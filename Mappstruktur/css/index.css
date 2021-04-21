@@ -95,7 +95,12 @@ form button {
     left: 10%;
 }
 
+.feedback {
+    color: red;
+    text-align: center;
+}
 
-
-
-
+.complete {
+    color: green;
+    text-align: center;
+}
