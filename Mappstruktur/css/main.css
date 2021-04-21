@@ -1,0 +1,65 @@
+* {
+    padding: 0px;
+    margin:  0px;
+    --transitionDuration: 1s;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#slider {
+    width: 300%;
+    height: 200%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#map {
+    grid-area: 1/1/2/2;
+    background-color: red;
+    position: sticky;
+}
+
+#dialogue {
+    grid-area: 1/2/2/3;
+    background-color: green;
+    position: sticky;
+}
+
+#interactive {
+    grid-area: 1/3/2/4;
+    background-color: blue;
+    position: sticky;
+}
+
+#inventory {
+    background-color: rgba(50, 50, 50, 0.5);
+    grid-area: 2/2/3/3;
+    position: sticky;
+}
+
+.viewLink {
+    position: absolute;
+    top: 2vh;
+    text-decoration: none;
+    padding: 10px;
+    background-color: gray;
+    color: black;
+}
+
+.right {
+    right: 2vh;
+}
+
+.left {
+    left: 2vh;
+}
+
+.middle {
+    left: 34vw;
+}

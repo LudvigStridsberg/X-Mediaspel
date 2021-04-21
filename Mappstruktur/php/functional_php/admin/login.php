@@ -22,7 +22,7 @@
             header("Location: ../../../index.php?loginError=$feedback");
             exit();
         } else {
-            header('Location: ../../page_php/main.php');
+            header('Location: ../../page_php/main.php#dialogue');
         }
     }
 
