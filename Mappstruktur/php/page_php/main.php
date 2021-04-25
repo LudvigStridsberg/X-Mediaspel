@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!($_SESSION["isLoggedIn"])) {
+        header("Location: ../../index.php?loginError=Du måste logga in först!");
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
