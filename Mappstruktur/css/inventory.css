@@ -1,0 +1,49 @@
+#invWrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--gray);
+    flex-direction: column;
+}
+
+#gems {
+    width: 87%;
+    flex-wrap: wrap;
+}
+
+#invWrapper > div > div {
+    width: 10vh;
+    height: 10vh;
+    margin: 5px;
+}
+
+#otherStuff > div {
+    background-color: lightgray;
+}
+
+#gems > div:first-child {
+    background-color: var(--pink);
+}
+
+#gems > div:nth-child(2) {
+    background-color: var(--orange);
+}
+
+#gems > div:nth-child(3) {
+    background-color: var(--green);
+}
+
+#gems > div:nth-child(4) {
+    background-color: var(--purple);
+}
+
+#gems > div:nth-child(5) {
+    background-color: var(--yellow);
+}
+
+#gems > div:nth-child(6) {
+    background-color: var(--red);
+}
+
+#gems > div:last-child {
+    background-color: var(--blue);
+}

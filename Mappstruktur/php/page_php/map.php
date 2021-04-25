@@ -1,0 +1,1 @@
+<a class="viewLink right" href="#dialogue">Dialog</a>
