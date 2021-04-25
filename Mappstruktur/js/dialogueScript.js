@@ -1,3 +1,5 @@
+"use strict";
+
 const image = document.getElementById("characterImg");
 const characterName = document.getElementById("characterName");
 const dialogueBox = document.getElementById("dialogueBox");

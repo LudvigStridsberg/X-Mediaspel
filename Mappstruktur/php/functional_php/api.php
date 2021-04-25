@@ -11,25 +11,26 @@
         copy("database.json", "dbBackup.json");
     }
 
-    $databaseFile = '../database.json';
+    $databaseFile = "database.json";
     $database = json_decode(file_get_contents($databaseFile), true);
 
     switch($method) {
-        case "GET": {
+        case "GET":
             $found = false;
             foreach ($database["users"] as $user) {
                 if ($user["id"] == $userId) {
                     $found = true;
                     send($user);
+                    break;
                 }
             }
 
             if (!$found) {
                 abort(404, "User not found");
+                break;
             }
-        }
 
-        case "PATCH": {
+        case "PATCH":
             $json = file_get_contents("php://input");
             $data = json_decode($json, true);
             $found = false;
@@ -47,19 +48,18 @@
             } else {
                 abort(404, "User not found");
             }
-        }
     }
 
     function send($data, $code = 200) {
         http_response_code($code);
         header("Content-Type: application/json");
-        echo(json_encode(["user" => $data]));
+        echo json_encode(["user" => $data]);
         exit();
     }
 
     function abort($code = 404, $error = "Content not found") {
         http_response_code($code);
         header("Content-Type: application/json");
-        echo(json_encode(["error" => $error]));
+        echo json_encode(["error" => $error]);
         exit();
     }
