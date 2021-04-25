@@ -7,7 +7,10 @@
             "pronoun": "",
             "storyPhase": 0,
             "inventory": [],
-            "hasPlayed": "false"
+            "hasPlayed": false,
+            "introDialogue": false,
+            "completedGame": false,
+            "outroDialogue": false
         }
     ]
 }
