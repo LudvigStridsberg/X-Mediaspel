@@ -1,0 +1,81 @@
+#dialogue > div:last-of-type {
+    height: 92vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+#dialogueWrapper {
+    width: 90%;
+    height: 90%;
+    background-image: url('images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#characterImg {
+    width: 90%;
+}
+
+#characterName {
+    border: 5px solid var(--white);
+    background-color: var(--gray);
+    color: var(--white);
+    padding: 3vw;
+    width: max-content;
+    z-index: 10;
+    position: absolute;
+    bottom: 27%;
+    left: 10%;
+    font-family: var(--barriecito);
+    font-size: 20px;
+}
+
+#dialogueBox {
+    border: 5px solid var(--black);
+    background-color: rgba(255, 255, 255, .8);
+    width: 97%;
+    height: 30%;
+}
+
+#dialogueBox > p {
+    margin: 8%;
+    font-family: var(--elite);
+    line-height: 25px;
+}
+
+#indicator {
+    padding: 8px;
+    position: absolute;
+    right: 45px;
+}
+
+.none {
+    display: none;
+}
+
+.more {
+    display: inline-block;
+    border: solid var(--black);
+    border-width: 0px 4px 4px 0px;
+    transform: rotate(45deg);
+    animation: arrowMovement .5s 0s infinite alternate;
+}
+
+.done {
+    display: inline-block;
+    background-color: var(--black);
+    bottom: 60px;
+    animation: doneBlink 1s infinite alternate linear;
+}
+
+@keyframes arrowMovement {
+    0% {bottom: 75px;}
+    100% {bottom: 60px;}
+}
+
+@keyframes doneBlink {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
