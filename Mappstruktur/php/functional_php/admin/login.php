@@ -23,7 +23,9 @@
             exit();
         } else {
             $_SESSION["user_ID"] = $result["id"];
+            $_SESSION["isLoggedIn"] = true;
             header('Location: ../../page_php/main.php#dialogue');
+            exit();
         }
     }
 
