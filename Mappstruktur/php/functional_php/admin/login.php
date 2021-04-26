@@ -22,7 +22,9 @@
             header("Location: ../../../index.php?loginError=$feedback");
             exit();
         } else {
+            $_SESSION["isLoggedIn"] = true;
             header('Location: ../../page_php/main.php#dialogue');
+            exit();
         }
     }
 
