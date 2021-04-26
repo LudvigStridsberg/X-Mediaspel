@@ -33,6 +33,7 @@
             </div>
         </div>
     </div>
+    <script src="../../js/functions.js"></script>
     <script src="../../js/main.js"></script>
 </body>
 </html>
