@@ -16,5 +16,3 @@
         </div>
     </div>
 </div>
-<script src="../../js/testDialogue.js"></script>
-<script src="../../js/dialogueScript.js"></script>
