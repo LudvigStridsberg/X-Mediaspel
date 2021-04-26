@@ -4,7 +4,6 @@
 <a class="viewLink right" href="#interactive">Spel/Gåta</a>
 <link rel="stylesheet" href="../../css/dialogue.css">
 <div class="menuBG">
-    <button id="startBtn">Start!</button>
 </div>
 <div class="flexer">
     <div class="none" id="dialogueWrapper">
