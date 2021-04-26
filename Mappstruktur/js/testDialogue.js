@@ -13,8 +13,8 @@ const dialogue = [
     },
     {
         name: "???",
-        image: `Jag visste att du skulle klara det, `/*${namn}*/,
-        script: "",
+        image: "",
+        script: `Jag visste att du skulle klara det, `/*${namn}*/,
         indicator: "more"
     },
     {
@@ -80,7 +80,7 @@ const dialogue = [
     {
         name: "Gatekeepern",
         image: "",
-        script: "Malm under. Malm-ö betyder egentligen malm över. Ni människor har alltid tycker det är lika roligt varje gång.",
+        script: "Malm under. Malm-ö betyder egentligen malm över. Ni människor tycker alltid att det är lika roligt varje gång.",
         indicator: "more"
     },
     {
@@ -97,8 +97,8 @@ const dialogue = [
     },
     {
         name: "Gatekeepern",
-        image: "Obalans kan få stora konsekvenser. Det är därför du är här.",
-        script: "",
+        image: "",
+        script: "Obalans kan få stora konsekvenser. Det är därför du är här.",
         indicator: "more"
     },
     {
