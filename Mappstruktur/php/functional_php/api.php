@@ -63,3 +63,4 @@
         echo json_encode(["error" => $error]);
         exit();
     }
+?>

@@ -1,7 +1,7 @@
 "use strict";
 
 function setState() {
-    const getReq = new Request("../functional_php/api.php?user=please");
+    const getReq = new Request("../functional_php/api.php");
     fetch(getReq)
     .then(getResp => {
         if(!getResp.ok) {
@@ -10,6 +10,6 @@ function setState() {
         return getResp.json();
     })
     .then(getResource => {
-        return getResource;
+        STATE = getResource;
     });
 }
