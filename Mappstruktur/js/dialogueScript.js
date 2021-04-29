@@ -36,7 +36,7 @@ function changeText() {
         // ...update all elements with the new data...
         characterName.innerHTML = dialogueObj.name;
         printText(dialogueObj.script, dialogueObj.indicator);
-        image.src = "images/" + dialogueObj.image + ".png";
+        image.src = "../media/illustrations/" + dialogueObj.image + ".png";
     } else {
         // ...otherwise we're out of dialogue, reset the page
         document.getElementById("dialogueWrapper").classList.remove("flexer");
