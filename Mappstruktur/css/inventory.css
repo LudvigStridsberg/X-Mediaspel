@@ -21,29 +21,43 @@
 }
 
 #gems > div:first-child {
-    background-color: var(--pink);
+    background-color: rgb(126, 125, 125);
+    padding: 5%;
+    background-image: url(../../media/illustrations/rosenkvartz.png);
 }
 
 #gems > div:nth-child(2) {
-    background-color: var(--orange);
+    /* background-color: var(--orange); */
+    background-color: rgb(126, 125, 125);
+    background-image: url(../../media/illustrations/carneol.png);
 }
 
 #gems > div:nth-child(3) {
-    background-color: var(--green);
+    /* background-color: var(--green); */
+    background-color: rgb(126, 125, 125);
+    background-image: url(../../media/illustrations/jade.png);
 }
 
 #gems > div:nth-child(4) {
-    background-color: var(--purple);
+    /* background-color: var(--purple); */
+    background-color: rgb(126, 125, 125);
+    background-image: url(../../media/illustrations/ametist.png);
 }
 
 #gems > div:nth-child(5) {
-    background-color: var(--yellow);
+    /* background-color: var(--yellow); */
+    background-color: rgb(126, 125, 125);
+    background-image: url(../../media/illustrations/citrin.png);
 }
 
 #gems > div:nth-child(6) {
-    background-color: var(--red);
+    /* background-color: var(--red); */
+    background-color: rgb(126, 125, 125);
+    background-image: url(../../media/illustrations/rubin.png);
 }
 
 #gems > div:last-child {
-    background-color: var(--blue);
+    /* background-color: var(--blue); */
+    background-color: rgb(126, 125, 125);
+    background-image: url(../../media/illustrations/kalcedon.png);
 }

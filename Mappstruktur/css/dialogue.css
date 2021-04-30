@@ -15,34 +15,49 @@
 }
 
 #characterImg {
-    width: 90%;
+    width: 87%;
+    position: absolute;
+    z-index: -1;
+    top: 32%;
+    right: 13%;
 }
 
 #characterName {
-    border: 5px solid var(--white);
-    background-color: var(--gray);
-    color: var(--white);
-    padding: 3vw;
+    /* border: 5px solid var(--white);
+    background-color: var(--gray); */
+    border: 3px solid #161616;
+    background-color: var(--white);
+    /* background-image: url(../../media/illustrations/border_test_name.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; */
+    color: #161616;
+    padding: 2vw;
     width: max-content;
     z-index: 10;
     position: absolute;
-    bottom: 27%;
+    bottom: 25%;
     left: 10%;
     font-family: var(--barriecito);
     font-size: 20px;
 }
 
 #dialogueBox {
-    border: 5px solid var(--black);
-    background-color: rgba(255, 255, 255, .8);
-    width: 97%;
+    /* border: 5px solid var(--black); */
+    /* background-color: rgba(255, 255, 255, .8); */
+    background-image: url(../../media/illustrations/border_test.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 98%;
     height: 30%;
 }
 
 #dialogueBox > p {
-    margin: 8%;
+    margin: 13% 8%;
     font-family: var(--elite);
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 22px;
 }
 
 #indicator {

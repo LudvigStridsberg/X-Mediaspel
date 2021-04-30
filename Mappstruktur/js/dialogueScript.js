@@ -36,7 +36,7 @@ function changeText() {
         // ...update all elements with the new data...
         characterName.innerHTML = dialogueObj.name;
         printText(dialogueObj.script, dialogueObj.indicator);
-        image.src = "../media/illustrations/" + dialogueObj.image + ".png";
+        image.src = "../../media/illustrations/" + dialogueObj.image + ".png";
     } else {
         // ...otherwise we're out of dialogue, reset the page
         document.getElementById("dialogueWrapper").classList.remove("flexer");
@@ -73,7 +73,8 @@ function printText(string, textIndicator) {
 
         // Set a ID for the timeout, so that we can close it when we are out of letters
         // Each letter-print prepares the next one
-        let id = setTimeout(printNext, 50);
+        //?Standard = 50, ändrad pga test 
+        let id = setTimeout(printNext, 20);
 
         // If this function call printed the last letter...
         if (lastLetter) {

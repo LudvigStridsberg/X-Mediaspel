@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin:  0px;
+    box-sizing: border-box;
 }
 
 :root {
@@ -46,7 +47,9 @@
 
 #dialogue {
     grid-area: 1/2/2/3;
-    background-color: var(--green);
+    background-image: url(../../media/illustrations/ledsna_klar.png);
+    background-position: center;
+    background-size: cover;
     position: sticky;
 }
 
@@ -116,4 +119,23 @@
 
 h2 {
     font-family: var(--barriecito);
+}
+
+#startBtn{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+
+
+#mapContainer{
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    width: 85%;
+    height: 85%;
+    background-image: url(../../media/illustrations/karta_malmu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
