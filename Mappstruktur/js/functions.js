@@ -10,6 +10,69 @@ function setState() {
         return getResp.json();
     })
     .then(getResource => {
-        STATE = getResource;
+        // let {key, value} = getResource;
+        // STATE.key = value;
+        // STATE.otherKey = othervalue;
     });
+}
+
+// Uppdatera spelarens state i databasen, borde kalla setState i slutet
+// Ska kallas från dialog-funktionen och från varje spel-script
+function patchState(patchObj) {
+    let {key, value} = patchObj;
+    switch(key) {
+        case "introDialogue":
+
+            break;
+        case "completedGame":
+
+            break;
+        case "outroDialogue":
+
+            // Call setState
+            break;
+    }
+}
+
+/*
+   Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
+   byta från en klass med display: none till en annan med t.ex display:flex etc.
+   Vi måste också göra så att den int som indikerar vilket objekt i arrayen som
+   kommer näst blir 0.
+*/
+function dialogueInit(dialogueType) {
+    switch(dialogueType) {
+        case "intro":
+
+            break;
+        case "outro":
+
+            break;
+    }
+}
+
+// Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
+// byta från en klass med display: none till en annan med t.ex display:flex etc.
+function gameInit() {
+
+}
+
+// Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
+// alltid där, vi måste byta mellan display: none och display: block/inline/whatever
+function itemHandler() {
+
+}
+
+function phaseChanger() {
+    // 1 Uppdateta phase-nummer via patchState
+    // 2 Få koordinaterna från phase-objektet, lägg i state
+    // 3 Uppdatera script-taggar och php-includes
+}
+
+function importantBtn(theButton) {
+    theButton.classlist.add("important");
+
+    setTimeout(function() {
+        theButton.classlist.remove("important");
+    }, 5000);
 }
