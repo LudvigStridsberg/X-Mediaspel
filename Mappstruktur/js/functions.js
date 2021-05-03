@@ -18,20 +18,38 @@ function setState() {
 
 // Uppdatera spelarens state i databasen, borde kalla setState i slutet
 // Ska kallas från dialog-funktionen och från varje spel-script
+// Call setState
 function patchState(patchObj) {
+
+    // Update the local State
     let {key, value} = patchObj;
-    switch(key) {
-        case "introDialogue":
+    STATE[key] = value;
+    
+    // Update the State on the database
+    const patchReq = new Request("../functional_php/api.php",
+        {
+            method: "PATCH",
+            body: JSON.stringify(STATE),
+            headers: {"Content-type": "application/json; charset=UTF-8"},
+        }
+    );
+    return fetch(patchReq)
+        .then(patchResp => {
+            if(!fetchResp) {
+                throw Error(fetchResp.status);
+            }
+            return patchResp.json;
+        })
+        .then(patchResource => {
+            console.log(patchResource);
 
-            break;
-        case "completedGame":
-
-            break;
-        case "outroDialogue":
-
-            // Call setState
-            break;
-    }
+            // This has to be set here as this has to happen after the state
+            // in the database has been updated
+            setState();
+        })
+        .catch(e => {
+            console.log(e);
+        });
 }
 
 /*
@@ -76,3 +94,22 @@ function importantBtn(theButton) {
         theButton.classlist.remove("important");
     }, 5000);
 }
+
+// ---------------------------------------------------
+    /*let {key, value} = patchObj;
+    switch(key) {
+        case "introDialogue":
+            STATE.introDialogue = value;
+            break;
+        case "completedGame":
+            STATE.completedGame = value;
+            break;
+        case "outroDialogue":
+            STATE.outroDialogue = value;
+            break;
+        case "inventory":
+            STATE.inventory = value;
+            break;
+        case "hasPlayed":
+            STATE.hasPlayed = value;
+    }*/
