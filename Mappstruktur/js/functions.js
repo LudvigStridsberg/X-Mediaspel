@@ -1,20 +1,23 @@
 "use strict";
 
-function setState() {
-    const getReq = new Request("../functional_php/api.php");
-    fetch(getReq)
-    .then(getResp => {
-        if(!getResp.ok) {
-            throw Error(getResp.status);
-        }
-        return getResp.json();
-    })
-    .then(getResource => {
-        // let {key, value} = getResource;
-        // STATE.key = value;
-        // STATE.otherKey = othervalue;
-    });
-}
+// function setState() {
+//     const getReq = new Request("../functional_php/api.php");
+//     fetch(getReq)
+//     .then(getResp => {
+//         if(!getResp.ok) {
+//             throw Error(getResp.status);
+//         }
+//         return getResp.json();
+//     })
+//     .then(getResource => {
+//         let STATE, {currentUser, currenstPhase,coordinatesTarget};
+//         // STATE.key = value;
+//         // STATE.otherKey = othervalue;
+//         let thisUser = findUser(getResource)
+//         STATE.currentUser = getResource.user;
+//         STATE.currentPhase = 
+//     });
+// }
 
 // Uppdatera spelarens state i databasen, borde kalla setState i slutet
 // Ska kallas från dialog-funktionen och från varje spel-script
@@ -33,7 +36,13 @@ function patchState(patchObj) {
             break;
     }
 }
+// function findUser(allUsers, id){
 
+//     let currentUser = allUsers.find(user => user.id === id);
+
+//     return currentUser;
+
+// }
 /*
    Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
    byta från en klass med display: none till en annan med t.ex display:flex etc.

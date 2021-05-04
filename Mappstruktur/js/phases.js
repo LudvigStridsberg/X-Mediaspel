@@ -1,5 +1,5 @@
 const phases = {
-    1: {
+    0: {
         gamePhp: "../game_php/piano.php",
         backgroundImage: "",
         targetLocation: {
