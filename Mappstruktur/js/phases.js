@@ -2,26 +2,136 @@ const userName // här ska username hämtas från STATE? Används i dialogen
 
 const phases = {
     one: {
-        gamePhp: "../game_php/piano.php",
+        gamePhp: false, // Ev bildspelet???
         backgroundImage: "",
-        targetLocation: {
+        targetLocation: { // Utblick/insikt-statyn vid posthusplatsen
             latitude: 0,
             longitude: 0
         },
         dialogue: {
             intro: [
                 {
-                    name: "",
+                    name: "BSK",
                     image: "",
-                    script: "",
-                }
+                    script: "Du tittar på den stora kolossen med ett hål i mitten. Nu då? Du tog dig hit men det verkar inte vara någon här.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Precis när du funderar på att gå så ser du en mörk skepnad ta form ett par meter framför dig.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Jag visste att du skulle klara det, " + userName + ".",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Hur gjorde du det där, vem är du och HUR vet du mitt namn!?",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Du lyckades vara på rätt plats vid rätt tillfälle. Sen har du visat dig värdig genom att lösa min gåta. Därför har haft ett öga på dig.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Jag är portmästaren av den undre världen, men de flesta brukar kalla mig Gatekeepern. Nu behöver jag din hjälp.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Min hjälp? Med vad?",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Det jag kommer berätta för dig är det ingen levande människa som vet. Så lyssna noga.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Du föddes som en människa i den övre världen. Ni har en teknologi, industri och.. mänsklighet.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Det ni inte har någon aning om är att det finns en parallell värld som lever i samspel med er egen. Detta är den undre världen, och den har sin kärna i Malmu.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Malmu?",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Malm under. Malm-ö betyder egentligen Malm över. Ni människor tycker det är lika roligt varje gång.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Den undre världen drivs av magi, fantasi och kreativitet från den övre världen, och ju mer ni ger, desto mer får ni tillbaka. Om världarna är i balans så att säga.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Och om de inte är i balans?",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Obalans kan få stora konsekvenser. Det är därför du är här.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Balansen är inte bara beroende av flödet av fantasi mellan världarna, utan det finns en till, stor kraft som påverkar våra dimensioner.",
+                } // Här kommer bildspel med förklaring/text/info
             ],
             outro: [
                 {
-                    name: "",
+                    name: "Jag",
                     image: "",
-                    script: "",
-                }
+                    script: "Och de här konsekvenserna är?",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Ingen konst, inga fantastiska historier, ingen musik, inga skratt. Bara en dyster, själskrossande levnad.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Det hugger till av ren och skär igenkänning.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Jag har redan samlat de fem första stenarna som finns i den undre världen, men jag kan inte samla dem i den övre.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "De är för den sakens skull du behövs. Du har visat dig värdig så du behöver inte vara orolig.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Men jag..",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Inga men. Vi måste skynda oss. Jag har mina misstankar om var vi hittar vissa stenar, men vi kan behöva fråga runt bland andra väsen.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Möt mig vid fontänen på stortorget. Och var försiktig med vem du pratar med.",
+                } // I spelarens inventory kan hen nu se kartan (en svg-bild) och första platsen är markerad. Klickar spelaren på platsen så står det en snabb recap om vad som hänt och behöver göras
             ]
         }
     },
@@ -37,7 +147,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Du står på torget och ser dig omkring för att se om du får syn på Gatekeepern. Torget myllrar av fantasiväsen.",
+                    script: "Du står på torget och ser dig omkring för att se om du får syn på Portmästarn. Torget myllrar av fantasiväsen.",
                 },
                 {
                     name: "BSK",
@@ -80,14 +190,14 @@ const phases = {
                     script: "Pojken gestikulerar till ödlan som agerar översättare.",
                 },
                 {
-                    name: "Gatekeepern",
+                    name: "Portmästarn",
                     image: "",
                     script: "Så du har funnit Djurpojken.",
                 },
                 {
                     name: "BSK",
                     image: "",
-                    script: "Du hoppar till av att Gatekeepern står bakom dig. När kom han hit!?",
+                    script: "Du hoppar till av att Portmästarn står bakom dig. När kom han hit!?",
                 },
                 {
                     name: "Ödlan",
@@ -120,7 +230,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Du ser Gatekeepern försvinna i vimlet av fantasiväsen bakom pojken.",
+                    script: "Du ser Portmästarn försvinna i vimlet av fantasiväsen bakom pojken.",
                 },
                 {
                     name: "Ödlan",
@@ -146,7 +256,7 @@ const phases = {
             ]
         }
     },
-    tree: {
+    three: {
         gamePhp: false,
         backgroundImage: "",
         targetLocation: { // Stadsteaterns ingång, vita bågar med apor
@@ -264,7 +374,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Du märker att din hand är knuten runt något hårt. Du öppnar upp dina fingrar och ser i handflatan en ädelsten - rosenkvarts. <br> Är detta ädelstenarna Gatekeepern pratade om?",
+                    script: "Du märker att din hand är knuten runt något hårt. Du öppnar upp dina fingrar och ser i handflatan en ädelsten - rosenkvarts. <br> Är detta ädelstenarna Portmästarn pratade om?",
                 }, // Här ska inventory lysa till och stenen ska läggas till
                 {
                     name: "Happ",
@@ -279,17 +389,17 @@ const phases = {
                 {
                     name: "Hipp",
                     image: "",
-                    script: "Du, vad du nu heter",
+                    script: "Du, vad du nu heter..",
                 },
                 {
                     name: "Jag",
                     image: "",
-                    script: `jag heter ${userName}`,
+                    script: "jag heter" + userName + ".",
                 },
                 {
                     name: "Hipp",
                     image: "",
-                    script: `${userName}` + ", du verkar ju ha en talang för att hjälpa folk. Gå dit och se om du inte kan göra något åt deras katzenjammer.",
+                    script: userName + ", du verkar ju ha en talang för att hjälpa folk. Gå dit och se om du inte kan göra något åt deras katzenjammer.",
                 },
                 {
                     name: "",
@@ -307,7 +417,7 @@ const phases = {
     four: {
         gamePhp: "../game_php/piano.php",
         backgroundImage: "",
-        targetLocation: {
+        targetLocation: { // Orkestern, Stortorget
             latitude: 0,
             longitude: 0
         },
@@ -321,7 +431,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Frustrerade och uppgivna står de i en klump mitt på gatan, och du kan se bandledaren stå för sig själv en bit bort med ryggen mot sina medlemmar",
+                    script: "Frustrerade och uppgivna står de i en klump mitt på gatan, och du kan se bandledaren stå för sig själv en bit bort med ryggen mot sina medlemmar.",
                 },
                 {
                     name: "BSK",
@@ -388,7 +498,7 @@ const phases = {
                 {
                     name: "Bandledaren",
                     image: "",
-                    script: "En av bandmedlemmarna suckar ljudligt, en annan skakar på huvudet med ett snett leende, och de andra två brister ut i skratt",
+                    script: "En av bandmedlemmarna suckar ljudligt, en annan skakar på huvudet med ett snett leende, och de andra två brister ut i skratt.",
                 },
                 {
                     name: "Bandledaren",
@@ -458,10 +568,10 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Bandledaren tackar igen och återgår till sina medlemmar. I samma stund kan du återigen se Gatekeepern. <br> Han verkar se dig med och rusar fram.",
+                    script: "Bandledaren tackar igen och återgår till sina medlemmar. I samma stund kan du återigen se Portmästarn. <br> Han verkar se dig med och rusar fram.",
                 },
                 {
-                    name: "Gatekeepern",
+                    name: "Portmästarn",
                     image: "",
                     script: "Var har du varit!?",
                 },
@@ -471,17 +581,17 @@ const phases = {
                     script: "Jag har hjälpt några väsen med deras problem. Jag tror det är nyckeln till att samla ihop stenarna, jag har två stycken!",
                 },
                 {
-                    name: "Gatekeepern",
+                    name: "Portmästarn",
                     image: "",
                     script: "Det kan vara farligt att vara en ensam människa i den undre världen. Det må ha gått väl, men nästa gång kanske du inte har sådan tur...",
                 },
                 {
-                    name: "Gatekeepern",
+                    name: "Portmästarn",
                     image: "",
                     script: "Det var naivt av mig att lämna dig. Från och med nu reser vi tillsammans.",
                 },
                 {
-                    name: "Gatekeepern",
+                    name: "Portmästarn",
                     image: "",
                     script: "Jag har ett väsen jag vill besöka, men först behöver jag samla in mer information om var väsendet är. Det flyttar sig konstant.",
                 },
@@ -493,7 +603,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Gatekeepern tittar ut över havet av väsen på gatan och svarar inte.",
+                    script: "Portmästarn tittar ut över havet av väsen på gatan och svarar inte.",
                 },
                 {
                     name: "Jag",
@@ -503,10 +613,10 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Gatekeepern sneglar mot dig.",
+                    script: "Portmästarn sneglar mot dig.",
                 },
                 {
-                    name: "Gatekeepern",
+                    name: "Portmästarn",
                     image: "",
                     script: "Nåväl. Vi kan gå dit.",
                 },
@@ -514,6 +624,324 @@ const phases = {
                     name: "BSK",
                     image: "",
                     script: "Du tänker tillbaka till bandledarens ord. <br> <i>Senast jag såg honom hade han vandrat längs södra promenaden, vid kanalen. Där ställde han sig sedan och grät och grät och grät.</i>",
+                },
+            ]
+        }
+    },
+    five: {
+        gamePhp: "", // Mini game med stjärntecken
+        backgroundImage: "",
+        targetLocation: { // Vid kanalen, ledsna gubben statyn
+            latitude: 0,
+            longitude: 0
+        },
+        dialogue: {
+            intro: [
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Med tanke på bandledarens beskrivning bekräftar ljudet av snyftande att ni kommit rätt. Han är förvånansvärt lik Gösta Ekman. Undrar om någon sagt det till honom?",
+                },
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "*Snyft* “Vil-vilka är ni?",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Jag heter" + userName + ", det här är Portmästarn..",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Han vet vem jag är.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "..och jag har kommit för att ge en present till dig. Jag hoppas den kan muntra upp dig",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du räcker fram fotografiet, med motivet föreställande Ledsna Gubben ihop med orkestern riktat mot marken, för att säkerställa att han tar emot det.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Ledsna Gubben tar bilden och tittar på den. Om hans läpp darrade innan är det ingenting jämfört med hur den skakar nu",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Bandledaren ville att du skulle ha den här som ett minne.",
+                }, // Bilden lämnar inventory
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "Åhh! Mina fina vänner! Hur kunde jag vara så dum och lämna orkestern!?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Gubben brister ut i storgråt. <br> Portmästarn, vars kroppsspråk skriker “OBEKVÄM”, vänder sig och tittar ut över kanalen. Du får lösa det här på egen hand.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Självklart kommer de förlåta dig! De sade till mig att de saknar dig!",
+                },
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "*Snyft* “Är det så?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Även om gubbens tårar fortsätter att rinna så kommer hulkningarna alltmer sällan. Han verkar samla sig en smula.",
+                },
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "Det var så länge sedan jag spelade. De kanske inte ens vill ha med mig i orkestern.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Det kan knappast bli värre än vad det nyss var. De behöver nog dig mer än du tror.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Gubben torkar sina tårar.",
+                },
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "Du kanske har rätt… Jag måste tillbaka och prata med dem! Tack för fotografiet. Finns det något jag kan ger er i gengäld?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Portmästarn vänder sig återigen mot gubben. Den plötsliga rörelsen får gubben att ta ett halv kliv tillbaka. Han ser nästan rädd ut. Varför så stark reaktion?",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Jag söker Zodiaken. Han har bytt position igen.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Gubben samlar sig och harklar till.",
+                },
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "Medan jag vilset vandrat i området så mötte jag Zodiaken, och den intresserade mig genast.",
+                },
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "Den lyssnade på mina problem och gav mig de här stjärntecknena. De ligger dock helt huller om buller…",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Åh nej, han börjar bli upprörd igen. Gubben tar fram ett bräde där små brickor med stjärntecken på ligger i oordning.",
+                },
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "... och jag vet inte hur jag ska få rätt på dem. Åhh den litade ju på mig! Jag måste sortera dem rätt! Kan ni förstå er på det här!?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Gubben räcker fram brädet med brickorna. Kan vi lösa det här?",
+                }, // Knappen för spel lyser till
+            ], // När spelet klaras blir nästa del tillgänglig
+            outro: [
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Gubben tittar upp på dig. Tårarna fortsätter att rinna, men denna gången verkar det vara av glädje.",
+                }, // Ledtråd till nästa location kommer i dialogen nedan
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "Tack så mycket, det var verkligen snällt av dig. Nu känner jag hur <b>lugnet</b> sprider sig i kroppen. När jag tänker på att en <b>förening</b> av <b>15</b> stjärntecken är gjorda är jag säker på att du hittar <b>gatan</b> som du letar efter.",
+                },
+                {
+                    name: "Ledsna Gubben",
+                    image: "",
+                    script: "Nu får ni ursäkta mig! Jag ska öva på mitt instrument innan jag går tillbaka till mina vänner i orkestern!",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Återigen ser du samma ljusstrålar dansa, denna gång i en grön färg. Stenen känns len i din hand, och du tittar på den.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Stenens mitt är så mörkt grön att det nästan ser svar ut, medan de spräckliga kanterna är i en ljusare nyans. Detta måste vara en jadeit.",
+                }, // Stenen läggs till i inventory - lyser till på iconen
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du utbyter en förstående blick med Portmästarn. Han upprepar gubbens ord långsamt.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Nu känner jag hur <b>lugnet</b> sprider sig i kroppen. När jag tänker på att en <b>förening</b> av <b>15</b> stjärntecken är gjorda är jag säker på att du hittar <b>gatan</b> som du letar efter.",
+                },
+            ]
+        }
+    },
+    six: {
+        gamePhp: false,
+        backgroundImage: "",
+        targetLocation: { // Föreningsgatan 15, zodiac-statyn
+            latitude: 0,
+            longitude: 0
+        },
+        dialogue: {
+            intro: [
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "När du och Portmästarn kommer fram till er destination kan ni känna en enorm presens. Ju närmare ni går, desto mer påtagliga blir de lågfrekventa ljudvågorna som får hela atmosfären att pulsera.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Det råder ingen tvekan om vem som är källan till den bultande luften. Det ni ser är den så kallade Zodiaken.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Ah, herr Portmästare. Så trevligt att se er igen, jag har väntat er och ert sällskap.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Håren reser sig i nacken när Zodiaken talar. Det är som att orden tar en genväg och landar rakt in i huvudet, utan att passera öronen först. Lite som att du nu delar med av ditt medvetna till Zodiaken. Försök tänka rena tankar.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Jag förväntar mig inget mindre av er, ers allvetande. Som ni kanske redan förutspått så har jag två frågor.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Det är som ni säger, och jag kan redan nu svara på er första fråga; jag förblir neutral.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Jag må se genom vävnaden av tiden, men inte ens jag besitter trotsighet nog att bekämpa ödet.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Jag vet vad som kommer hända med er, herr Portmästare. Om ni kommer lyckas eller ej, faller sig ödet berätta för er när det är dags. Återigen, mer än så tillåts jag inte säga.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Portmästarn verkar irriterad men samtidigt återhållsam, som att han vet att det inte finns något mer han kan göra",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "För er andra fråga bör ni söka er mot älvornas slott.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Ers allvetande, med all respekt, där finns inget mer än ruiner nu för tiden. Slottet har varit borta sedan tusentals år tillbaka.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Javisst vet jag det. Men så länge ruinerna står där, har slottet endast dött sin första död. Minnena från förr lever kvar, och ser ni inte dem, bör ni leta ännu noggrannare.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Portmästarn ser fundersam ut.",
+                }
+            ],
+            outro: [
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: userName + ", att ni har tagit er an detta uppdraget är mycket nobelt av er. Er tillit till herr Portmästare är beundransvärd.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Oroa er inte, herr Portmästare kan inte höra oss.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Jag ser att ni samlat på er tre stenar. Imponerande. De bär på en mycket större makt än ni tror.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "När stenarna glider ifrån varandra, dras de till misär. Ni har löst problem för att åkalla dem, inte sant?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du vet inte ens om du behöver svara på den frågan.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Som ni vet kan stenarnas orsaka katastrofer i båda våra världar när de glider ifrån varandra. Misären som orsakas av stenarna spär sedan på deras separation allt mer och skapar en ond cykel",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Situationen blir alltså bara värre ju längre den tillåts att fortlöpa.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Stenarna behöver placeras på sina rätta platser i både den övre och undre världen. Först då kommer världarna sakta att helas igen.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Jag kan se genom tid och rum. Det förflutna, nutiden och framtiden. Jag kan inte berätta om vad som kommer hända. Men jag kan ge er ett råd.",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Lika viktigt som att lyssna på andra, är att lyssna på den egna magkänslan.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Vad säger ni till" + userName + ", ers allvetande?",
+                },
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Inget av vikt för er, herr Portmästare. Jag ska hjälpa er på er resa.",
+                }, // Nedan kommer en ledtråd till nästa location
+                {
+                    name: "Zodiaken",
+                    image: "",
+                    script: "Det ni söker finner ni på platsen där alla goda ting är tre. <br> Följ solnedgångens riktning, där pelarna ståtligt minner om en tid nu svunnen. <br> Där finns den älva vars två syskon fortsatt utan henne, <br> Ty hon är fast mellan fyra hörn.",
                 },
             ]
         }
