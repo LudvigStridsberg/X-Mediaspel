@@ -10,9 +10,17 @@ function setState() {
         return getResp.json();
     })
     .then(getResource => {
-        // let {key, value} = getResource;
+        // let STATE = {currentUser, currentPhase, coordinatesTarget};
         // STATE.key = value;
         // STATE.otherKey = othervalue;
+        let user = getResource.user;
+        console.table(user);
+        // let thisUser = getResource.user.find(user => user.id === currentUser);
+        STATE.currentUser = user;
+        STATE.currentPhase = user.storyPhase;
+        STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
+        //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
+        
     });
 }
 
@@ -33,7 +41,13 @@ function patchState(patchObj) {
             break;
     }
 }
+// function findUser(allUsers, id){
 
+//     let currentUser = allUsers.find(user => user.id === id);
+
+//     return currentUser;
+
+// }
 /*
    Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
    byta från en klass med display: none till en annan med t.ex display:flex etc.
