@@ -1,23 +1,28 @@
 "use strict";
 
-// function setState() {
-//     const getReq = new Request("../functional_php/api.php");
-//     fetch(getReq)
-//     .then(getResp => {
-//         if(!getResp.ok) {
-//             throw Error(getResp.status);
-//         }
-//         return getResp.json();
-//     })
-//     .then(getResource => {
-//         let STATE, {currentUser, currenstPhase,coordinatesTarget};
-//         // STATE.key = value;
-//         // STATE.otherKey = othervalue;
-//         let thisUser = findUser(getResource)
-//         STATE.currentUser = getResource.user;
-//         STATE.currentPhase = 
-//     });
-// }
+function setState() {
+    const getReq = new Request("../functional_php/api.php");
+    fetch(getReq)
+    .then(getResp => {
+        if(!getResp.ok) {
+            throw Error(getResp.status);
+        }
+        return getResp.json();
+    })
+    .then(getResource => {
+        // let STATE = {currentUser, currentPhase, coordinatesTarget};
+        // STATE.key = value;
+        // STATE.otherKey = othervalue;
+        let user = getResource.user;
+        console.table(user);
+        // let thisUser = getResource.user.find(user => user.id === currentUser);
+        STATE.currentUser = user;
+        STATE.currentPhase = user.storyPhase;
+        STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
+        //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
+        
+    });
+}
 
 // Uppdatera spelarens state i databasen, borde kalla setState i slutet
 // Ska kallas från dialog-funktionen och från varje spel-script

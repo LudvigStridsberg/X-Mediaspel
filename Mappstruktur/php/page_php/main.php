@@ -36,34 +36,6 @@
     
 </body>
 
-<script>
-
-    let currentUser = <?php echo $_SESSION["user_ID"]?>;
-
-    function setState() {
-    const getReq = new Request("../functional_php/api.php");
-    fetch(getReq)
-    .then(getResp => {
-        if(!getResp.ok) {
-            throw Error(getResp.status);
-        }
-        return getResp.json();
-    })
-    .then(getResource => {
-        // let STATE = {currentUser, currentPhase, coordinatesTarget};
-        // STATE.key = value;
-        // STATE.otherKey = othervalue;
-        let user = getResource.user;
-        console.table(user);
-        // let thisUser = getResource.user.find(user => user.id === currentUser);
-        STATE.currentUser = user;
-        STATE.currentPhase = user.storyPhase;
-        STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
-        
-    });
-}
-
-</script>
 <script src="../../js/functions.js"></script>
 <script src="../../js/phases.js"></script>
 <script src="../../js/main.js"></script>
