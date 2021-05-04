@@ -20,7 +20,7 @@
             foreach ($database["users"] as $user) {
                 if ($user["id"] == $userId) {
                     $found = true;
-                    send($user);
+                    send(200, $user);
                     break;
                 }
             }
@@ -45,12 +45,13 @@
             if ($found) {
                 $json = json_encode($database, JSON_PRETTY_PRINT);
                 file_put_contents("database.json", $json);
+                send(200, "User patched!");
             } else {
                 abort(404, "User not found");
             }
     }
 
-    function send($data, $code = 200) {
+    function send($code = 200, $data) {
         http_response_code($code);
         header("Content-Type: application/json");
         echo json_encode(["user" => $data]);
