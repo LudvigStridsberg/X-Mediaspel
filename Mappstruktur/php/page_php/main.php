@@ -35,9 +35,10 @@
     </div>
     
 </body>
-
 <script src="../../js/functions.js"></script>
-<script src="../../js/phases.js"></script>
 <script src="../../js/main.js"></script>
+
+<script src="../../js/phases.js"></script>
+
 
 </html>

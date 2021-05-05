@@ -35,9 +35,9 @@
             $data = json_decode($json, true);
             $found = false;
 
-            foreach($database["users"] as $user) {
-                if($user["id"] == $userId) {
-                    $user = $data;
+            for($i = 0; $i<count($database["users"]); $i++){
+                if($database["users"][$i]["id"] == $userId) {
+                    $database["users"][$i] = $data;
                     $found = true;
                 }
             }

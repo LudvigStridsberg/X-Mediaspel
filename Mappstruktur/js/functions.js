@@ -10,7 +10,7 @@ function setState() {
         return getResp.json();
     })
     .then(getResource => {
-        // let STATE = {currentUser, currentPhase, coordinatesTarget};
+        // STATE = {currentUser:{}, currentPhase, coordinatesTarget};
         // STATE.key = value;
         // STATE.otherKey = othervalue;
         let user = getResource.user;
@@ -27,29 +27,29 @@ function setState() {
 // Uppdatera spelarens state i databasen, borde kalla setState i slutet
 // Ska kallas från dialog-funktionen och från varje spel-script
 // Call setState
-function patchState(patchObj) {
+function patchState(key1, key2, value) {
 
     // Update the local State
-    let {key, value} = patchObj;
-    STATE[key] = value;
+    // let {key, value} = patchObj;
+    STATE[key1][key2] = value;
     
     // Update the State on the database
     const patchReq = new Request("../functional_php/api.php",
         {
             method: "PATCH",
-            body: JSON.stringify(STATE),
+            body: JSON.stringify(STATE.currentUser),
             headers: {"Content-type": "application/json; charset=UTF-8"},
         }
     );
     return fetch(patchReq)
         .then(patchResp => {
-            if(!fetchResp) {
-                throw Error(fetchResp.status);
+            if(!patchResp) {
+                throw Error(patchResp.status);
             }
-            return patchResp.json;
+            return patchResp.json();
         })
         .then(patchResource => {
-            console.log(patchResource);
+            console.log("API respons", patchResource);
 
             // This has to be set here as this has to happen after the state
             // in the database has been updated
