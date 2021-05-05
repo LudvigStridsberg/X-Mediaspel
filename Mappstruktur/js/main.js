@@ -10,6 +10,6 @@ let STATE = {
 
 setState();
 
-setTimeout(function(){
-    patchState("currentUser", "introDialogue", true);
-}, 3000)
+// setTimeout(function(){
+//     patchState("currentUser", "introDialogue", true);
+// }, 3000)
