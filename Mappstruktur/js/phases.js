@@ -1,7 +1,8 @@
 const userName // här ska username hämtas från STATE? Används i dialogen
+const userNameU // i uppercase
 
 const phases = {
-    one: {
+    1: {
         gamePhp: false, // Ev bildspelet???
         backgroundImage: "",
         targetLocation: { // Utblick/insikt-statyn vid posthusplatsen
@@ -135,7 +136,7 @@ const phases = {
             ]
         }
     },
-    two: {
+    2: {
         gamePhp: false,
         backgroundImage: "",
         targetLocation: { // Stortorget, fontänen
@@ -256,7 +257,7 @@ const phases = {
             ]
         }
     },
-    three: {
+    3: {
         gamePhp: false,
         backgroundImage: "",
         targetLocation: { // Stadsteaterns ingång, vita bågar med apor
@@ -414,7 +415,7 @@ const phases = {
             ]
         }
     },
-    four: {
+    4: {
         gamePhp: "../game_php/piano.php",
         backgroundImage: "",
         targetLocation: { // Orkestern, Stortorget
@@ -628,7 +629,7 @@ const phases = {
             ]
         }
     },
-    five: {
+    5: {
         gamePhp: "", // Mini game med stjärntecken
         backgroundImage: "",
         targetLocation: { // Vid kanalen, ledsna gubben statyn
@@ -802,7 +803,7 @@ const phases = {
             ]
         }
     },
-    six: {
+    6: {
         gamePhp: false,
         backgroundImage: "",
         targetLocation: { // Föreningsgatan 15, zodiac-statyn
@@ -943,6 +944,748 @@ const phases = {
                     image: "",
                     script: "Det ni söker finner ni på platsen där alla goda ting är tre. <br> Följ solnedgångens riktning, där pelarna ståtligt minner om en tid nu svunnen. <br> Där finns den älva vars två syskon fortsatt utan henne, <br> Ty hon är fast mellan fyra hörn.",
                 },
+            ]
+        }
+    },
+    7: {
+        gamePhp: false,
+        backgroundImage: "",
+        targetLocation: { // Konstmuseet, pelarna
+            latitude: 0,
+            longitude: 0
+        },
+        dialogue: {
+            intro: [
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Det här var en gång ett ståtligt slott där älvorna bodde. Det enda som finns kvar nu är ruiner, och älvorna har sedan dess spridit ut sig. De går att hitta på lite alla möjliga ställen förutom just här.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Men Zodiaken har aldrig fel, så det måste finnas en älva kvar här någonstans. Vi får leta runt på området efter en ‘älva fast mellan fyra hörn’.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "Den kanske kan berätta vart vi bör gå.",
+                }
+            ],
+            outro: [ // Spelaren letar o hittar qr // Inget outro i denna?
+                {
+                    name: "",
+                    image: "",
+                    script: "",
+                },
+            ]
+        }
+    },
+    8: {
+        gamePhp: false, // Gåtan med antal bussar
+        backgroundImage: "",
+        targetLocation: { // Kyrkogården, GA-torg
+            latitude: 0,
+            longitude: 0
+        },
+        dialogue: {
+            intro: [
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "I den stora cirkeln där kyrkogårdens gångar möts ser ni älvorna flyga omkring - bingo. Dokumentet ni läste tidigare hade några år på nacken, men älvorna verkar ha bosatt sig här.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Märkligt ställe kan man tycka, men det är också en väldigt vacker plats.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "De två älvorna bollar något mellan sig som blänker till i ljuset. Det ser nästan ut som.. En näsa i brons?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Deras fnitter är så intensivt att det nästan låter aggressivt. Portmästaren drar en tung suck.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Älvor, har ni något problem vi kan hjälpa er med?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Älvorna stannar upp samma sekund som du ställt färdigt din fråga och vänder sina huvuden blixtsnabbt åt ditt håll. De tittar på varandra, och tillbaka på dig.",
+                },
+                {
+                    name: "Älvan Marky",
+                    image: "",
+                    script: "Hjälp? Du kan hjälpa oss förstå vad du gör med DEN DÄR!",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Marky pekar mot Portmästaren och de båda älvorna börjar skratta hysteriskt. Gatekeepern verkar oberörd. Han verkar inte vara så värst omtyckt",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Jag vet vad ni gjorde mot ert syskon.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Återigen tystnar älvorna abrupt. Älvan Marky tittar på dig med dödligt allvar i sin blick. Den flyger närmre ditt ansikte.",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Jaså det vet du? Då har jag ett problem du kan få lösa åt oss.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du börjar verkligen bli bra på det här.",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Åh ack och ve! Att bråka över en sådan petitess! Nu är vår lillasyster försvunnen, puts väck!",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Vad bråkade ni om?",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Vi skäms så mycket.. Borde vi verkligen berätta?",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Du är en främling! Hur ska vi kunna lita på främlingar?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Båda älvorna verkar ha svårt att hålla sig för skratt.",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Jag har en idé! Vad sägs om en liten gåta?",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Om ni löser gåtan kan vi lita på er och kan berätta vi vad vi bråkade om. Då kanske vi kan lösa vårt problem. Jag saknar henne så!",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Den andra älvan tryckte undan ett skratt. Portmästaren står med armarna i kors och tittar bort. Han verkar inte vara särskilt intresserad av konversationen.",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "De tar inte bara en men flera personer till inte bara ett men flera ställen, men frågan är hur många av dem tar personer till ställen från stället som döptes efter kungen, eller kungen som döptes efter stället?",
+                }, // Knappen för gåtor lyser upp - spelaren ska skriva in rätt siffra (6)
+            ],
+            outro: [
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Älvorna är tysta. De tittar på dig. De tittar på varandra. Sedan brister de ut i ett skratt så högt att det hade kunnat väcka de döda, vilket skapar oro med tanke på platsen ni befinner er. Mellan några häftiga andetag lyckas en av dem klämma fram några meningar.",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Gick du verkligen på den lätta!? Varför skulle vi vilja veta några sådana DUMHETER!?",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Är det svårt att ta sig runt i världen när man är så KORKAD?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Det är aldrig roligt att bli gjort till åtlöje. Just som du börjar tappa ditt tålamod ljusnar ett gult sken från älvorna.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Även om skrattet skedde på din bekostnad; kan det vara så att de behövde det? Det känns som ett konstigt problem, men innan du hinner analysera händelsen färdigt ligger den ljusgula stenen i din hand.",
+                }, // Inventoy lyser upp - ny sten // Ny bild med bakgrundsfärg på älvan
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Efter en stund lugnar älvorna ned sig, torkar sina tårar och hämtar andan",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Nåväl, vi kan berätta vad vi bråkade om.",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Vår syster ville inte bo på kyrkogården, icke sa nicke! Hon ville stanna där vi redan var. Nu har vi inte sett henne på snart 77 år.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Med lite snabb huvudräkning landar du på året 1944. Du kan inte låta bli att undra om de vet vad som faktiskt hänt med henne. Eller om de ens bryr sig.",
+                },
+                {
+                    name: "Marky",
+                    image: "",
+                    script: "Allt hon gjorde var att gnälla. Wää, wää, wää, blaa, blaa, blaa.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Älvorna skrattar åt sin imitation av deras syster. Vilka svin. Hon var ju bara orolig för er. Portmästaren vänder sig mot dig.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Om du inte har något emot det så slösar jag personligen inte mer tid här. Låt oss ta oss vidare.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Jag har en vän som kan ha lokaliserat den sista stenen åt oss. Hon kommer inte åt den eftersom vi behöver en människa från den övre världen. Allt du behöver göra är att locka fram den.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Jag vet att vi skulle resa tillsammans, men hon och jag behöver tala i enrum, så jag går i förväg. Jag finns där för att möta dig när vi väl kommer fram.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Ta dig till min väns grotta i Kungsparken. Du hittar henne längs kommendantstigen.",
+                },
+            ]
+        }
+    },
+    9: {
+        gamePhp: false, // Ormens gåta
+        backgroundImage: "",
+        targetLocation: { // Ormgrottan i Kungsparken
+            latitude: 0,
+            longitude: 0
+        },
+        dialogue: {
+            intro: [
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Gatekeepern är så uppslukad i sin konversation att han inte märker dig. Han tittar upp mot ormen vars huvud hänger från taket på grottan",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "", // Bild på ryggen
+                    script: "Så länge allt går enligt plan så kommer din frihet. Du har varit en stor hjälp i arbetet och för det ska du belönas.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Ormen drar mungiporna till ett leende samtidigt som hon nöjt skjuter ut sin tunga. Leendet blir dock inte långvarigt då hon får syn på dig bakom Portmästaren.",
+                },
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "Vi har vissst får ssällsskap.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Gatekeepern vänder sig hastigt och tittar på dig. Hans kroppsspråk påminner om en femåring som blev tagen på bar gärning med handen i kakburken.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Hur länge har du varit här?",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Jag kom nyss hit.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Hur mycket har du hört?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Zodiaken sa åt dig att lita på din magkänsla. Den säger just nu åt dig att dra en vit lögn.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Ingenting.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Ingenting viktigt i alla fall.. Kanske..",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Tystnaden från Gatekeepern hintar om att han inte riktigt tror på dig. Ormen sänker sitt huvud ytterligare för att komma närmare ditt ansikte.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Hennes gula ögon är nästan självlysande och de svarta vertikala pupillerna gör att blicken känns vass",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Eftersom du har sett flertalet videoklipp på ormar som hugger tag i byten i slowmotion så vet att det är bäst att vara på sin vakt. Hennes reflexer är vida överlägsna dina",
+                },
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "Sså, du är människan ssom ssamlar in sstenarna?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Hennes röst kunde inte vara en större motsats till hennes utseende. Den är lugn och djup och hennes ton är mjuk och len.",
+                },
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "Vi ssamarbetar, du och jag. Jag är en god vän till Portmästaren.",
+                },
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "Jag har ssökt upp den ssissta sstenen för att hjälpa er på ert sstora uppdrag. Det är det minssta jag kan göra.",
+                },
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "Gatekeepern och jag försstår varandra på ett ssätt som ingen annan gör. Vi vet båda hur det är att inte passsa in och lämnass vid ssidlinjen.  Vi är bara misssförsstådda - vi vill bara väl.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Hennes röst är nästintill förtrollande. Du kan inte dra din uppmärksamhet från hennes ord.",
+                },
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "Portmästaren ssade att du framkallar sstenarna genom att lösssa problem",
+                },
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "För att du ska få tag i sstenen jag lokalisserat sså sska jag ge dig ett problem.",
+                }, // Gåtan kommer
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "Jag vill att du sska försstå min ssitss... Berätta för mig vilket djur ssom är längsst ned, tyngd av de andra, omgedd av godtrogna rådjur ssom sspringer, ovetandess av vilken frihet de har givitss.",
+                }, // Knappen för gåtor lyser - spelaren svarar på gåtan
+            ],
+            outro: [
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Ormen i grottan ler ännu större än vad hon gjort tidigare.",
+                },
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "Jag vissste att du sskulle försstå; sse ssaker ur mitt persspektiv. Ingen vill lita på en sslug och lisstig orm.",
+                },
+                {
+                    name: "Ormen",
+                    image: "",
+                    script: "Alla andra vässsen gör allt i ssin makt för att trycka ned osss. Men de sska får sse. När jag fått min frihet sså sska jag vissa dem mitt ssanna jag. Allt tack vare Portmästarn!",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Ormen börjar omringas av samma sken du sett tidigare. De röda strålarna lyser som strålkastare. När de slocknat igen ser du efter i din hand och finner en klarröd rubin.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Transparensen får stenen att påminna om godis. Även om du aldrig skulle få för dig att faktiskt göra det blir du lite sugen på att stoppa den i munnen.",
+                }, // Inventory lyser upp - ny sten
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Portmästaren springer fram till där du står och frågar dig ängsligt.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Har du fått tag på den sista stenen?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du visar den godisliknande stenen för Portmästaren. Plötsligt sker något konstigt. Rubinen i din hand beter sig som att ha fått sitt eget liv. Trots att du står still tumlar den runt i din handflata. Portmästaren växlar mellan att titta på dig och stenen",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Jag har aldrig sett något liknande. Detta kan inte vara ett bra tecken. Beter sig alla stenarna så här?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du tar fram de andra stenarna från din samling, och mycket riktigt. Även de har börjat rulla omkring, som att de söker efter något men konstant byter riktning igen.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Till sist lägger sig stenarna i en formation och börjar lysa i unison. Stenarna har varsin skarp stråle och de pekar alla på en och samma plats på din karta.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Vi måste gå dit stenarna pekar, och det är fort.",
+                }
+            ]
+        }
+    },
+    10: {
+        gamePhp: false,
+        backgroundImage: "",
+        targetLocation: { // Paddlaren utan ansikte, Tekniska museet
+            latitude: 0,
+            longitude: 0
+        },
+        dialogue: {
+            intro: [
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Ni är på platsen dit stenarna pekade er.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Detta är inte platsen där stenarna ska vara, så varför ledde dem oss hit?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Han hinner knappt avsluta sin mening innan ett kvävt rop stjäler er uppmärksamhet. Gatekeepern tar ett steg tillbaka av chock.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Framför er ser ni ett väsen, sittandes i en kanot, utan ansikte. Panikslaget letar han med händerna över det tomma anletet.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Desperationen smittar av sig för varje nytt dovt skrik ni hör. Håren reser sig i nacken av obehag.",
+                } 
+            ],
+            outro: [
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "När negativa energier når en viss grad av styrka börjar världarna falla isär. Det var det här jag varnade dig om från första början.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Ingen konst, inga fantastiska historier, ingen musik, inga skratt. Bara en dyster, själskrossande levnad. Så lyder profetian. Och det du ser här är början på uppfyllelsen av den.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Det stackars väsendet kryper upp med knäna till där dess panna borde sitta och vaggar fram och tillbaka, som att den desperat hoppas på att det bara än en dålig dröm.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Det här måste vara en varning. Vår tid håller på att rinna ut och om vi inte tar oss till platsen dit stenarna kan återförenas korrekt kommer alla, både väsen och människor, bli till tomma skal. Förvandlingen har redan börjat.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Så var är den här platsen där stenarna kan återförenas korrekt?",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Vi måste följa turbinkanalen tills vi når de två små broarna som knyter an till hamnen, men ska gå inte över någon av dem. Strax bortom den östra bron står två människoformade portaler. Där är kärnan till balansen och harmonin mellan den övre och undre världen.",
+                }
+            ]
+        }
+    },
+    11: {
+        gamePhp: false, // Ev placera stenar, eller behålla endast dialog?
+        backgroundImage: "",
+        targetLocation: { // Kockums
+            latitude: 0,
+            longitude: 0
+        },
+        dialogue: {
+            intro: [
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Ni är äntligen framme vid vad som ska vara den sista destinationen.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "I ditt huvud hade du föreställt dig något mer grandiost för knutpunkten för de två världarna. Men här står ni, bredvid en parkering. Som att han kan läsa dina tankar talar Portmästaren till dig",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Detta var kanske inte riktigt det du förväntade dig, men det är en genialisk plats. Den viktigaste punkten ligger helt öppet för alla att se, anonym för världen.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Lyssna på mig " + userName + ". Detta är slutet. Det är nu eller aldrig. Du har varit en utmärkt kompanjon och följt alla mina instruktioner.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Jag har bara ett sista ste ",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "PORTMÄSTARE." + userNameU + ". NI HAR TILLSAMMANS SAMLAT IHOP ÄDELSTENARNA OCH FÖR DET ÄR VI EVIGT TACKSAMMA.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "ENDAST VI, DEN SANNA ÄDELN ÖVER MALM-U OCH MALM-Ö, KAN HANTERA MAKTEN HOS STENARNA.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "PORTMÄSTARE. NI SKALL GE ÖVER STENARNA FÖR DEN UNDRE VÄRLDEN.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: userNameU + ". NI SKALL GE ÖVER STENARNA FÖR DEN ÖVRE VÄRLDEN.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "FÖRST DÅ ÄR STENARNA PÅ SINA RÄTTA PLATSER OCH VÅRA VÄRLDAR KAN ÅTERIGEN HELAS.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Precis som hos Zodiaken hörs deras dånande röster som tankar i ditt huvud och känslan av allestädesnärvaro är oundviklig.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Portmästaren, som annars alltid haft ett visst lugn, ser onekligen stressad ut.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Du måste ge mig dina stenar.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Va? Men de sa ju..",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Portmästaren börjar höja rösten och hans gestalt ser nästan ut att växa i samband med volymen. Han böjer sig över dig.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Jag måste ha dina stenar. Du borde ge dem till mig.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Du har litat på mig hela denna vägen, inte sant? Du har aldrig träffat dessa väsen innan. Så för allas bästa, GE MIG DINA STENAR!",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Portmästaren är ursinnig. Du minns Zodiakens ord. Lita på din magkänsla.",
+                }, // Spelaren gör slutvalet // Annorlunda outros på denna
+            ],
+            outroB: [ // Ger stenarna till Portis
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Gatekeepern är ju faktiskt den som varit vid din sida genom hela er resa. Han måste vara upprörd av en anledning.",
+                },
+                {
+                    name: "",
+                    image: "",
+                    script: "Okej. Du får dem. Jag litar på dig mer än dem.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du hinner knappt räcka fram alla stenarna innan han har roffat åt sig dem ur dina händer. Portmästaren skratt som börjar blygsamt blir snabbt maniskt.",
+                },
+                {
+                    name: "",
+                    image: "",
+                    script: "Äntligen!! Äntligen är alla stenarna mina! Aldrig igen kommer jag behöva tjäna någon. Inga fler löjliga väsen som hela tiden ska springa omkring och förstöra mina portar. Aldrig igen behöva se en till korkad människa!",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Din magkänsla börjar vända. I ditt huvud hör du Ädelns ord eka.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "VAD HAR DU GJORT, NAIVA MÄNNISKA? MED STENARNA I SIN ÄGO KAN PORTMÄSTAREN FÅ OBEGRÄNSAD MAKT.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Och det finns ingen som kommer kunna stoppa mig! FRÅN OCH MED NU SKA NI ALLA TJÄNA MIG!",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Alla tio stenar, fem från den övre världen och fem från den undre världen svävar nu mellan Portmästarens händer.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Än en gång börjar de lysa i samma färger du såg när du samlade in dem, innan de förenas i en starkt lysande orb.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Sekunder senare håller Gatekeepern i en stor krona, prydd av alla tio ädelstenar, som han sätter på sitt huvud. Allting blir svart.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "…",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "…..",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "NAIVA MÄNNISKA. STENARNAS MAKT ÄR INGET ATT LEKA MED. DU HAR BLIVIT MANIPULERAD AV ETT MONSTER. HAN VILL INGET ÄN ATT HA MAKTEN FÖR SIG SJÄLV.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "TILLSAMMANS MED ALLSEENDE ZODIAKEN HAR VI SAMLAT VÅRA SISTA KRAFTER FÖR ATT FÖRVRÄNGA TIDSLINJER, FLÄTA OM TIDENS VÄVNAD OCH ÅTERSTÄLLA VÄRLDEN TILL DET DEN VAR FÖRE ER RESA.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "ERA MINNEN KOMMER I DENNA NYA VERKLIGHET VARA FALSKA, TY INGENTING AV DET SOM VAR HAR ÄNNU HÄNT.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "VÄRLDENS ÖDE LIGGER NU ÅTER PÅ DINA AXLAR. VÄLJ RÄTT DENNA GÅNG. PORTMÄSTAREN FINNS DÄR NI TRÄFFADES FÖRST.",
+                }
+            ],
+            outroB: [ // Ger stenarna till ädeln
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du tar ett kliv tillbaka från den vansinniga Portmästaren. Det här var det alla hade varnat dig för.",
+                },
+                {
+                    name: "Jag",
+                    image: "",
+                    script: "Nej. Stenarna ska till den plats där de hör hemma, och det är inte hos dig.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du ger över alla fem ädelstenar till Ädeln som i sina spegelliknande kroppar förvarar dem.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Karneol vid huvudet, citrin vid halsen, jadeit vid axeln, rosenkvarts vid hjärtat och rubinen vid magen.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Medan du placerade dina stenar hade Portmästaren gjort ett desperat försök att stjäla dem, men Ädeln kunde med enkelhet schasa iväg honom med en stark, osynlig kraft som får honom att falla omkull",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: userNameU + ". DU HAR HJÄLPT OSS ÅTERFÅ VÅRA KRAFTER. ÄVEN OM PORTMÄSTAREN VÄGRAR LÄMNA ÖVER DEN UNDRE VÄRLDENS STENAR, GER DEN ÖVRE VÄRLDEN STENAR OSS KRAFTEN ATT SJÄLVA ÅKALLA DEM.",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Ur den omtöcknade Portmästarens ficka flyger den undre världens stenar fram, och han hinner inte fånga dem i luften innan de placeras i den andra spegelfiguren.",
+                },
+                {
+                    name: "Portmästaren",
+                    image: "",
+                    script: "Nej, NEJ! Mina stenar! Jag har slitit så hårt för att vinna min makt! Det får inte sluta så här!! INTE MINA STENAR!!",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Desperat försöker Portmästaren springa till Ädeln som återigen knuffar bak honom, denna gången med ännu mer kraft.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "TACK VARE DIG, " + userNameU + " KOMMER VÄRLDEN NU KUNNA BÖRJA HELA OCH ÅTERGÅ TILL DET NORMALA.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "ATT STENARNA SEPARERAS ÄR OUNDVIKLIGT. DE MÅ SKAPA MISÄR, MEN UTAN SORG FINNS INGEN LYCKA. UTAN MÖRKER FINNS INGET LJUS. VARE SIG DET GÄLLER ETT DYGN ELLER EN HEL LIVSTID SÅ KOMMER DET ALLTID FINNAS HINDER PÅ VÄGEN",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "DU HAR TAGIT DIG ÖVER DESSA HINDER OCH HAR DÄRMED BEVISAT ATT DET FINNS NÅGOT BÄTTRE PÅ ANDRA SIDAN.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: userNameU + ". PORTMÄSTAREN KOMMER FÖRSÖKA MED SINA PLANER IGEN. HÖR DU OM NÅGON SOM FÖRSÖKER HJÄLPA HONOM, RÅD DEM ATT LITA PÅ SIN MAGKÄNSLA.",
+                },
+                {
+                    name: "Ädeln",
+                    image: "",
+                    script: "Å HELA UNDRE VÄRLDENS VÄGAR TACKAR VI DIG FÖR DITT MOD, DIN KLOKHET OCH DIN IHÄRDIGHET.",
+                }
             ]
         }
     },
