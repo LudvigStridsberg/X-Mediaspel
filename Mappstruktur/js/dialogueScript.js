@@ -17,9 +17,9 @@ dialogueBox.addEventListener("click", e => {
 function changeText(theArray) {
 
     // Clear all dialogue-elements of previous data
-    dialogueBox.classList.remove("none");
+    dialogueBox.classList.remove("hidden");
     indicator.classList.remove("more", "done");
-    indicator.classList.add("none");
+    indicator.classList.add("hidden");
     characterName.innerHTML = "";
     text.innerHTML = "";
     let dialogueObj
@@ -43,8 +43,8 @@ function changeText(theArray) {
     } else {
         // ...otherwise we're out of dialogue, reset the page
         document.getElementById("dialogueWrapper").classList.remove("flexer");
-        document.getElementById("dialogueWrapper").classList.add("none");
-        document.getElementById("startBtn").classList.remove("none");
+        document.getElementById("dialogueWrapper").classList.add("hidden");
+        document.getElementById("startBtn").classList.remove("hidden");
         dialogueIndex = -1;
     }
 }
@@ -88,7 +88,7 @@ function printText(string, textIndicator) {
             clearTimeout(id);
 
             // ...show the indicator and make it look like it's supposed to...
-            indicator.classList.remove("none");
+            indicator.classList.remove("hidden");
             indicator.classList.add(textIndicator);
 
             // ...stop the speaking-sound since no more letters are showing up
@@ -101,8 +101,8 @@ function printText(string, textIndicator) {
 }
 
 document.getElementById("startBtn").addEventListener("click", e=> {
-    document.getElementById("dialogueWrapper").classList.remove("none");
+    document.getElementById("dialogueWrapper").classList.remove("hidden");
     document.getElementById("dialogueWrapper").classList.add("flexer");
-    document.getElementById("startBtn").classList.add("none");
+    document.getElementById("startBtn").classList.add("hidden");
     dialogueBox.click();
 });
