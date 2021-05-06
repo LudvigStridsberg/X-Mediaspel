@@ -50,6 +50,7 @@ function changeText(arrayChoice) {
     // If the object exists...
     if (dialogueObj != undefined) {
         // ...update all elements with the new data...
+        //!FORTSÄTT HÄR NÄR phaseChanger() är bekräftat
         if(dialogueObj.hasOwnProperty("items")){
             console.log("has items");
             itemHandler(dialogueObj.items);
