@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = -1;
+let dialogueIndex = 5;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -38,7 +38,7 @@ function changeText(arrayChoice) {
 
     // Get the new object from the correct array
     dialogueObj = STATE.dialogue[arrayChoice][dialogueIndex];
-
+    
     // If this is the last object in the array the indicator should get
     // the "done" class. Otherwise its the "more" class
     if (dialogueIndex == STATE.dialogue[arrayChoice].length - 1) {
@@ -50,6 +50,10 @@ function changeText(arrayChoice) {
     // If the object exists...
     if (dialogueObj != undefined) {
         // ...update all elements with the new data...
+        if(dialogueObj.hasOwnProperty("items")){
+            console.log("has items");
+            itemHandler(dialogueObj.items);
+        }
         characterName.innerHTML = dialogueObj.name;
         printText(dialogueObj.script, indicatorClass);
         image.src = "images/" + dialogueObj.image + ".png";

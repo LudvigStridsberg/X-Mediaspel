@@ -90,8 +90,8 @@ function gameInit() {
 
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
 // alltid där, vi måste byta mellan display: none och display: block/inline/whatever
-function itemHandler() {
-
+function itemHandler(itemObj) {
+    patchState("currentUser", "inventory", itemObj);
 }
 
 function phaseChanger() {
