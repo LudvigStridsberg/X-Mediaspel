@@ -1,8 +1,7 @@
-const userName // här ska username hämtas från STATE? Används i dialogen
-const userNameU // i uppercase
+
 
 const phases = {
-    1: {
+    0: {
         gamePhp: false, // Ev bildspelet???
         backgroundImage: "",
         targetLocation: { // Utblick/insikt-statyn vid posthusplatsen
@@ -24,7 +23,7 @@ const phases = {
                 {
                     name: "Portmästarn",
                     image: "",
-                    script: "Jag visste att du skulle klara det, " + userName + ".",
+                    script: "Jag visste att du skulle klara det, " + getUsername() + ".",
                 },
                 {
                     name: "Jag",
@@ -74,7 +73,12 @@ const phases = {
                 {
                     name: "Portmästarn",
                     image: "",
-                    script: "Den undre världen drivs av magi, fantasi och kreativitet från den övre världen, och ju mer ni ger, desto mer får ni tillbaka. Om världarna är i balans så att säga.",
+                    script: "Den undre världen drivs av magi, fantasi och kreativitet från den övre världen, och ju mer ni ger, desto mer får ni tillbaka...",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "",
+                    script: "..om världarna är i balans så att säga.",
                 },
                 {
                     name: "Jag",
@@ -136,7 +140,7 @@ const phases = {
             ]
         }
     },
-    2: {
+    1: {
         gamePhp: false,
         backgroundImage: "",
         targetLocation: { // Stortorget, fontänen
@@ -257,7 +261,7 @@ const phases = {
             ]
         }
     },
-    3: {
+    2: {
         gamePhp: false,
         backgroundImage: "",
         targetLocation: { // Stadsteaterns ingång, vita bågar med apor
@@ -361,7 +365,12 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Strålar i ljusrosa nyans bryter sig ut i formen av Hipps siluett. Är det ingen annan som ser det här!? Ljuset dansar runt i bara några sekunder innan det lägger sig igen.",
+                    script: "Strålar i ljusrosa nyans bryter sig ut i formen av Hipps siluett. Är det ingen annan som ser det här!?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: " Ljuset dansar runt i bara några sekunder innan det lägger sig igen.",
                 },
                 {
                     name: "Jag",
@@ -375,7 +384,12 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Du märker att din hand är knuten runt något hårt. Du öppnar upp dina fingrar och ser i handflatan en ädelsten - rosenkvarts. <br> Är detta ädelstenarna Portmästarn pratade om?",
+                    script: "Du märker att din hand är knuten runt något hårt. Du öppnar upp dina fingrar och ser i handflatan en ädelsten - rosenkvarts.",
+                }, // Här ska inventory lysa till och stenen ska läggas till
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Är detta ädelstenarna Portmästarn pratade om?",
                 }, // Här ska inventory lysa till och stenen ska läggas till
                 {
                     name: "Happ",
@@ -395,12 +409,12 @@ const phases = {
                 {
                     name: "Jag",
                     image: "",
-                    script: "jag heter" + userName + ".",
+                    script: "jag heter" + getUsername() + ".",
                 },
                 {
                     name: "Hipp",
                     image: "",
-                    script: userName + ", du verkar ju ha en talang för att hjälpa folk. Gå dit och se om du inte kan göra något åt deras katzenjammer.",
+                    script: getUsername() + ", du verkar ju ha en talang för att hjälpa folk. Gå dit och se om du inte kan göra något åt deras katzenjammer.",
                 },
                 {
                     name: "",
@@ -410,12 +424,17 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Du tittar först på Hipp och sedan på stenen i din hand. Hjälpa folk.. Är det nyckeln till att samla in de här stenarna? Du bestämmer dig för att ge det ett försök. Mot passagen!",
+                    script: "Du tittar först på Hipp och sedan på stenen i din hand. Hjälpa folk.. Är det nyckeln till att samla in de här stenarna?",
+                },
+                {
+                    name: "BSK",
+                    image: "",
+                    script: "Du bestämmer dig för att ge det ett försök. Mot passagen!",
                 }
             ]
         }
     },
-    4: {
+    3: {
         gamePhp: "../game_php/piano.php",
         backgroundImage: "",
         targetLocation: { // Orkestern, Stortorget
@@ -629,7 +648,7 @@ const phases = {
             ]
         }
     },
-    5: {
+    4: {
         gamePhp: "", // Mini game med stjärntecken
         backgroundImage: "",
         targetLocation: { // Vid kanalen, ledsna gubben statyn
@@ -651,7 +670,7 @@ const phases = {
                 {
                     name: "Jag",
                     image: "",
-                    script: "Jag heter" + userName + ", det här är Portmästarn..",
+                    script: "Jag heter" + getUsername() + ", det här är Portmästarn..",
                 },
                 {
                     name: "Portmästarn",
@@ -803,7 +822,7 @@ const phases = {
             ]
         }
     },
-    6: {
+    5: {
         gamePhp: false,
         backgroundImage: "",
         targetLocation: { // Föreningsgatan 15, zodiac-statyn
@@ -882,7 +901,7 @@ const phases = {
                 {
                     name: "Zodiaken",
                     image: "",
-                    script: userName + ", att ni har tagit er an detta uppdraget är mycket nobelt av er. Er tillit till herr Portmästare är beundransvärd.",
+                    script: getUsername() + ", att ni har tagit er an detta uppdraget är mycket nobelt av er. Er tillit till herr Portmästare är beundransvärd.",
                 },
                 {
                     name: "Zodiaken",
@@ -932,7 +951,7 @@ const phases = {
                 {
                     name: "Portmästaren",
                     image: "",
-                    script: "Vad säger ni till" + userName + ", ers allvetande?",
+                    script: "Vad säger ni till" + getUsername() + ", ers allvetande?",
                 },
                 {
                     name: "Zodiaken",
@@ -947,7 +966,7 @@ const phases = {
             ]
         }
     },
-    7: {
+    6: {
         gamePhp: false,
         backgroundImage: "",
         targetLocation: { // Konstmuseet, pelarna
@@ -981,7 +1000,7 @@ const phases = {
             ]
         }
     },
-    8: {
+    7: {
         gamePhp: false, // Gåtan med antal bussar
         backgroundImage: "",
         targetLocation: { // Kyrkogården, GA-torg
@@ -1175,7 +1194,7 @@ const phases = {
             ]
         }
     },
-    9: {
+    8: {
         gamePhp: false, // Ormens gåta
         backgroundImage: "",
         targetLocation: { // Ormgrottan i Kungsparken
@@ -1364,7 +1383,7 @@ const phases = {
             ]
         }
     },
-    10: {
+    9: {
         gamePhp: false,
         backgroundImage: "",
         targetLocation: { // Paddlaren utan ansikte, Tekniska museet
@@ -1433,7 +1452,7 @@ const phases = {
             ]
         }
     },
-    11: {
+    10: {
         gamePhp: false, // Ev placera stenar, eller behålla endast dialog?
         backgroundImage: "",
         targetLocation: { // Kockums
@@ -1460,7 +1479,7 @@ const phases = {
                 {
                     name: "Portmästaren",
                     image: "",
-                    script: "Lyssna på mig " + userName + ". Detta är slutet. Det är nu eller aldrig. Du har varit en utmärkt kompanjon och följt alla mina instruktioner.",
+                    script: "Lyssna på mig " + getUsername() + ". Detta är slutet. Det är nu eller aldrig. Du har varit en utmärkt kompanjon och följt alla mina instruktioner.",
                 },
                 {
                     name: "Portmästaren",
@@ -1470,7 +1489,7 @@ const phases = {
                 {
                     name: "Ädeln",
                     image: "",
-                    script: "PORTMÄSTARE." + userNameU + ". NI HAR TILLSAMMANS SAMLAT IHOP ÄDELSTENARNA OCH FÖR DET ÄR VI EVIGT TACKSAMMA.",
+                    script: "PORTMÄSTARE." + getUsername() + ". NI HAR TILLSAMMANS SAMLAT IHOP ÄDELSTENARNA OCH FÖR DET ÄR VI EVIGT TACKSAMMA.",
                 },
                 {
                     name: "Ädeln",
@@ -1485,7 +1504,7 @@ const phases = {
                 {
                     name: "Ädeln",
                     image: "",
-                    script: userNameU + ". NI SKALL GE ÖVER STENARNA FÖR DEN ÖVRE VÄRLDEN.",
+                    script: getUsername() + ". NI SKALL GE ÖVER STENARNA FÖR DEN ÖVRE VÄRLDEN.",
                 },
                 {
                     name: "Ädeln",
@@ -1644,7 +1663,7 @@ const phases = {
                 {
                     name: "Ädeln",
                     image: "",
-                    script: userNameU + ". DU HAR HJÄLPT OSS ÅTERFÅ VÅRA KRAFTER. ÄVEN OM PORTMÄSTAREN VÄGRAR LÄMNA ÖVER DEN UNDRE VÄRLDENS STENAR, GER DEN ÖVRE VÄRLDEN STENAR OSS KRAFTEN ATT SJÄLVA ÅKALLA DEM.",
+                    script: getUsername() + ". DU HAR HJÄLPT OSS ÅTERFÅ VÅRA KRAFTER. ÄVEN OM PORTMÄSTAREN VÄGRAR LÄMNA ÖVER DEN UNDRE VÄRLDENS STENAR, GER DEN ÖVRE VÄRLDEN STENAR OSS KRAFTEN ATT SJÄLVA ÅKALLA DEM.",
                 },
                 {
                     name: "BSK",
@@ -1664,7 +1683,7 @@ const phases = {
                 {
                     name: "Ädeln",
                     image: "",
-                    script: "TACK VARE DIG, " + userNameU + " KOMMER VÄRLDEN NU KUNNA BÖRJA HELA OCH ÅTERGÅ TILL DET NORMALA.",
+                    script: "TACK VARE DIG, " + getUsername() + " KOMMER VÄRLDEN NU KUNNA BÖRJA HELA OCH ÅTERGÅ TILL DET NORMALA.",
                 },
                 {
                     name: "Ädeln",
@@ -1679,7 +1698,7 @@ const phases = {
                 {
                     name: "Ädeln",
                     image: "",
-                    script: userNameU + ". PORTMÄSTAREN KOMMER FÖRSÖKA MED SINA PLANER IGEN. HÖR DU OM NÅGON SOM FÖRSÖKER HJÄLPA HONOM, RÅD DEM ATT LITA PÅ SIN MAGKÄNSLA.",
+                    script: getUsername() + ". PORTMÄSTAREN KOMMER FÖRSÖKA MED SINA PLANER IGEN. HÖR DU OM NÅGON SOM FÖRSÖKER HJÄLPA HONOM, RÅD DEM ATT LITA PÅ SIN MAGKÄNSLA.",
                 },
                 {
                     name: "Ädeln",

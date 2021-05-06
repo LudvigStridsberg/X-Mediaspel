@@ -20,7 +20,7 @@
             "storyPhase": 0,
             "inventory": [],
             "hasPlayed": false,
-            "introDialogue": false,
+            "introDialogue": true,
             "completedGame": false,
             "outroDialogue": false
         }

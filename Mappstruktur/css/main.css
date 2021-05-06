@@ -114,6 +114,10 @@
     align-items: center;
 }
 
+.hidden {
+    display: none;
+}
+
 h2 {
     font-family: var(--barriecito);
 }

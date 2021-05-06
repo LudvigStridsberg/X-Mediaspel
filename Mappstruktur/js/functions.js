@@ -19,6 +19,7 @@ function setState() {
         STATE.currentUser = user;
         STATE.currentPhase = user.storyPhase;
         STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
+        STATE.dialogue = phases[STATE.currentPhase].dialogue;
         //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
         
     });
@@ -73,14 +74,12 @@ function patchState(key1, key2, value) {
    kommer näst blir 0.
 */
 function dialogueInit(dialogueType) {
-    switch(dialogueType) {
-        case "intro":
-
-            break;
-        case "outro":
-
-            break;
-    }
+    let dWrapper = document.getElementById("dialogueWrapper");
+    dialogueTemp = STATE.dialogue[dialogueType];
+    // Use toggle?
+    dWrapper.classList.remove("hidden");
+    dWrapper.classList.add("flexer");
+    dialogueBox.click();
 }
 
 // Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
