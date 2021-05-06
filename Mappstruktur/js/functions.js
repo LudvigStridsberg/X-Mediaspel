@@ -60,13 +60,6 @@ function patchState(key1, key2, value) {
             console.log(e);
         });
 }
-// function findUser(allUsers, id){
-
-//     let currentUser = allUsers.find(user => user.id === id);
-
-//     return currentUser;
-
-// }
 /*
    Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
    byta från en klass med display: none till en annan med t.ex display:flex etc.
