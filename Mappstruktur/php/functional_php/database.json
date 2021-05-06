@@ -11,6 +11,18 @@
             "introDialogue": false,
             "completedGame": false,
             "outroDialogue": false
+        },
+        {
+            "username": "Sami",
+            "password": "1",
+            "id": 1,
+            "pronoun": "",
+            "storyPhase": 0,
+            "inventory": [],
+            "hasPlayed": false,
+            "introDialogue": true,
+            "completedGame": false,
+            "outroDialogue": false
         }
     ]
 }

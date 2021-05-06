@@ -10,30 +10,62 @@ function setState() {
         return getResp.json();
     })
     .then(getResource => {
-        // let {key, value} = getResource;
+        // STATE = {currentUser:{}, currentPhase, coordinatesTarget};
         // STATE.key = value;
         // STATE.otherKey = othervalue;
+        let user = getResource.user;
+        console.table(user);
+        // let thisUser = getResource.user.find(user => user.id === currentUser);
+        STATE.currentUser = user;
+        STATE.currentPhase = user.storyPhase;
+        STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
+        //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
+        
     });
 }
 
 // Uppdatera spelarens state i databasen, borde kalla setState i slutet
 // Ska kallas från dialog-funktionen och från varje spel-script
-function patchState(patchObj) {
-    let {key, value} = patchObj;
-    switch(key) {
-        case "introDialogue":
+// Call setState
+function patchState(key1, key2, value) {
 
-            break;
-        case "completedGame":
+    // Update the local State
+    // let {key, value} = patchObj;
+    STATE[key1][key2] = value;
+    
+    // Update the State on the database
+    const patchReq = new Request("../functional_php/api.php",
+        {
+            method: "PATCH",
+            body: JSON.stringify(STATE.currentUser),
+            headers: {"Content-type": "application/json; charset=UTF-8"},
+        }
+    );
+    return fetch(patchReq)
+        .then(patchResp => {
+            if(!patchResp) {
+                throw Error(patchResp.status);
+            }
+            return patchResp.json();
+        })
+        .then(patchResource => {
+            console.log("API respons", patchResource);
 
-            break;
-        case "outroDialogue":
-
-            // Call setState
-            break;
-    }
+            // This has to be set here as this has to happen after the state
+            // in the database has been updated
+            setState();
+        })
+        .catch(e => {
+            console.log(e);
+        });
 }
+// function findUser(allUsers, id){
 
+//     let currentUser = allUsers.find(user => user.id === id);
+
+//     return currentUser;
+
+// }
 /*
    Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
    byta från en klass med display: none till en annan med t.ex display:flex etc.
@@ -76,3 +108,22 @@ function importantBtn(theButton) {
         theButton.classlist.remove("important");
     }, 5000);
 }
+
+// ---------------------------------------------------
+    /*let {key, value} = patchObj;
+    switch(key) {
+        case "introDialogue":
+            STATE.introDialogue = value;
+            break;
+        case "completedGame":
+            STATE.completedGame = value;
+            break;
+        case "outroDialogue":
+            STATE.outroDialogue = value;
+            break;
+        case "inventory":
+            STATE.inventory = value;
+            break;
+        case "hasPlayed":
+            STATE.hasPlayed = value;
+    }*/
