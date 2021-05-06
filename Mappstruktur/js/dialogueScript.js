@@ -11,10 +11,18 @@ let dialogueIndex = -1;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
-    changeText();
+
+    let arrayChoice = "";
+    if (STATE.currentUser.introDialogue == false) {
+        arrayChoice = "intro";
+    } else {
+        arrayChoice = "outro";
+    }
+
+    changeText(arrayChoice);
 });
 
-function changeText(theArray) {
+function changeText(arrayChoice) {
 
     // Clear all dialogue-elements of previous data
     dialogueBox.classList.remove("hidden");
@@ -22,23 +30,28 @@ function changeText(theArray) {
     indicator.classList.add("hidden");
     characterName.innerHTML = "";
     text.innerHTML = "";
-    let dialogueObj
+    let dialogueObj;
+    let indicatorClass;
 
     //Prevent the user from trying to skip
     dialogueBox.style.pointerEvents = "none";
 
     // Get the new object from the correct array
-    if (theArray == "intro") {
-        dialogueObj = STATE.dialogue.intro[dialogueIndex];
-    } else if (theArray == "outro") {
-        dialogueObj = STATE.dialogue.outro[dialogueIndex];
+    dialogueObj = STATE.dialogue[arrayChoice][dialogueIndex];
+
+    // If this is the last object in the array the indicator should get
+    // the "done" class. Otherwise its the "more" class
+    if (dialogueIndex == STATE.dialogue[arrayChoice].length - 1) {
+        indicatorClass = "done";
+    } else {
+        indicatorClass = "more";
     }
 
     // If the object exists...
     if (dialogueObj != undefined) {
         // ...update all elements with the new data...
         characterName.innerHTML = dialogueObj.name;
-        printText(dialogueObj.script, dialogueObj.indicator);
+        printText(dialogueObj.script, indicatorClass);
         image.src = "images/" + dialogueObj.image + ".png";
     } else {
         // ...otherwise we're out of dialogue, reset the page
@@ -46,16 +59,14 @@ function changeText(theArray) {
         document.getElementById("dialogueWrapper").classList.add("hidden");
         document.getElementById("startBtn").classList.remove("hidden");
         dialogueIndex = -1;
+        patchState("currentUser", `${arrayChoice}Dialogue`, true);
     }
 }
 
-function printText(string, textIndicator) {
+function printText(string, indicatorClass) {
 
     // Create a indicator that will show when the current string is done
     let lastLetter = false;
-
-    // Start playing the speaking-sound
-    dialogueSound.play();
 
     // Reset the letter-index
     let letterIndex = 0; 
@@ -76,7 +87,7 @@ function printText(string, textIndicator) {
 
         // Set a ID for the timeout, so that we can close it when we are out of letters
         // Each letter-print prepares the next one
-        let id = setTimeout(printNext, 50);
+        let id = setTimeout(printNext, 10);
 
         // If this function call printed the last letter...
         if (lastLetter) {
@@ -89,10 +100,7 @@ function printText(string, textIndicator) {
 
             // ...show the indicator and make it look like it's supposed to...
             indicator.classList.remove("hidden");
-            indicator.classList.add(textIndicator);
-
-            // ...stop the speaking-sound since no more letters are showing up
-            dialogueSound.pause();
+            indicator.classList.add(indicatorClass);
         }
     }
 
