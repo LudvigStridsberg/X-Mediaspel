@@ -40,7 +40,7 @@
 
 #map {
     grid-area: 1/1/2/2;
-    background-color: var(--red);
+    background-color: #f5f5f5;
     position: sticky;
 }
 
