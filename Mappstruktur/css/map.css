@@ -1,0 +1,8 @@
+#mapHolder {
+    overflow: scroll;
+}
+
+svg {
+    height: 91vh;
+    width: 300%;
+}

@@ -48,5 +48,5 @@
 <script src="../../js/main.js"></script>
 <script src="../../js/phases.js"></script>
 <script src="../../js/dialogueScript.js"></script>
-
+<script src="../../js/map.js"></script>
 </html>
