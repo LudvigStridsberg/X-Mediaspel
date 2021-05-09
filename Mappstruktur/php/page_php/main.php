@@ -23,6 +23,9 @@
         <div id="slider">
             <div id="map">
                 <?php include "map.php"; ?>
+                <div id="summaryNotif">
+                    <p id="summaryText"></p>
+                </div>
             </div>
             <div id="dialogue">
                 <?php include "dialogue.php"; ?>
@@ -40,10 +43,10 @@
 <script>
     function getUsername(casing) {
         let name = "<?php echo $username; ?>";
-        console.log(name);
         return name.charAt(0).toUpperCase() + name.slice(1);
     }
 </script>
+<script src="../../js/summaries.js"></script>
 <script src="../../js/functions.js"></script>
 <script src="../../js/main.js"></script>
 <script src="../../js/phases.js"></script>

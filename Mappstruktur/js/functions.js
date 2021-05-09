@@ -21,7 +21,7 @@ function setState() {
         STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
         STATE.dialogue = phases[STATE.currentPhase].dialogue;
         //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
-        
+        displayLocations();
     });
 }
 
@@ -98,6 +98,7 @@ function phaseChanger() {
     // 1 Uppdateta phase-nummer via patchState
     // 2 Få koordinaterna från phase-objektet, lägg i state
     // 3 Uppdatera script-taggar och php-includes
+    displayLocations();
 }
 
 function importantBtn(theButton) {
@@ -108,21 +109,52 @@ function importantBtn(theButton) {
     }, 5000);
 }
 
-// ---------------------------------------------------
-    /*let {key, value} = patchObj;
-    switch(key) {
-        case "introDialogue":
-            STATE.introDialogue = value;
-            break;
-        case "completedGame":
-            STATE.completedGame = value;
-            break;
-        case "outroDialogue":
-            STATE.outroDialogue = value;
-            break;
-        case "inventory":
-            STATE.inventory = value;
-            break;
-        case "hasPlayed":
-            STATE.hasPlayed = value;
-    }*/
+function displayLocations() {
+    let locationArray = document.querySelectorAll(".locationPoint");
+
+    locationArray.forEach(location => {
+        let idNumber = location.id.substring(location.id.length - 1, location.id.length);
+
+        if(location.id.length > 9) {
+            idNumber = location.id.substring(location.id.length - 2, location.id.length);
+        }
+
+        if (idNumber < STATE.currentPhase) {
+            location.classList.toggle('hidden');
+        }
+
+        location.addEventListener("click", function() {
+            const sumNotif = document.getElementById("summaryNotif");
+            const sumText = document.getElementById("summaryText");
+
+            if (sumNotif.classList.contains("notifAnimationIn")) {
+                sumNotif.classList.add("notifAnimationOut");
+            }
+            sumNotif.classList.add("notifAnimationIn");
+            
+            if(location.classList.contains("markedSpot")) {
+                console.log("It contains it");
+                this.classList.replace("markedSpot", "");
+                sumNotif.classList.add("notifAnimationOut");
+            } else {
+                // locationArray.forEach(locationSpot => {
+                //     locationSpot.classList.remove("markedSpot");
+                // });
+
+                setTimeout(function() {
+                    sumNotif.classList.remove("notifAnimationOut");
+                    sumNotif.classList.add("notifAnimationIn");
+                }, 500);
+            }
+            this.classList.add("markedSpot");
+            // if(sumNotif.classList.contains("notifAnimationIn")) {
+            //     sumNotif.classList.remove("notifAnimationIn");
+            //     sumNotif.classList.add("notifAnimationOut");
+            // }
+
+            //sumNotif.classList.replace("notifAnimationIn", "notifAnimationOut");
+            
+            // sumText.innerHTML = summaries[idNumber];
+        });
+    });
+}
