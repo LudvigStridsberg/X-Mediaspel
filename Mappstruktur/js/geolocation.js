@@ -68,8 +68,8 @@ const GPS = {
 };
 
 function compareLocationFunction(locationData) {
-    let targetLat = STATE.targetLocation.latitude;
-    let targetLon = STATE.targetLocation.longitude;
+    let targetLat = STATE.coordinatesTarget.latitude;
+    let targetLon = STATE.coordinatesTarget.longitude;
     let {latitude, longitude} = locationData;
     let latOk = false;
     let lonOk = false;
@@ -85,12 +85,12 @@ function compareLocationFunction(locationData) {
     }
 
     // If they have arrived we don't want to repeatedly start the dialogue after the first time
-    if (latOk && lonOk && STATE.introDialogue == false) {
+    if (latOk && lonOk && STATE.dialogue.introDialogue == false) {
         navigator.geolocation.clearWatch(gpsID);
         dialogueInit("intro");
     }
 
-    if(latOk && lonOk && STATE.introDialogue == true && STATE.gameComplete == true && STATE.outroDialogue == false) {
+    if(latOk && lonOk && STATE.dialogue.introDialogue == true && STATE.currentUser.gameComplete == true && STATE.dialogue.outroDialogue == false) {
         navigator.geolocation.clearWatch(gpsID);
         dialogueInit("outro");
     }
