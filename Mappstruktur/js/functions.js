@@ -70,7 +70,8 @@ function dialogueInit(dialogueType) {
     let dWrapper = document.getElementById("dialogueWrapper");
     dialogueTemp = STATE.dialogue[dialogueType];
     // Use toggle?
-    dWrapper.classList.remove("hidden");
+    
+    dWrapper.classList.remove("none");
     dWrapper.classList.add("flexer");
     dialogueBox.click();
 }
@@ -84,7 +85,8 @@ function gameInit() {
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
 // alltid där, vi måste byta mellan display: none och display: block/inline/whatever
 function itemHandler() {
-
+    //! kolla igenom detta också så allt funkar med phaseChanger
+    patchState("currentUser", "inventory", itemObj);
 }
 
 function phaseChanger() {
