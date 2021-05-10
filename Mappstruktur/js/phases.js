@@ -137,6 +137,14 @@ const phases = {
                     name: "Portmästarn",
                     image: "portmastaren.png",
                     script: "Möt mig vid fontänen på stortorget. Och var försiktig med vem du pratar med.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[false, false, false, false, false, false, false]
+                    }
+
                 } // I spelarens inventory kan hen nu se kartan (en svg-bild) och första platsen är markerad. Klickar spelaren på platsen så står det en snabb recap om vad som hänt och behöver göras
             ]
         }
@@ -229,6 +237,13 @@ const phases = {
                     name: "BSK",
                     image: "",
                     script: "Innan du ens hinner tacka ja (eller nej för den delen) har du ett brev i dina händer.",
+                    items:{
+                        mapItem: true,
+                        letterItem: true,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[false, false, false, false, false, false, false]
+                    }
                 },
             ],
             // Här lyser inventory upp och då finns gåtan där att läsa
@@ -305,6 +320,13 @@ const phases = {
                     name: "BSK",
                     image: "",
                     script: "Du håller ut brevet och båda aporna hugger mot din hand. Apan till vänster lyckats roffa åt sig brevet.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[false, false, false, false, false, false, false]
+                    }
                 },
                 // Brevet lämnar inventory
                 {
@@ -387,6 +409,13 @@ const phases = {
                     name: "BSK",
                     image: "",
                     script: "Du märker att din hand är knuten runt något hårt. Du öppnar upp dina fingrar och ser i handflatan en ädelsten - rosenkvarts.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[true, false, false, false, false, false, false]
+                    }
                 }, // Här ska inventory lysa till och stenen ska läggas till
                 {
                     name: "BSK",
@@ -556,6 +585,13 @@ const phases = {
                     name: "BSK",
                     image: "",
                     script: "Stenen som ligger på handflatan ser nästan ut att ha målats med en pensel i olika orangea och röda färger. Stråken av de olika nyanserna gör den väldigt vacker.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[true, true, false, false, false, false, false]
+                    }
                 }, // Stenen läggs till - inventory lyser till
                 {
                     name: "Bandledaren",
@@ -581,6 +617,13 @@ const phases = {
                     name: "Bandledaren",
                     image: "bandledaren.png",
                     script: "Åhh tusen tack! Här är avskedsgåvan.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: true,
+                        oldLetterItem: false,
+                        gems:[true, true, false, false, false, false, false]
+                    }
                 }, // illustration läggs till - inventory lyser till
                 {
                     name: "Bandledaren",
@@ -698,6 +741,13 @@ const phases = {
                     name: "Jag",
                     image: "",
                     script: "Bandledaren ville att du skulle ha den här som ett minne.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[true, true, false, false, false, false, false]
+                    }
                 }, // Bilden lämnar inventory
                 {
                     name: "Ledsna Gubben",
@@ -810,6 +860,13 @@ const phases = {
                     name: "BSK",
                     image: "",
                     script: "Stenens mitt är så mörkt grön att det nästan ser svar ut, medan de spräckliga kanterna är i en ljusare nyans. Detta måste vara en jadeit.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[true, true, true, false, false, false, false]
+                    }
                 }, // Stenen läggs till i inventory - lyser till på iconen
                 {
                     name: "BSK",
@@ -1142,6 +1199,13 @@ const phases = {
                     name: "BSK",
                     image: "",
                     script: "Även om skrattet skedde på din bekostnad; kan det vara så att de behövde det? Det känns som ett konstigt problem, men innan du hinner analysera händelsen färdigt ligger den ljusgula stenen i din hand.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[true, true, true, true, false, false, false]
+                    }
                 }, // Inventoy lyser upp - ny sten // Ny bild med bakgrundsfärg på älvan
                 {
                     name: "BSK",
@@ -1341,6 +1405,13 @@ const phases = {
                     name: "BSK",
                     image: "farg_ormen.png",
                     script: "Ormen börjar omringas av samma sken du sett tidigare. De röda strålarna lyser som strålkastare. När de slocknat igen ser du efter i din hand och finner en klarröd rubin.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[true, true, true, true, true, false, false]
+                    }
                 },
                 {
                     name: "BSK",
@@ -1552,9 +1623,16 @@ const phases = {
                     name: "BSK",
                     image: "",
                     script: "Portmästaren är ursinnig. Du minns Zodiakens ord. Lita på din magkänsla.",
+                    items:{
+                        mapItem: true,
+                        letterItem: false,
+                        photo: false,
+                        oldLetterItem: false,
+                        gems:[true, true, true, true, true, false, false]
+                    }
                 }, // Spelaren gör slutvalet // Annorlunda outros på denna
             ],
-            outroB: [ // Ger stenarna till Portis
+            outroA: [ // Ger stenarna till Portis //!Kontrollera att alla stenar är false
                 {
                     name: "BSK",
                     image: "",
@@ -1636,7 +1714,7 @@ const phases = {
                     script: "VÄRLDENS ÖDE LIGGER NU ÅTER PÅ DINA AXLAR. VÄLJ RÄTT DENNA GÅNG. PORTMÄSTAREN FINNS DÄR NI TRÄFFADES FÖRST.",
                 }
             ],
-            outroB: [ // Ger stenarna till ädeln
+            outroB: [ // Ger stenarna till ädeln //! kontroll ifall stenarna är true
                 {
                     name: "BSK",
                     image: "",
