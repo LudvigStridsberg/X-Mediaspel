@@ -1,0 +1,74 @@
+#mapWrapper {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--gray);
+    padding: 2vh;
+}
+
+#mapSection {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--white);
+    border: 3px solid black;
+}
+
+#infoSection {
+    box-sizing: border-box;
+    margin-top: 2vh;
+    width: 100%;
+    height: 35%;
+    background-color: var(--white);
+    border: 3px solid black;
+}
+
+.infoTag {
+    z-index: 10;
+    position: relative;
+    top: -5%;
+    left: -1%;
+    width: max-content;
+    font-family: var(--elite);
+    font-size: 14px;
+    border: 3px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    padding: 1vw 4vw;
+}
+
+.infoTextWrapper {
+    padding: 5%;
+    font-family: var(--elite);
+}
+
+#plats1,
+#plats2,
+#plats3,
+#plats4,
+#plats5,
+#plats6,
+#plats7,
+#plats8,
+#plats9 {
+    fill: var(--yellow) ; 
+}
+
+#plats1:active,
+#plats2:active,
+#plats3:active,
+#plats4:active,
+#plats5:active,
+#plats6:active,
+#plats7:active,
+#plats8:active,
+#plats9:active {
+    fill: var(--green); 
+}
+.markedBlip {
+    stroke: var(--black);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+}
+
+
+ 

@@ -1,49 +1,94 @@
 #invWrapper {
     width: 100%;
     height: 100vh;
+    box-sizing: border-box;
+    padding: 2vh;
     background-color: var(--gray);
-    flex-direction: column;
 }
 
-#gems {
-    width: 87%;
-    flex-wrap: wrap;
+#invImgSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35%;
+    width: 100%;
+    /* background-color: var(--lightgray); */
+    margin: 3vh 0;
+}
+#invImgSection img {
+    width: 70%;
+    overflow: hidden;
 }
 
-#invWrapper > div > div {
-    width: 10vh;
-    height: 10vh;
-    margin: 5px;
+#invSection {
+    display: grid;
+    height: 200px;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(2, 70px);
+    place-content: center;
+    gap: 1vh;
+    background-color: var(--lightgray);
+    margin-bottom: 4vh;
+    box-sizing: border-box;
 }
 
-#otherStuff > div {
-    background-color: lightgray;
+#invSection div {
+    border: 2px solid var(--darkgray);
 }
 
-#gems > div:first-child {
-    background-color: var(--pink);
+#invSection div:nth-child(1) {
+    border: 2px solid var(--darkgray);
+    background-image: url(../../media/illustrations/malmu_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-#gems > div:nth-child(2) {
-    background-color: var(--orange);
+#gemSection {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(2, 70px);
+    place-content: center;
+    gap: 1vh;
 }
 
-#gems > div:nth-child(3) {
-    background-color: var(--green);
+#gemSection div:nth-child(1) {
+    background-color: var(--darkgray);
+    border-radius: 50%;
 }
 
-#gems > div:nth-child(4) {
-    background-color: var(--purple);
+#gemSection div:nth-child(2) {
+    background-color: var(--darkgray);
+    border-radius: 50%;
 }
 
-#gems > div:nth-child(5) {
-    background-color: var(--yellow);
+#gemSection div:nth-child(3) {
+    background-color: var(--darkgray);
+    border-radius: 50%;
 }
 
-#gems > div:nth-child(6) {
-    background-color: var(--red);
+#gemSection div:nth-child(4) {
+    background-color: var(--darkgray);
+    border-radius: 50%;
 }
 
-#gems > div:last-child {
-    background-color: var(--blue);
+#gemSection div:nth-child(5) {
+    background-color: var(--darkgray);
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+}
+
+#gemSection div:nth-child(6) {
+    background-color: var(--darkgray);
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+}
+
+#gemSection div:nth-child(7) {
+    background-color: var(--darkgray);
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
 }
