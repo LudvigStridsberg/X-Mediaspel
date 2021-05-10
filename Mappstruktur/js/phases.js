@@ -142,7 +142,7 @@ const phases = {
                         letterItem: false,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[false, false, false, false, false, false, false]
+                        gems:[false, false, false, false, false]
                     }
 
                 } // I spelarens inventory kan hen nu se kartan (en svg-bild) och första platsen är markerad. Klickar spelaren på platsen så står det en snabb recap om vad som hänt och behöver göras
@@ -247,7 +247,7 @@ const phases = {
                         letterItem: true,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[false, false, false, false, false, false, false]
+                        gems:[false, false, false, false, false]
                     }
                 },
             ],
@@ -335,7 +335,7 @@ const phases = {
                         letterItem: false,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[false, false, false, false, false, false, false]
+                        gems:[false, false, false, false, false]
                     }
                 },
                 // Brevet lämnar inventory
@@ -429,7 +429,7 @@ const phases = {
                         letterItem: false,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[true, false, false, false, false, false, false]
+                        gems:[true, false, false, false, false]
                     }
                 }, // Här ska inventory lysa till och stenen ska läggas till
                 {
@@ -635,7 +635,7 @@ const phases = {
                         letterItem: false,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[true, true, false, false, false, false, false]
+                        gems:[true, true, false, false, false]
                     }
                 }, // Stenen läggs till - inventory lyser till
                 {
@@ -667,7 +667,7 @@ const phases = {
                         letterItem: false,
                         photo: true,
                         oldLetterItem: false,
-                        gems:[true, true, false, false, false, false, false]
+                        gems:[true, true, false, false, false]
                     }
                 }, // illustration läggs till - inventory lyser till
                 {
@@ -801,7 +801,7 @@ const phases = {
                         letterItem: false,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[true, true, false, false, false, false, false]
+                        gems:[true, true, false, false, false]
                     }
                 }, // Bilden lämnar inventory
                 {
@@ -935,7 +935,7 @@ const phases = {
                         letterItem: false,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[true, true, true, false, false, false, false]
+                        gems:[true, true, true, false, false]
                     }
                 }, // Stenen läggs till i inventory - lyser till på iconen
                 {
@@ -1344,7 +1344,7 @@ const phases = {
                         letterItem: false,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[true, true, true, true, false, false, false]
+                        gems:[true, true, true, true, false]
                     }
                 }, // Inventoy lyser upp - ny sten // Ny bild med bakgrundsfärg på älvan
                 {
@@ -1570,7 +1570,7 @@ const phases = {
                         letterItem: false,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[true, true, true, true, true, false, false]
+                        gems:[true, true, true, true, true]
                     }
                 },
                 {
@@ -1828,7 +1828,7 @@ const phases = {
                         letterItem: false,
                         photo: false,
                         oldLetterItem: false,
-                        gems:[true, true, true, true, true, false, false]
+                        gems:[true, true, true, true, true]
                     }
                 }, // Spelaren gör slutvalet // Annorlunda outros på denna
             ],
