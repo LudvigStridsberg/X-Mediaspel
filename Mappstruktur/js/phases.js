@@ -22,7 +22,7 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag visste att du skulle klara det, " + getUsername() + ".",
                 },
                 {
@@ -32,12 +32,12 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Du lyckades vara på rätt plats vid rätt tillfälle. Sen har du visat dig värdig genom att lösa min gåta. Därför har haft ett öga på dig.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag är portmästaren av den undre världen, men de flesta brukar kalla mig Gatekeepern. Nu behöver jag din hjälp.",
                 },
                 {
@@ -47,17 +47,17 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Det jag kommer berätta för dig är det ingen levande människa som vet. Så lyssna noga.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Du föddes som en människa i den övre världen. Ni har en teknologi, industri och.. mänsklighet.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Det ni inte har någon aning om är att det finns en parallell värld som lever i samspel med er egen. Detta är den undre världen, och den har sin kärna i Malmu.",
                 },
                 {
@@ -67,12 +67,13 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Malm under. Malm-ö betyder egentligen Malm över. Ni människor tycker det är lika roligt varje gång.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+
+                    image: "portmastaren.png",
                     script: "Den undre världen drivs av magi, fantasi och kreativitet från den övre världen, och ju mer ni ger, desto mer får ni tillbaka...",
                 },
                 {
@@ -87,12 +88,12 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Obalans kan få stora konsekvenser. Det är därför du är här.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Balansen är inte bara beroende av flödet av fantasi mellan världarna, utan det finns en till, stor kraft som påverkar våra dimensioner.",
                 } // Här kommer bildspel med förklaring/text/info
             ],
@@ -104,7 +105,7 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Ingen konst, inga fantastiska historier, ingen musik, inga skratt. Bara en dyster, själskrossande levnad.",
                 },
                 {
@@ -114,12 +115,12 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag har redan samlat de fem första stenarna som finns i den undre världen, men jag kan inte samla dem i den övre.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "De är för den sakens skull du behövs. Du har visat dig värdig så du behöver inte vara orolig.",
                 },
                 {
@@ -129,12 +130,12 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Inga men. Vi måste skynda oss. Jag har mina misstankar om var vi hittar vissa stenar, men vi kan behöva fråga runt bland andra väsen.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Möt mig vid fontänen på stortorget. Och var försiktig med vem du pratar med.",
                 } // I spelarens inventory kan hen nu se kartan (en svg-bild) och första platsen är markerad. Klickar spelaren på platsen så står det en snabb recap om vad som hänt och behöver göras
             ]
@@ -182,11 +183,11 @@ const phases = {
                 {
                     name: "BSK",
                     image: "",
-                    script: "Nu står han rakt framför dig med samma stora leende. Ödlan kryper snabbt upp på pojkens axel.",
+                    script: "Nu står han rakt framför dig med samma stora leende. Ödlan kryper snabbt upp på pojkens hand.",
                 },
                 {
                     name: "Pojkens ödla",
-                    image: "",
+                    image: "djurpojken_odla.png",
                     script: "Som kaninen i hatten dök du upp! Vi skulle behöva din hjälp!",
                 },
                 {
@@ -196,7 +197,7 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Så du har funnit Djurpojken.",
                 },
                 {
@@ -206,7 +207,7 @@ const phases = {
                 },
                 {
                     name: "Ödlan",
-                    image: "",
+                    image: "djurpojken_odla.png",
                     script: "Det är så här att jag är mitt uppe i en fin middag med mina kära vänner.",
                 },
                 {
@@ -216,12 +217,12 @@ const phases = {
                 },
                 {
                     name: "Ödlan",
-                    image: "",
+                    image: "djurpojken_odla.png",
                     script: "Och som en virrig höna glömde jag helt och hållet bort att jag hade ett viktigt ärende till min andre käre vän Hipp.",
                 },
                 {
                     name: "Ödlan",
-                    image: "",
+                    image: "djurpojken_odla.png",
                     script: "Skulle du kunna lämna detta brev till honom?",
                 },
                 {
@@ -239,7 +240,7 @@ const phases = {
                 },
                 {
                     name: "Ödlan",
-                    image: "",
+                    image: "djurpojken_odla.png",
                     script: "Var försiktig med vem du litar på.. Väsen kan vara listiga och sluga, precis som räven, eller ormen.",
                 },
                 {
@@ -249,12 +250,12 @@ const phases = {
                 },
                 {
                     name: "Ödlan",
-                    image: "",
+                    image: "djurpojken_odla.png",
                     script: "Nej, inte Happ. Eller jo, Happ också, men jag hade en annan person i åtanke…",
                 },
                 {
                     name: "Ödlan",
-                    image: "",
+                    image: "djurpojken_odla.png",
                     // Här kommer gåtan igen i dialogrutan
                     script: "Kom ihåg: <b>Hipp</b> är rena rama <b>teater</b>apan du vet säkert vart du kan hitta honom, han borde <b>inte vara så långt härifrån.</b>",
                 },
@@ -282,7 +283,7 @@ const phases = {
                 },
                 {
                     name: "Hipp och Happ",
-                    image: "",
+                    image: "hipp_happ.png",
                     script: "DET ÄR TILL MIG! NEJ TILL MIG!",
                 },
                 {
@@ -292,7 +293,7 @@ const phases = {
                 },
                 {
                     name: "Hipp och Happ",
-                    image: "",
+                    image: "hipp_happ.png",
                     script: "DET ÄR JAG! NEJ, JAG ÄR HIPP!",
                 },
                 {
@@ -308,27 +309,27 @@ const phases = {
                 // Brevet lämnar inventory
                 {
                     name: "Happ",
-                    image: "",
+                    image: "happ_arg.png",
                     script: "Rackarns!",
                 },
                 {
                     name: "Hipp",
-                    image: "",
+                    image: "hipp.png",
                     script: "Du ska alltid ställa till med problem Happ.. Tack för brevet, det är JAG som är Hipp.",
                 },
                 {
                     name: "Hipp",
-                    image: "",
+                    image: "hipp.png",
                     script: "Jag har väntat på det här från Djurpojken. Det var väldigt viktigt för mig. I det här kuvertet finns nämligen mitt antagningsbesked från teaterhögskolan.",
                 },
                 {
                     name: "Happ",
-                    image: "",
+                    image: "happ.png",
                     script: "Öppna det nu, öppna det nu!",
                 },
                 {
                     name: "Hipp",
-                    image: "",
+                    image: "hipp.png",
                     script: "Lugn, lugn..",
                 },
                 {
@@ -338,7 +339,7 @@ const phases = {
                 },
                 {
                     name: "Happ",
-                    image: "",
+                    image: "happ.png",
                     script: "Vad står det!?",
                 },
                 {
@@ -348,7 +349,7 @@ const phases = {
                 },
                 {
                     name: "Hipp",
-                    image: "",
+                    image: "hipp.png",
                     script: "JAG ÄR ANTAGEN! Allt mitt slit har inte varit förgäves!",
                 },
                 {
@@ -364,13 +365,14 @@ const phases = {
                 // Hipps rosa skugga blir synlig
                 {
                     name: "BSK",
-                    image: "",
+                    image: "farg_hipp.png",
                     script: "Strålar i ljusrosa nyans bryter sig ut i formen av Hipps siluett. Är det ingen annan som ser det här!?",
                 },
                 {
                     name: "BSK",
                     image: "",
                     script: " Ljuset dansar runt i bara några sekunder innan det lägger sig igen.",
+
                 },
                 {
                     name: "Jag",
@@ -393,17 +395,17 @@ const phases = {
                 }, // Här ska inventory lysa till och stenen ska läggas till
                 {
                     name: "Happ",
-                    image: "",
+                    image: "happ.png",
                     script: "Såg vadå? Jag har inte sett någonting. Men jag hör ett riktigt oväsen. Är det den där orkestern som är igång igen?",
                 },
                 {
                     name: "Hipp",
-                    image: "",
+                    image: "hipp.png",
                     script: "De har spelat förskräckligt på senaste tiden.",
                 },
                 {
                     name: "Hipp",
-                    image: "",
+                    image: "hipp.png",
                     script: "Du, vad du nu heter..",
                 },
                 {
@@ -413,12 +415,12 @@ const phases = {
                 },
                 {
                     name: "Hipp",
-                    image: "",
+                    image: "hipp.png",
                     script: getUsername() + ", du verkar ju ha en talang för att hjälpa folk. Gå dit och se om du inte kan göra något åt deras katzenjammer.",
                 },
                 {
-                    name: "",
-                    image: "",
+                    name: "Hipp",
+                    image: "hipp.png",
                     script: "Om du går genom passagen typ nu så border du fånga dem i rättan tid.",
                 },
                 {
@@ -470,7 +472,7 @@ const phases = {
                 },
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Nej nej, du stör inte. Faktum är att jag behöver något annat att tänka på. En gång var vi den ståtliga optimistorkestern, men nu..",
                 },
                 {
@@ -480,12 +482,12 @@ const phases = {
                 },
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Numera är vi den värdelösa pessimistorkestern. En av våra medlemmar hoppade av, vilket gjorde att allas humör blev i moll och nu kan vi inte rycka upp oss till dur igen.",
                 },
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Jag har en idé om hur vi skulle kunna må lite bättre, men det innebär att spela musik. Som du kanske både sett och hört så är ingen av oss tillräckligt pigg för att göra det.",
                 },
                 {
@@ -500,34 +502,34 @@ const phases = {
                 },
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Det hade varit jättesnällt! Du kanske redan vet detta, men det finns en låtsnutt som är så överanvänd, en sådan kliché, så att de flesta musiker som känner till den brister ut i skratt när de hör den.",
                 },
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Om du skulle spela den snutten tror jag att vi skulle kunna känna tillräcklig glädje för att kunna rycka upp oss och komma vidare. Det var det vår före detta medlem brukade göra när vi körde fast förr.",
                 }, // Nedanstående är ledtråd till spelet
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Jag vet inte exakt hur den spelas, men jag vet att <b>första noten är ett D</b>. Namnet är på engelska och betyder <b>‘Slicket’</b>. Se om du inte kan ta och spela den för bandet!",
                 }, // Spelet blir nu tillgängligt - knappen lyser upp - dialogen fortsätter först när spelet är klarat
             ],
             outro: [
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "En av bandmedlemmarna suckar ljudligt, en annan skakar på huvudet med ett snett leende, och de andra två brister ut i skratt.",
                 },
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Bandledarens axlar sänks en nivå av lättnad när hon ser sina vänner börja komma till liv igen.",
                 },
                 {
                     name: "Bandmedlemmar",
-                    image: "",
+                    image: "orkestern.png",
                     script: "Åh neeeej! Inte den! <br> Seriöst!? <br> Var det du som bad människan att spela THE LICK?",
                 },
                 {
@@ -542,7 +544,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "farg_orkestern.png",
                     script: "Bandmedlemmarna nickar i unison. I samma stund kan du ana strålar som börjar spricka fram bakom bandmedlemmarna, precis som dem du såg hos Hipp och Happ.",
                 },
                 {
@@ -557,17 +559,17 @@ const phases = {
                 }, // Stenen läggs till - inventory lyser till
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Tack ska du ha för hjälpen. Jag tror att vi ska kunna rycka upp oss igen. Vår gamle medlem, han som lämnade, brukade spela den snutten varje gång vi tappade humöret.",
                 },
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Men en dag hade han helt plötsligt bara tappat det, och han ville varken spela eller umgås med oss. Nu vägrar han till och med att prata.",
                 },
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Jag skulle bara vilja ge honom en gåva som adjö, så att han aldrig glömmer sin orkester. Tror du att du skulle kunna hitta honom och ge den?",
                 },
                 {
@@ -577,12 +579,12 @@ const phases = {
                 },
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Åhh tusen tack! Här är avskedsgåvan.",
                 }, // illustration läggs till - inventory lyser till
                 {
                     name: "Bandledaren",
-                    image: "",
+                    image: "bandledaren.png",
                     script: "Senast jag såg honom hade han vandrat längs södra promenaden, vid kanalen. Där ställde han sig sedan och grät och grät och grät.",
                 },
                 {
@@ -592,7 +594,7 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Var har du varit!?",
                 },
                 {
@@ -602,17 +604,17 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Det kan vara farligt att vara en ensam människa i den undre världen. Det må ha gått väl, men nästa gång kanske du inte har sådan tur...",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Det var naivt av mig att lämna dig. Från och med nu reser vi tillsammans.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag har ett väsen jag vill besöka, men först behöver jag samla in mer information om var väsendet är. Det flyttar sig konstant.",
                 },
                 {
@@ -637,7 +639,7 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Nåväl. Vi kan gå dit.",
                 },
                 {
@@ -664,7 +666,7 @@ const phases = {
                 },
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_1.png",
                     script: "*Snyft* “Vil-vilka är ni?",
                 },
                 {
@@ -674,7 +676,7 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Han vet vem jag är.",
                 },
                 {
@@ -699,7 +701,7 @@ const phases = {
                 }, // Bilden lämnar inventory
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_1.png",
                     script: "Åhh! Mina fina vänner! Hur kunde jag vara så dum och lämna orkestern!?",
                 },
                 {
@@ -714,7 +716,7 @@ const phases = {
                 },
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_2.png",
                     script: "*Snyft* “Är det så?",
                 },
                 {
@@ -724,7 +726,7 @@ const phases = {
                 },
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_2.png",
                     script: "Det var så länge sedan jag spelade. De kanske inte ens vill ha med mig i orkestern.",
                 },
                 {
@@ -739,7 +741,7 @@ const phases = {
                 },
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_1.png",
                     script: "Du kanske har rätt… Jag måste tillbaka och prata med dem! Tack för fotografiet. Finns det något jag kan ger er i gengäld?",
                 },
                 {
@@ -749,7 +751,7 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag söker Zodiaken. Han har bytt position igen.",
                 },
                 {
@@ -759,12 +761,12 @@ const phases = {
                 },
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_1.png",
                     script: "Medan jag vilset vandrat i området så mötte jag Zodiaken, och den intresserade mig genast.",
                 },
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_2.png",
                     script: "Den lyssnade på mina problem och gav mig de här stjärntecknena. De ligger dock helt huller om buller…",
                 },
                 {
@@ -774,12 +776,12 @@ const phases = {
                 },
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_1.png",
                     script: "... och jag vet inte hur jag ska få rätt på dem. Åhh den litade ju på mig! Jag måste sortera dem rätt! Kan ni förstå er på det här!?",
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "ledsna_spel.png",
                     script: "Gubben räcker fram brädet med brickorna. Kan vi lösa det här?",
                 }, // Knappen för spel lyser till
             ], // När spelet klaras blir nästa del tillgänglig
@@ -791,17 +793,17 @@ const phases = {
                 }, // Ledtråd till nästa location kommer i dialogen nedan
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_1.png",
                     script: "Tack så mycket, det var verkligen snällt av dig. Nu känner jag hur <b>lugnet</b> sprider sig i kroppen. När jag tänker på att en <b>förening</b> av <b>15</b> stjärntecken är gjorda är jag säker på att du hittar <b>gatan</b> som du letar efter.",
                 },
                 {
                     name: "Ledsna Gubben",
-                    image: "",
+                    image: "ledsna_1.png",
                     script: "Nu får ni ursäkta mig! Jag ska öva på mitt instrument innan jag går tillbaka till mina vänner i orkestern!",
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "farg_ledsna.png",
                     script: "Återigen ser du samma ljusstrålar dansa, denna gång i en grön färg. Stenen känns len i din hand, och du tittar på den.",
                 },
                 {
@@ -816,7 +818,7 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Nu känner jag hur <b>lugnet</b> sprider sig i kroppen. När jag tänker på att en <b>förening</b> av <b>15</b> stjärntecken är gjorda är jag säker på att du hittar <b>gatan</b> som du letar efter.",
                 },
             ]
@@ -843,7 +845,7 @@ const phases = {
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Ah, herr Portmästare. Så trevligt att se er igen, jag har väntat er och ert sällskap.",
                 },
                 {
@@ -853,22 +855,22 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag förväntar mig inget mindre av er, ers allvetande. Som ni kanske redan förutspått så har jag två frågor.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Det är som ni säger, och jag kan redan nu svara på er första fråga; jag förblir neutral.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Jag må se genom vävnaden av tiden, men inte ens jag besitter trotsighet nog att bekämpa ödet.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Jag vet vad som kommer hända med er, herr Portmästare. Om ni kommer lyckas eller ej, faller sig ödet berätta för er när det är dags. Återigen, mer än så tillåts jag inte säga.",
                 },
                 {
@@ -878,17 +880,17 @@ const phases = {
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "För er andra fråga bör ni söka er mot älvornas slott.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Ers allvetande, med all respekt, där finns inget mer än ruiner nu för tiden. Slottet har varit borta sedan tusentals år tillbaka.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Javisst vet jag det. Men så länge ruinerna står där, har slottet endast dött sin första död. Minnena från förr lever kvar, och ser ni inte dem, bör ni leta ännu noggrannare.",
                 },
                 {
@@ -900,22 +902,22 @@ const phases = {
             outro: [
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: getUsername() + ", att ni har tagit er an detta uppdraget är mycket nobelt av er. Er tillit till herr Portmästare är beundransvärd.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Oroa er inte, herr Portmästare kan inte höra oss.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Jag ser att ni samlat på er tre stenar. Imponerande. De bär på en mycket större makt än ni tror.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "När stenarna glider ifrån varandra, dras de till misär. Ni har löst problem för att åkalla dem, inte sant?",
                 },
                 {
@@ -925,42 +927,42 @@ const phases = {
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Som ni vet kan stenarnas orsaka katastrofer i båda våra världar när de glider ifrån varandra. Misären som orsakas av stenarna spär sedan på deras separation allt mer och skapar en ond cykel",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Situationen blir alltså bara värre ju längre den tillåts att fortlöpa.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Stenarna behöver placeras på sina rätta platser i både den övre och undre världen. Först då kommer världarna sakta att helas igen.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Jag kan se genom tid och rum. Det förflutna, nutiden och framtiden. Jag kan inte berätta om vad som kommer hända. Men jag kan ge er ett råd.",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Lika viktigt som att lyssna på andra, är att lyssna på den egna magkänslan.",
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Vad säger ni till" + getUsername() + ", ers allvetande?",
                 },
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Inget av vikt för er, herr Portmästare. Jag ska hjälpa er på er resa.",
                 }, // Nedan kommer en ledtråd till nästa location
                 {
                     name: "Zodiaken",
-                    image: "",
+                    image: "zodiaken.png",
                     script: "Det ni söker finner ni på platsen där alla goda ting är tre. <br> Följ solnedgångens riktning, där pelarna ståtligt minner om en tid nu svunnen. <br> Där finns den älva vars två syskon fortsatt utan henne, <br> Ty hon är fast mellan fyra hörn.",
                 },
             ]
@@ -977,17 +979,17 @@ const phases = {
             intro: [
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Det här var en gång ett ståtligt slott där älvorna bodde. Det enda som finns kvar nu är ruiner, och älvorna har sedan dess spridit ut sig. De går att hitta på lite alla möjliga ställen förutom just här.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Men Zodiaken har aldrig fel, så det måste finnas en älva kvar här någonstans. Vi får leta runt på området efter en ‘älva fast mellan fyra hörn’.",
                 },
                 {
                     name: "Portmästarn",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Den kanske kan berätta vart vi bör gå.",
                 }
             ],
@@ -1041,7 +1043,7 @@ const phases = {
                 },
                 {
                     name: "Älvan Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Hjälp? Du kan hjälpa oss förstå vad du gör med DEN DÄR!",
                 },
                 {
@@ -1061,7 +1063,7 @@ const phases = {
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Jaså det vet du? Då har jag ett problem du kan få lösa åt oss.",
                 },
                 {
@@ -1071,7 +1073,7 @@ const phases = {
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Åh ack och ve! Att bråka över en sådan petitess! Nu är vår lillasyster försvunnen, puts väck!",
                 },
                 {
@@ -1081,12 +1083,12 @@ const phases = {
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Vi skäms så mycket.. Borde vi verkligen berätta?",
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Du är en främling! Hur ska vi kunna lita på främlingar?",
                 },
                 {
@@ -1096,12 +1098,12 @@ const phases = {
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Jag har en idé! Vad sägs om en liten gåta?",
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Om ni löser gåtan kan vi lita på er och kan berätta vi vad vi bråkade om. Då kanske vi kan lösa vårt problem. Jag saknar henne så!",
                 },
                 {
@@ -1111,7 +1113,7 @@ const phases = {
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "De tar inte bara en men flera personer till inte bara ett men flera ställen, men frågan är hur många av dem tar personer till ställen från stället som döptes efter kungen, eller kungen som döptes efter stället?",
                 }, // Knappen för gåtor lyser upp - spelaren ska skriva in rätt siffra (6)
             ],
@@ -1123,17 +1125,17 @@ const phases = {
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Gick du verkligen på den lätta!? Varför skulle vi vilja veta några sådana DUMHETER!?",
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Är det svårt att ta sig runt i världen när man är så KORKAD?",
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "farg_alvan.png",
                     script: "Det är aldrig roligt att bli gjort till åtlöje. Just som du börjar tappa ditt tålamod ljusnar ett gult sken från älvorna.",
                 },
                 {
@@ -1148,12 +1150,12 @@ const phases = {
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Nåväl, vi kan berätta vad vi bråkade om.",
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Vår syster ville inte bo på kyrkogården, icke sa nicke! Hon ville stanna där vi redan var. Nu har vi inte sett henne på snart 77 år.",
                 },
                 {
@@ -1163,7 +1165,7 @@ const phases = {
                 },
                 {
                     name: "Marky",
-                    image: "",
+                    image: "alvan.png",
                     script: "Allt hon gjorde var att gnälla. Wää, wää, wää, blaa, blaa, blaa.",
                 },
                 {
@@ -1173,22 +1175,22 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Om du inte har något emot det så slösar jag personligen inte mer tid här. Låt oss ta oss vidare.",
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag har en vän som kan ha lokaliserat den sista stenen åt oss. Hon kommer inte åt den eftersom vi behöver en människa från den övre världen. Allt du behöver göra är att locka fram den.",
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag vet att vi skulle resa tillsammans, men hon och jag behöver tala i enrum, så jag går i förväg. Jag finns där för att möta dig när vi väl kommer fram.",
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Ta dig till min väns grotta i Kungsparken. Du hittar henne längs kommendantstigen.",
                 },
             ]
@@ -1205,22 +1207,22 @@ const phases = {
             intro: [
                 {
                     name: "BSK",
-                    image: "",
+                    image: "portmastaren_ormen.png",
                     script: "Gatekeepern är så uppslukad i sin konversation att han inte märker dig. Han tittar upp mot ormen vars huvud hänger från taket på grottan",
                 },
                 {
                     name: "Portmästaren",
-                    image: "", // Bild på ryggen
+                    image: "portmastaren_ormen.png", // Bild på ryggen
                     script: "Så länge allt går enligt plan så kommer din frihet. Du har varit en stor hjälp i arbetet och för det ska du belönas.",
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "portmastaren_ormen.png",
                     script: "Ormen drar mungiporna till ett leende samtidigt som hon nöjt skjuter ut sin tunga. Leendet blir dock inte långvarigt då hon får syn på dig bakom Portmästaren.",
                 },
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "Vi har vissst får ssällsskap.",
                 },
                 {
@@ -1230,7 +1232,7 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Hur länge har du varit här?",
                 },
                 {
@@ -1240,7 +1242,7 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Hur mycket har du hört?",
                 },
                 {
@@ -1275,7 +1277,7 @@ const phases = {
                 },
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "Sså, du är människan ssom ssamlar in sstenarna?",
                 },
                 {
@@ -1285,17 +1287,17 @@ const phases = {
                 },
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "Vi ssamarbetar, du och jag. Jag är en god vän till Portmästaren.",
                 },
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "Jag har ssökt upp den ssissta sstenen för att hjälpa er på ert sstora uppdrag. Det är det minssta jag kan göra.",
                 },
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "Gatekeepern och jag försstår varandra på ett ssätt som ingen annan gör. Vi vet båda hur det är att inte passsa in och lämnass vid ssidlinjen.  Vi är bara misssförsstådda - vi vill bara väl.",
                 },
                 {
@@ -1305,17 +1307,17 @@ const phases = {
                 },
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "Portmästaren ssade att du framkallar sstenarna genom att lösssa problem",
                 },
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "För att du ska få tag i sstenen jag lokalisserat sså sska jag ge dig ett problem.",
                 }, // Gåtan kommer
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "Jag vill att du sska försstå min ssitss... Berätta för mig vilket djur ssom är längsst ned, tyngd av de andra, omgedd av godtrogna rådjur ssom sspringer, ovetandess av vilken frihet de har givitss.",
                 }, // Knappen för gåtor lyser - spelaren svarar på gåtan
             ],
@@ -1327,17 +1329,17 @@ const phases = {
                 },
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "Jag vissste att du sskulle försstå; sse ssaker ur mitt persspektiv. Ingen vill lita på en sslug och lisstig orm.",
                 },
                 {
                     name: "Ormen",
-                    image: "",
+                    image: "ormen.png",
                     script: "Alla andra vässsen gör allt i ssin makt för att trycka ned osss. Men de sska får sse. När jag fått min frihet sså sska jag vissa dem mitt ssanna jag. Allt tack vare Portmästarn!",
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "farg_ormen.png",
                     script: "Ormen börjar omringas av samma sken du sett tidigare. De röda strålarna lyser som strålkastare. När de slocknat igen ser du efter i din hand och finner en klarröd rubin.",
                 },
                 {
@@ -1352,7 +1354,7 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Har du fått tag på den sista stenen?",
                 },
                 {
@@ -1362,7 +1364,7 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag har aldrig sett något liknande. Detta kan inte vara ett bra tecken. Beter sig alla stenarna så här?",
                 },
                 {
@@ -1377,7 +1379,7 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Vi måste gå dit stenarna pekar, och det är fort.",
                 }
             ]
@@ -1473,42 +1475,42 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Detta var kanske inte riktigt det du förväntade dig, men det är en genialisk plats. Den viktigaste punkten ligger helt öppet för alla att se, anonym för världen.",
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Lyssna på mig " + getUsername() + ". Detta är slutet. Det är nu eller aldrig. Du har varit en utmärkt kompanjon och följt alla mina instruktioner.",
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Jag har bara ett sista ste ",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "PORTMÄSTARE." + getUsername() + ". NI HAR TILLSAMMANS SAMLAT IHOP ÄDELSTENARNA OCH FÖR DET ÄR VI EVIGT TACKSAMMA.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "ENDAST VI, DEN SANNA ÄDELN ÖVER MALM-U OCH MALM-Ö, KAN HANTERA MAKTEN HOS STENARNA.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "PORTMÄSTARE. NI SKALL GE ÖVER STENARNA FÖR DEN UNDRE VÄRLDEN.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: getUsername() + ". NI SKALL GE ÖVER STENARNA FÖR DEN ÖVRE VÄRLDEN.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "FÖRST DÅ ÄR STENARNA PÅ SINA RÄTTA PLATSER OCH VÅRA VÄRLDAR KAN ÅTERIGEN HELAS.",
                 },
                 {
@@ -1523,7 +1525,7 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren.png",
                     script: "Du måste ge mig dina stenar.",
                 },
                 {
@@ -1538,12 +1540,12 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren_arg.png",
                     script: "Jag måste ha dina stenar. Du borde ge dem till mig.",
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren_arg.png",
                     script: "Du har litat på mig hela denna vägen, inte sant? Du har aldrig träffat dessa väsen innan. Så för allas bästa, GE MIG DINA STENAR!",
                 },
                 {
@@ -1559,7 +1561,7 @@ const phases = {
                     script: "Gatekeepern är ju faktiskt den som varit vid din sida genom hela er resa. Han måste vara upprörd av en anledning.",
                 },
                 {
-                    name: "",
+                    name: "Jag",
                     image: "",
                     script: "Okej. Du får dem. Jag litar på dig mer än dem.",
                 },
@@ -1569,23 +1571,23 @@ const phases = {
                     script: "Du hinner knappt räcka fram alla stenarna innan han har roffat åt sig dem ur dina händer. Portmästaren skratt som börjar blygsamt blir snabbt maniskt.",
                 },
                 {
-                    name: "",
-                    image: "",
+                    name: "Portmastaren",
+                    image: "portmastaren_arg.png",
                     script: "Äntligen!! Äntligen är alla stenarna mina! Aldrig igen kommer jag behöva tjäna någon. Inga fler löjliga väsen som hela tiden ska springa omkring och förstöra mina portar. Aldrig igen behöva se en till korkad människa!",
                 },
                 {
-                    name: "Portmästaren",
+                    name: "BSK",
                     image: "",
                     script: "Din magkänsla börjar vända. I ditt huvud hör du Ädelns ord eka.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "VAD HAR DU GJORT, NAIVA MÄNNISKA? MED STENARNA I SIN ÄGO KAN PORTMÄSTAREN FÅ OBEGRÄNSAD MAKT.",
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren_arg.png",
                     script: "Och det finns ingen som kommer kunna stoppa mig! FRÅN OCH MED NU SKA NI ALLA TJÄNA MIG!",
                 },
                 {
@@ -1615,22 +1617,22 @@ const phases = {
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "NAIVA MÄNNISKA. STENARNAS MAKT ÄR INGET ATT LEKA MED. DU HAR BLIVIT MANIPULERAD AV ETT MONSTER. HAN VILL INGET ÄN ATT HA MAKTEN FÖR SIG SJÄLV.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "TILLSAMMANS MED ALLSEENDE ZODIAKEN HAR VI SAMLAT VÅRA SISTA KRAFTER FÖR ATT FÖRVRÄNGA TIDSLINJER, FLÄTA OM TIDENS VÄVNAD OCH ÅTERSTÄLLA VÄRLDEN TILL DET DEN VAR FÖRE ER RESA.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "ERA MINNEN KOMMER I DENNA NYA VERKLIGHET VARA FALSKA, TY INGENTING AV DET SOM VAR HAR ÄNNU HÄNT.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "VÄRLDENS ÖDE LIGGER NU ÅTER PÅ DINA AXLAR. VÄLJ RÄTT DENNA GÅNG. PORTMÄSTAREN FINNS DÄR NI TRÄFFADES FÖRST.",
                 }
             ],
@@ -1662,7 +1664,7 @@ const phases = {
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: getUsername() + ". DU HAR HJÄLPT OSS ÅTERFÅ VÅRA KRAFTER. ÄVEN OM PORTMÄSTAREN VÄGRAR LÄMNA ÖVER DEN UNDRE VÄRLDENS STENAR, GER DEN ÖVRE VÄRLDEN STENAR OSS KRAFTEN ATT SJÄLVA ÅKALLA DEM.",
                 },
                 {
@@ -1672,7 +1674,7 @@ const phases = {
                 },
                 {
                     name: "Portmästaren",
-                    image: "",
+                    image: "portmastaren_arg.png",
                     script: "Nej, NEJ! Mina stenar! Jag har slitit så hårt för att vinna min makt! Det får inte sluta så här!! INTE MINA STENAR!!",
                 },
                 {
@@ -1682,27 +1684,27 @@ const phases = {
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "TACK VARE DIG, " + getUsername() + " KOMMER VÄRLDEN NU KUNNA BÖRJA HELA OCH ÅTERGÅ TILL DET NORMALA.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "ATT STENARNA SEPARERAS ÄR OUNDVIKLIGT. DE MÅ SKAPA MISÄR, MEN UTAN SORG FINNS INGEN LYCKA. UTAN MÖRKER FINNS INGET LJUS. VARE SIG DET GÄLLER ETT DYGN ELLER EN HEL LIVSTID SÅ KOMMER DET ALLTID FINNAS HINDER PÅ VÄGEN",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "DU HAR TAGIT DIG ÖVER DESSA HINDER OCH HAR DÄRMED BEVISAT ATT DET FINNS NÅGOT BÄTTRE PÅ ANDRA SIDAN.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: getUsername() + ". PORTMÄSTAREN KOMMER FÖRSÖKA MED SINA PLANER IGEN. HÖR DU OM NÅGON SOM FÖRSÖKER HJÄLPA HONOM, RÅD DEM ATT LITA PÅ SIN MAGKÄNSLA.",
                 },
                 {
                     name: "Ädeln",
-                    image: "",
+                    image: "adeln.png",
                     script: "Å HELA UNDRE VÄRLDENS VÄGAR TACKAR VI DIG FÖR DITT MOD, DIN KLOKHET OCH DIN IHÄRDIGHET.",
                 }
             ]
