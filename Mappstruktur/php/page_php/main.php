@@ -4,6 +4,8 @@
         header("Location: ../../index.php?loginError=Du måste logga in först!");
         exit();
     }
+
+    $username = $_SESSION["username"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,6 +23,9 @@
         <div id="slider">
             <div id="map">
                 <?php include "map.php"; ?>
+                <div id="summaryNotif">
+                    <p id="summaryText"></p>
+                </div>
             </div>
             <div id="dialogue">
                 <?php include "dialogue.php"; ?>
@@ -33,12 +38,18 @@
             </div>
         </div>
     </div>
-    
 </body>
+<script>
+    function getUsername(casing) {
+        let name = "<?php echo $username; ?>";
+        return name.charAt(0).toUpperCase() + name.slice(1);
+    }
+</script>
+<script src="../../js/summaries.js"></script>
 <script src="../../js/functions.js"></script>
+<script src="../../js/geolocation.js"></script>
 <script src="../../js/main.js"></script>
-
 <script src="../../js/phases.js"></script>
-
-
+<script src="../../js/dialogueScript.js"></script>
+<script src="../../js/map.js"></script>
 </html>

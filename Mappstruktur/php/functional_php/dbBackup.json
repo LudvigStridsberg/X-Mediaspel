@@ -1,7 +1,7 @@
 {
     "users": [
         {
-            "username": "Ludde",
+            "username": "ludde",
             "password": "1",
             "id": 0,
             "pronoun": "",
@@ -20,9 +20,9 @@
             "storyPhase": 0,
             "inventory": [],
             "hasPlayed": false,
-            "introDialogue": false,
-            "completedGame": false,
-            "outroDialogue": false
+            "introDialogue": true,
+            "completedGame": true,
+            "outroDialogue": true
         }
     ]
 }

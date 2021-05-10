@@ -72,8 +72,6 @@
     width: 100%;
     background-color: darkgrey;
     border-bottom: 5px solid rgb(100, 100, 100);
-    box-sizing: border-box;
-    flex-direction: column;
 }
 
 .viewLink {
@@ -130,6 +128,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hidden {
+    display: none;
 }
 
 h2 {

@@ -57,6 +57,7 @@
     padding: 8px;
     position: absolute;
     right: 45px;
+    bottom: 50px;
 }
 
 .none {
@@ -67,8 +68,8 @@
     display: inline-block;
     border: solid var(--black);
     border-width: 0px 4px 4px 0px;
-    transform: rotate(45deg);
-    animation: arrowMovement .5s 0s infinite alternate;
+    transform: rotate(-45deg);
+    animation: arrowBlink .5s 0s infinite alternate;
 }
 
 .done {
@@ -110,22 +111,12 @@
     z-index: -2;
 }
 
-@keyframes arrowMovement {
-    0% {
-        bottom: 75px;
-    }
-
-    100% {
-        bottom: 60px;
-    }
+@keyframes arrowBlink {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @keyframes doneBlink {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
