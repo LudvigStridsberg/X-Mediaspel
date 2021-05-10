@@ -3,26 +3,26 @@
 function setState() {
     const getReq = new Request("../functional_php/api.php");
     fetch(getReq)
-    .then(getResp => {
-        if(!getResp.ok) {
-            throw Error(getResp.status);
-        }
-        return getResp.json();
-    })
-    .then(getResource => {
-        // STATE = {currentUser:{}, currentPhase, coordinatesTarget};
-        // STATE.key = value;
-        // STATE.otherKey = othervalue;
-        let user = getResource.user;
-        console.table("rsrc currentUser", user);
-        // let thisUser = getResource.user.find(user => user.id === currentUser);
-        STATE.currentUser = user;
-        STATE.currentPhase = user.storyPhase;
-        STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
-        STATE.dialogue = phases[STATE.currentPhase].dialogue;
-        //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
-        displayLocations();
-    });
+        .then(getResp => {
+            if (!getResp.ok) {
+                throw Error(getResp.status);
+            }
+            return getResp.json();
+        })
+        .then(getResource => {
+            // STATE = {currentUser:{}, currentPhase, coordinatesTarget};
+            // STATE.key = value;
+            // STATE.otherKey = othervalue;
+            let user = getResource.user;
+            console.table("rsrc currentUser", user);
+            // let thisUser = getResource.user.find(user => user.id === currentUser);
+            STATE.currentUser = user;
+            STATE.currentPhase = user.storyPhase;
+            STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
+            STATE.dialogue = phases[STATE.currentPhase].dialogue;
+            //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
+            displayLocations();
+        });
 }
 
 // Uppdatera spelarens state i databasen, borde kalla setState i slutet
@@ -33,18 +33,18 @@ function patchState(key1, key2, value) {
     // Update the local State
     // let {key, value} = patchObj;
     STATE[key1][key2] = value;
-    
+
     // Update the State on the database
-    const patchReq = new Request("../functional_php/api.php",
-        {
-            method: "PATCH",
-            body: JSON.stringify(STATE.currentUser),
-            headers: {"Content-type": "application/json; charset=UTF-8"},
-        }
-    );
+    const patchReq = new Request("../functional_php/api.php", {
+        method: "PATCH",
+        body: JSON.stringify(STATE.currentUser),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        },
+    });
     return fetch(patchReq)
         .then(patchResp => {
-            if(!patchResp) {
+            if (!patchResp) {
                 throw Error(patchResp.status);
             }
             return patchResp.json();
@@ -89,8 +89,8 @@ function itemHandler() {
 
 function phaseChanger() {
     // 1 Uppdateta phase-nummer via patchState
-    if(STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue){
-        
+    if (STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue) {
+
         STATE.currentUser.introDialogue = false;
         STATE.currentUser.completedGame = false;
         STATE.currentUser.outroDialogue = false;
@@ -106,59 +106,46 @@ function phaseChanger() {
 function importantBtn(theButton) {
     theButton.classlist.add("important");
 
-    setTimeout(function() {
+    setTimeout(function () {
         theButton.classlist.remove("important");
     }, 5000);
 }
 
 function displayLocations() {
     let locationArray = document.querySelectorAll(".locationPoint");
-
+    let prevLocation;
     locationArray.forEach(location => {
         let idNumber = location.id.substring(location.id.length - 1, location.id.length);
 
-        // if(location.id.length > 9) {
-        //     idNumber = location.id.substring(location.id.length - 2, location.id.length);
-        // }
 
-        if (idNumber < STATE.currentPhase) {
-            location.classList.toggle('hidden');
+
+        if (location.id.length > 9) {
+            idNumber = location.id.substring(location.id.length - 2, location.id.length);
         }
 
-        location.addEventListener("click", function() {
-            const sumHeader = document.getElementById("infoTag");
+        console.log("current idNumber", idNumber)
+
+        if (idNumber > STATE.currentPhase) {
+            location.classList.toggle('none');
+        }
+
+
+        location.addEventListener("click", function () {
+            let prevSelected = document.querySelector(".markedLocation");
+
+            if (prevSelected) {
+                prevSelected.classList.remove("markedLocation");
+            }
+
+            // const sumHeader = document.getElementById("infoTag");
             const sumText = document.querySelector(".infoTextWrapper > p");
 
-           
+            console.log(this.id)
+
+            this.classList.toggle("markedLocation");
+
+            sumText.innerHTML = summaries[idNumber - 1];
+
         });
     });
 }
-
- // if (sumNotif.classList.contains("notifAnimationIn")) {
-            //     sumNotif.classList.add("notifAnimationOut");
-            // }
-            // sumNotif.classList.add("notifAnimationIn");
-            
-            // if(location.classList.contains("markedSpot")) {
-            //     console.log("It contains it");
-            //     this.classList.replace("markedSpot", "");
-            //     sumNotif.classList.add("notifAnimationOut");
-            // } else {
-            //     // locationArray.forEach(locationSpot => {
-            //     //     locationSpot.classList.remove("markedSpot");
-            //     // });
-
-            //     setTimeout(function() {
-            //         sumNotif.classList.remove("notifAnimationOut");
-            //         sumNotif.classList.add("notifAnimationIn");
-            //     }, 500);
-            // }
-            // this.classList.add("markedSpot");
-            // // if(sumNotif.classList.contains("notifAnimationIn")) {
-            // //     sumNotif.classList.remove("notifAnimationIn");
-            // //     sumNotif.classList.add("notifAnimationOut");
-            // // }
-
-            // //sumNotif.classList.replace("notifAnimationIn", "notifAnimationOut");
-            
-            // // sumText.innerHTML = summaries[idNumber];

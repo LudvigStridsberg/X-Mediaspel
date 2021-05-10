@@ -742,22 +742,22 @@
                 style="fill:none;stroke:#131116;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5173653135790346px" />
             <line x1="220.83" y1="12.01" x2="235.41" y2="9.71"
                 style="fill:none;stroke:#131116;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5173653135790346px" />
-            <circle class="locationPoint" id="location8" cx="222.81" cy="365.04" r="10.11"/>
-            <circle class="locationPoint" id="location7" cx="295.99" cy="313.35" r="10.11"/>
-            <circle class="locationPoint" id="location6" cx="338.23" cy="179.45" r="10.11"/>
-            <circle class="locationPoint" id="location5" cx="206.92" cy="199.39" r="10.11"/>
-            <circle class="locationPoint" id="location4" cx="145.3" cy="163.06" r="10.11"/>
-            <circle class="locationPoint" id="location3" cx="22.68" cy="155.52" r="10.11"/>
-            <circle class="locationPoint" id="location2" cx="261.31" cy="125.05" r="10.11"/>
-            <circle class="locationPoint" id="location1" cx="285.18" cy="119.02" r="10.11"/>
-            <circle class="locationPoint" id="location0" cx="255.54" cy="104.59" r="10.11"/>
-            <circle class="locationPoint" id="location9" cx="218.3" cy="31.69" r="10.11"/>
+            <circle class="locationPoint pelarna" id="location7" cx="222.81" cy="365.04" r="10.11"/>
+            <circle class="locationPoint zodiac" id="location6" cx="295.99" cy="313.35" r="10.11"/>
+            <circle class="locationPoint gubben" id="location5" cx="338.23" cy="179.45" r="10.11"/>
+            <circle class="locationPoint elves" id="location8" cx="206.92" cy="199.39" r="10.11"/>
+            <circle class="locationPoint ormhuve" id="location9" cx="145.3" cy="163.06" r="10.11"/>
+            <circle class="locationPoint kajak" id="location10" cx="22.68" cy="155.52" r="10.11"/>
+            <circle class="locationPoint orkestern" id="location4" cx="261.31" cy="125.05" r="10.11"/>
+            <circle class="locationPoint teatern" id="location3" cx="285.18" cy="119.02" r="10.11"/>
+            <circle class="locationPoint apPojke" id="location2" cx="255.54" cy="104.59" r="10.11"/>
+            <circle class="locationPoint inblick" id="location1" cx="218.3" cy="31.69" r="10.11"/>
         </svg>
     </div>
     <div id="infoSection">
         <div class="infoTag">Information</div>
         <div class="infoTextWrapper">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vero natus voluptatem tempore possimus, id sequi laudantium ipsum inventore tempora aut consequatur. Eligendi ullam deserunt nobis id velit rerum ipsum, nisi expedita, dolore corporis obcaecati nulla veniam? Aspernatur, cum hic.</p>
+            <p></p>
         </div>
     </div>
 </div>
