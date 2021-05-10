@@ -6,7 +6,7 @@
 
 
 <link rel="stylesheet" href="../../css/dialogue.css">
-<div id="overlayStandby">
+<div id="overlayStandby" class="none">
     <img src="../../media/illustrations/malmu_icon.png" alt="Malmu">
     <img src="../../media/illustrations/searching.gif" alt="Letar efter kontakt..">
         <div class="textlayer">
@@ -14,12 +14,13 @@
             <p>Ta dig till en anslutningsplats</p>
         </div>
 </div>
-<div class="flexer none">
-    <div class="none" id="dialogueWrapper">
-        <img src="../../media/illustrations/Ledsna.png" id="characterImg">
+<div class="flexer">
+    <div class="" id="dialogueWrapper">
+        <button id="startBtn">go!</button>
+        <img src="" id="characterImg">
         <div id="dialogueBox">
-            <div id="characterName">Ledsna Gubben</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quidem voluptatibus natus architecto amet quas in</p>
+            <div id="characterName"></div>
+            <p></p>
             <div class="none" id="indicator"></div>
         </div>
     </div>

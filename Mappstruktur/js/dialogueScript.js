@@ -52,7 +52,12 @@ function changeText(arrayChoice) {
         // ...update all elements with the new data...
         characterName.innerHTML = dialogueObj.name;
         printText(dialogueObj.script, indicatorClass);
-        image.src = "images/" + dialogueObj.image + ".png";
+        image.src = "../../media/illustrations/" + dialogueObj.image;
+        //BUT, control if item has been handed!
+        if(dialogueObj.items){
+            //items exist
+            itemHandler(dialogueObj.items);
+        }
     } else {
         // ...otherwise we're out of dialogue, reset the page
         document.getElementById("dialogueWrapper").classList.remove("flexer");
@@ -111,9 +116,9 @@ function printText(string, indicatorClass) {
     printNext();
 }
 
-// document.getElementById("startBtn").addEventListener("click", e=> {
-//     document.getElementById("dialogueWrapper").classList.remove("none");
-//     document.getElementById("dialogueWrapper").classList.add("flexer");
-//     document.getElementById("startBtn").classList.add("none");
-//     dialogueBox.click();
-// });
+document.getElementById("startBtn").addEventListener("click", e=> {
+    document.getElementById("dialogueWrapper").classList.remove("none");
+    document.getElementById("dialogueWrapper").classList.add("flexer");
+    document.getElementById("startBtn").classList.add("none");
+    dialogueBox.click();
+});

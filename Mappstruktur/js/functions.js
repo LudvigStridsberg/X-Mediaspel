@@ -84,14 +84,15 @@ function gameInit() {
 
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
 // alltid där, vi måste byta mellan display: none och display: block/inline/whatever
-function itemHandler() {
+function itemHandler(itemObj) {
+    console.log("itemHandler", itemObj)
     //! kolla igenom detta också så allt funkar med phaseChanger
     patchState("currentUser", "inventory", itemObj);
 }
 
 function phaseChanger() {
     // 1 Uppdateta phase-nummer via patchState
-    if (STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue) {
+    if (STATE.currentUser.introDialogue && STATE.currentUser.outroDialogue) {//! && STATE.currentUser.completedGame
 
         STATE.currentUser.introDialogue = false;
         STATE.currentUser.completedGame = false;
@@ -124,8 +125,6 @@ function displayLocations() {
         if (location.id.length > 9) {
             idNumber = location.id.substring(location.id.length - 2, location.id.length);
         }
-
-        console.log("current idNumber", idNumber)
 
         if (idNumber > STATE.currentPhase) {
             location.classList.toggle('none');
