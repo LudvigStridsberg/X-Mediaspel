@@ -24,28 +24,28 @@
                     <button type="submit">Logga in</button>
                 </form>
             </div>
-            <div id="reg_wrapper">
+        </div>
+            <!-- <div id="reg_wrapper">
                 <form id="registerform" action="php/functional_php/admin/register.php" method="POST">
                 <p class="feedback">
                     <?php 
-                        if (isset($_GET['registerError'])) {
-                            echo $_GET['registerError'];
-                        } 
+                       // if (isset($_GET['registerError'])) {
+                       //     echo $_GET['registerError'];
+                     //   } 
                     ?>
                 </p>
                 <p class="complete">
                     <?php 
-                        if (isset($_GET['registerComplete'])) {
-                            echo $_GET['registerComplete'];
-                        } 
-                    ?>
+                        //if (isset($_GET['registerComplete'])) {
+                       //     echo $_GET['registerComplete'];
+                     //   } 
+                   ?>
                 </p>
                 <h1>Registrera dig</h1>
                     <input type="text" name="registerUsername" placeholder="Användarnamn">
                     <input type="text" name="registerPassword" placeholder="Lösenord">
                     <button type="submit">Registrera</button>
                 </form>
-            <div>
-        </div>
+            </div> -->
     </body>
 </html>

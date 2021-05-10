@@ -1,45 +1,53 @@
-#dialogue > div:last-of-type {
-    height: 92vh;
+#dialogue>div:last-of-type {
+    height: 100vh;
     width: 100%;
     flex-direction: column;
 }
 
 #dialogueWrapper {
-    width: 90%;
-    height: 90%;
-    background-image: url('images/bg.jpg');
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../media/illustrations/ledsna_klar.png');
     background-position: center;
     background-size: cover;
-    justify-content: flex-end;
     flex-direction: column;
+    align-items: center;
 }
 
 #characterImg {
-    width: 90%;
+    position: relative;
+    width: 80%;
+    bottom: -25%;
+    left: -10%;
+    z-index: 0;
 }
 
 #characterName {
-    border: 5px solid var(--white);
-    background-color: var(--gray);
-    color: var(--white);
-    padding: 3vw;
+    border: 3px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    padding: 1vw 2vw;
     width: max-content;
-    z-index: 10;
+    z-index: 3;
     position: absolute;
-    bottom: 27%;
-    left: 10%;
+    top: -3vh;
+    left: .5vh;
     font-family: var(--barriecito);
     font-size: 20px;
 }
 
 #dialogueBox {
-    border: 5px solid var(--black);
-    background-color: rgba(255, 255, 255, .8);
-    width: 97%;
-    height: 30%;
+    position: absolute;
+    bottom: 7vh;
+    border: 3px solid var(--black);
+    background-color: rgba(255, 255, 255, .9);
+    width: 95%;
+    height: 20%;
+    z-index: 2;
 }
 
-#dialogueBox > p {
+#dialogueBox>p {
     margin: 8%;
     font-family: var(--elite);
     line-height: 25px;
@@ -69,6 +77,38 @@
     background-color: var(--black);
     bottom: 60px;
     animation: doneBlink 1s infinite alternate linear;
+}
+
+#overlayStandby {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    background-color: var(--black);
+    z-index: -2;
+
+}
+#overlayStandby img:nth-child(1) {
+    position: absolute;
+    width: 70%;
+    top: 20%;
+    left: 16%
+}
+#overlayStandby img:nth-child(2) {
+    display: block;
+    height: 100%;
+    /* width: 100%; */
+    opacity: .4;
+    /* filter: saturate(3); */
+}
+.textlayer {
+    position: absolute;
+    background-color: var(--white);
+    text-align: center;
+    top: 55%;
+    width: 100%;
+    padding: 2vh 2vh;
+    opacity: .8;
+    z-index: -2;
 }
 
 @keyframes arrowBlink {

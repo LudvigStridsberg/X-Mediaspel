@@ -23,6 +23,18 @@
             "introDialogue": false,
             "completedGame": false,
             "outroDialogue": false
+        },
+        {
+            "username": "Emil",
+            "password": "1",
+            "id": 2,
+            "pronoun": "",
+            "storyPhase": 0,
+            "inventory": [],
+            "hasPlayed": false,
+            "introDialogue": true,
+            "completedGame": false,
+            "outroDialogue": false
         }
     ]
 }

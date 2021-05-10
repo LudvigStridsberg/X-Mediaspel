@@ -1,0 +1,55 @@
+* {
+    font-family: var(--elite);
+    box-sizing: border-box;
+}
+
+#interWrapper {
+    width: 100vw;
+    height: 100vh;
+    padding: 2vh;
+}
+
+#interLogo {
+    height: 35%;
+    width: 100%;
+    background-color: lightgrey;
+    margin-bottom: 10vh;
+}
+
+#questTitle {
+    width: max-content;
+    background-color: var(--white);
+    border: 3px solid var(--black);
+    padding: 1.2vh 2vh;
+    margin-bottom: 2vh;
+}
+
+#questAnswer {
+    display: flex;
+    flex-direction: column;
+}
+
+#questAnswer input {
+    padding: 1.5vh;
+    border: 3px solid var(--black);
+    margin-bottom: 2vh;
+    width: 100%;
+    font-size: 20px;
+}
+
+#questAnswer button {
+    width: max-content;
+    background-color: var(--white);
+    border: 3px solid var(--black);
+    padding: 1.5vh 3vh;
+    align-self: end;
+}
+
+.feedbackQuest {
+    color: var(--red);
+    background-color: var(--white);
+    width: max-content;
+    padding: 3px 6px;
+    margin-left: 3px;
+    font-size: 13px;
+}
