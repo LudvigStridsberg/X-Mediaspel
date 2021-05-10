@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 5;
+let dialogueIndex = -1;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -37,10 +37,17 @@ function changeText(arrayChoice) {
     dialogueBox.style.pointerEvents = "none";
 
     // Get the new object from the correct array
+    // dialogueObj = STATE.dialogue.outroB[dialogueIndex];
     dialogueObj = STATE.dialogue[arrayChoice][dialogueIndex];
+    
 
     // If this is the last object in the array the indicator should get
     // the "done" class. Otherwise its the "more" class
+    // if (dialogueIndex == STATE.dialogue.outroB.length - 1) {
+    //     indicatorClass = "done";
+    // } else {
+    //     indicatorClass = "more";
+    // }
     if (dialogueIndex == STATE.dialogue[arrayChoice].length - 1) {
         indicatorClass = "done";
     } else {
@@ -95,7 +102,7 @@ function printText(string, indicatorClass) {
 
         // Set a ID for the timeout, so that we can close it when we are out of letters
         // Each letter-print prepares the next one
-        let id = setTimeout(printNext, 10);
+        let id = setTimeout(printNext, 1);
 
         // If this function call printed the last letter...
         if (lastLetter) {

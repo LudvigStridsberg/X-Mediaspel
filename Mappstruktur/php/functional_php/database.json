@@ -31,24 +31,24 @@
             "password": "1",
             "id": 1,
             "pronoun": "",
-            "storyPhase": 0,
+            "storyPhase": 10,
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
                     false,
                     false
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
+            "introDialogue": true,
             "completedGame": false,
             "outroDialogue": false
         },
