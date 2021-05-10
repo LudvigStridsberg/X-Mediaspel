@@ -1,0 +1,56 @@
+#mapWrapper {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--gray);
+    padding: 2vh;
+}
+
+#mapSection {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--white);
+    border: 3px solid black;
+}
+
+#infoSection {
+    box-sizing: border-box;
+    margin-top: 2vh;
+    width: 100%;
+    height: 35%;
+    background-color: var(--white);
+    border: 3px solid black;
+}
+
+.infoTag {
+    z-index: 10;
+    position: relative;
+    top: -5%;
+    left: -1%;
+    width: max-content;
+    font-family: var(--elite);
+    font-size: 14px;
+    border: 3px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    padding: 1vw 4vw;
+}
+
+.infoTextWrapper {
+    padding: 5%;
+    font-family: var(--elite);
+}
+
+.locationPoint {
+    fill: var(--yellow) ; 
+}
+
+.locationPoint:active {
+    fill: var(--green); 
+}
+.markedLocation {
+    stroke: var(--black);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+    fill: var(--green);
+}

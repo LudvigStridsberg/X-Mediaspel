@@ -3,25 +3,26 @@
 function setState() {
     const getReq = new Request("../functional_php/api.php");
     fetch(getReq)
-    .then(getResp => {
-        if(!getResp.ok) {
-            throw Error(getResp.status);
-        }
-        return getResp.json();
-    })
-    .then(getResource => {
-        // STATE = {currentUser:{}, currentPhase, coordinatesTarget};
-        // STATE.key = value;
-        // STATE.otherKey = othervalue;
-        let user = getResource.user;
-        console.table(user);
-        // let thisUser = getResource.user.find(user => user.id === currentUser);
-        STATE.currentUser = user;
-        STATE.currentPhase = user.storyPhase;
-        STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
-        //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
-        
-    });
+        .then(getResp => {
+            if (!getResp.ok) {
+                throw Error(getResp.status);
+            }
+            return getResp.json();
+        })
+        .then(getResource => {
+            // STATE = {currentUser:{}, currentPhase, coordinatesTarget};
+            // STATE.key = value;
+            // STATE.otherKey = othervalue;
+            let user = getResource.user;
+            console.table("rsrc currentUser", user);
+            // let thisUser = getResource.user.find(user => user.id === currentUser);
+            STATE.currentUser = user;
+            STATE.currentPhase = user.storyPhase;
+            STATE.coordinatesTarget = phases[STATE.currentPhase].targetLocation;
+            STATE.dialogue = phases[STATE.currentPhase].dialogue;
+            //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
+            displayLocations();
+        });
 }
 
 // Uppdatera spelarens state i databasen, borde kalla setState i slutet
@@ -32,18 +33,18 @@ function patchState(key1, key2, value) {
     // Update the local State
     // let {key, value} = patchObj;
     STATE[key1][key2] = value;
-    
+
     // Update the State on the database
-    const patchReq = new Request("../functional_php/api.php",
-        {
-            method: "PATCH",
-            body: JSON.stringify(STATE.currentUser),
-            headers: {"Content-type": "application/json; charset=UTF-8"},
-        }
-    );
+    const patchReq = new Request("../functional_php/api.php", {
+        method: "PATCH",
+        body: JSON.stringify(STATE.currentUser),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        },
+    });
     return fetch(patchReq)
         .then(patchResp => {
-            if(!patchResp) {
+            if (!patchResp) {
                 throw Error(patchResp.status);
             }
             return patchResp.json();
@@ -59,13 +60,6 @@ function patchState(key1, key2, value) {
             console.log(e);
         });
 }
-// function findUser(allUsers, id){
-
-//     let currentUser = allUsers.find(user => user.id === id);
-
-//     return currentUser;
-
-// }
 /*
    Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
    byta från en klass med display: none till en annan med t.ex display:flex etc.
@@ -73,14 +67,13 @@ function patchState(key1, key2, value) {
    kommer näst blir 0.
 */
 function dialogueInit(dialogueType) {
-    switch(dialogueType) {
-        case "intro":
-
-            break;
-        case "outro":
-
-            break;
-    }
+    let dWrapper = document.getElementById("dialogueWrapper");
+    dialogueTemp = STATE.dialogue[dialogueType];
+    // Use toggle?
+    
+    dWrapper.classList.remove("none");
+    dWrapper.classList.add("flexer");
+    dialogueBox.click();
 }
 
 // Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
@@ -92,38 +85,69 @@ function gameInit() {
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
 // alltid där, vi måste byta mellan display: none och display: block/inline/whatever
 function itemHandler() {
-
+    //! kolla igenom detta också så allt funkar med phaseChanger
+    patchState("currentUser", "inventory", itemObj);
 }
 
 function phaseChanger() {
     // 1 Uppdateta phase-nummer via patchState
+    if (STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue) {
+
+        STATE.currentUser.introDialogue = false;
+        STATE.currentUser.completedGame = false;
+        STATE.currentUser.outroDialogue = false;
+    }
+    let phaseIndex = STATE.currentPhase;
+    patchState("currentUser", "storyPhase", phaseIndex + 1);
+    // 1.1, kontrollera spel stadierna intro, completedGame och outro
     // 2 Få koordinaterna från phase-objektet, lägg i state
     // 3 Uppdatera script-taggar och php-includes
+    displayLocations();
 }
 
 function importantBtn(theButton) {
     theButton.classlist.add("important");
 
-    setTimeout(function() {
+    setTimeout(function () {
         theButton.classlist.remove("important");
     }, 5000);
 }
 
-// ---------------------------------------------------
-    /*let {key, value} = patchObj;
-    switch(key) {
-        case "introDialogue":
-            STATE.introDialogue = value;
-            break;
-        case "completedGame":
-            STATE.completedGame = value;
-            break;
-        case "outroDialogue":
-            STATE.outroDialogue = value;
-            break;
-        case "inventory":
-            STATE.inventory = value;
-            break;
-        case "hasPlayed":
-            STATE.hasPlayed = value;
-    }*/
+function displayLocations() {
+    let locationArray = document.querySelectorAll(".locationPoint");
+    let prevLocation;
+    locationArray.forEach(location => {
+        let idNumber = location.id.substring(location.id.length - 1, location.id.length);
+
+
+
+        if (location.id.length > 9) {
+            idNumber = location.id.substring(location.id.length - 2, location.id.length);
+        }
+
+        console.log("current idNumber", idNumber)
+
+        if (idNumber > STATE.currentPhase) {
+            location.classList.toggle('none');
+        }
+
+
+        location.addEventListener("click", function () {
+            let prevSelected = document.querySelector(".markedLocation");
+
+            if (prevSelected) {
+                prevSelected.classList.remove("markedLocation");
+            }
+
+            // const sumHeader = document.getElementById("infoTag");
+            const sumText = document.querySelector(".infoTextWrapper > p");
+
+            console.log(this.id)
+
+            this.classList.toggle("markedLocation");
+
+            sumText.innerHTML = summaries[idNumber - 1];
+
+        });
+    });
+}

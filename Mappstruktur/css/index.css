@@ -7,29 +7,34 @@
     --c-para: #000000;
     --c-btn-bg: #f4f4f4;
     --c-bg-main: #c2c2c2;
-    --c-reg-bg: #131313; 
+    --c-reg-bg: #131313;
     --c-reg-para: var(--c-bg-main);
     --c-login-bg: var(--c-bg-main);
-    --c-login-para: var(--c-reg-bg); 
+    --c-login-para: var(--c-reg-bg);
 }
-*{
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
 body {
     font-size: var(--s-para);
     color: var(--c-para);
     background-color: var(--c-bg-main);
 }
 
-#loginForm,#registerform {
+#loginForm,
+#registerform {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
 }
-#login_wrapper , #reg_wrapper{
+
+#login_wrapper,
+#reg_wrapper {
     height: 90vh;
 }
 
@@ -38,8 +43,9 @@ body {
     background-color: var(--c-login-bg);
     color: var(--c-login-para);
 }
+
 #reg_wrapper {
-    clip-path: polygon(0% 6%, 6% 0%, 12% 6%, 18% 0%, 24% 6%, 30% 0%, 36% 6%, 42% 0%, 48% 6%, 54% 0%, 60% 6%, 66% 0%, 72% 6%, 78% 0%, 84% 6%, 90% 0%, 96% 6%, 100% 0%,100% 100%, 0% 100%);
+    clip-path: polygon(0% 6%, 6% 0%, 12% 6%, 18% 0%, 24% 6%, 30% 0%, 36% 6%, 42% 0%, 48% 6%, 54% 0%, 60% 6%, 66% 0%, 72% 6%, 78% 0%, 84% 6%, 90% 0%, 96% 6%, 100% 0%, 100% 100%, 0% 100%);
     padding: 10%;
     background-color: var(--c-reg-bg);
     color: var(--c-reg-para);
@@ -60,7 +66,7 @@ form button {
     height: 50px;
     border-radius: 10px;
     border: none;
-    background-color:var(--c-btn-bg);
+    background-color: var(--c-btn-bg);
     font-size: 17px;
     font-weight: bold;
 }
