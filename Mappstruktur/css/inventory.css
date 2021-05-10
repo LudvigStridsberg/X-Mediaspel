@@ -17,7 +17,7 @@
 }
 #invImgSection img {
     width: 70%;
-    overflow: hidden;
+    overflow: none;
 }
 
 #invSection {

@@ -70,7 +70,8 @@ function dialogueInit(dialogueType) {
     let dWrapper = document.getElementById("dialogueWrapper");
     dialogueTemp = STATE.dialogue[dialogueType];
     // Use toggle?
-    dWrapper.classList.remove("hidden");
+    
+    dWrapper.classList.remove("none");
     dWrapper.classList.add("flexer");
     dialogueBox.click();
 }
