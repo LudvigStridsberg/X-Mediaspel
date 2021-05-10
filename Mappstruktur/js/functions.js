@@ -117,46 +117,48 @@ function displayLocations() {
     locationArray.forEach(location => {
         let idNumber = location.id.substring(location.id.length - 1, location.id.length);
 
-        if(location.id.length > 9) {
-            idNumber = location.id.substring(location.id.length - 2, location.id.length);
-        }
+        // if(location.id.length > 9) {
+        //     idNumber = location.id.substring(location.id.length - 2, location.id.length);
+        // }
 
         if (idNumber < STATE.currentPhase) {
             location.classList.toggle('hidden');
         }
 
         location.addEventListener("click", function() {
-            const sumNotif = document.getElementById("summaryNotif");
-            const sumText = document.getElementById("summaryText");
+            const sumHeader = document.getElementById("infoTag");
+            const sumText = document.querySelector(".infoTextWrapper > p");
 
-            if (sumNotif.classList.contains("notifAnimationIn")) {
-                sumNotif.classList.add("notifAnimationOut");
-            }
-            sumNotif.classList.add("notifAnimationIn");
-            
-            if(location.classList.contains("markedSpot")) {
-                console.log("It contains it");
-                this.classList.replace("markedSpot", "");
-                sumNotif.classList.add("notifAnimationOut");
-            } else {
-                // locationArray.forEach(locationSpot => {
-                //     locationSpot.classList.remove("markedSpot");
-                // });
-
-                setTimeout(function() {
-                    sumNotif.classList.remove("notifAnimationOut");
-                    sumNotif.classList.add("notifAnimationIn");
-                }, 500);
-            }
-            this.classList.add("markedSpot");
-            // if(sumNotif.classList.contains("notifAnimationIn")) {
-            //     sumNotif.classList.remove("notifAnimationIn");
-            //     sumNotif.classList.add("notifAnimationOut");
-            // }
-
-            //sumNotif.classList.replace("notifAnimationIn", "notifAnimationOut");
-            
-            // sumText.innerHTML = summaries[idNumber];
+           
         });
     });
 }
+
+ // if (sumNotif.classList.contains("notifAnimationIn")) {
+            //     sumNotif.classList.add("notifAnimationOut");
+            // }
+            // sumNotif.classList.add("notifAnimationIn");
+            
+            // if(location.classList.contains("markedSpot")) {
+            //     console.log("It contains it");
+            //     this.classList.replace("markedSpot", "");
+            //     sumNotif.classList.add("notifAnimationOut");
+            // } else {
+            //     // locationArray.forEach(locationSpot => {
+            //     //     locationSpot.classList.remove("markedSpot");
+            //     // });
+
+            //     setTimeout(function() {
+            //         sumNotif.classList.remove("notifAnimationOut");
+            //         sumNotif.classList.add("notifAnimationIn");
+            //     }, 500);
+            // }
+            // this.classList.add("markedSpot");
+            // // if(sumNotif.classList.contains("notifAnimationIn")) {
+            // //     sumNotif.classList.remove("notifAnimationIn");
+            // //     sumNotif.classList.add("notifAnimationOut");
+            // // }
+
+            // //sumNotif.classList.replace("notifAnimationIn", "notifAnimationOut");
+            
+            // // sumText.innerHTML = summaries[idNumber];

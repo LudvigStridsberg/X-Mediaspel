@@ -742,16 +742,16 @@
                 style="fill:none;stroke:#131116;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5173653135790346px" />
             <line x1="220.83" y1="12.01" x2="235.41" y2="9.71"
                 style="fill:none;stroke:#131116;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5173653135790346px" />
-            <circle id="plats9" cx="222.81" cy="365.04" r="10.11"/>
-            <circle id="plats8" cx="295.99" cy="313.35" r="10.11"/>
-            <circle id="plats7" cx="338.23" cy="179.45" r="10.11"/>
-            <circle id="plats6" cx="206.92" cy="199.39" r="10.11"/>
-            <circle id="plats5" cx="145.3" cy="163.06" r="10.11"/>
-            <circle id="plats4" cx="22.68" cy="155.52" r="10.11"/>
-            <circle id="plats3" cx="261.31" cy="125.05" r="10.11"/>
-            <circle id="plats2" cx="285.18" cy="119.02" r="10.11"/>
-            <circle id="plats1" cx="255.54" cy="104.59" r="10.11"/>
-            <circle id="plats10" cx="218.3" cy="31.69" r="10.11" class="markedBlip"/>
+            <circle class="locationPoint" id="location8" cx="222.81" cy="365.04" r="10.11"/>
+            <circle class="locationPoint" id="location7" cx="295.99" cy="313.35" r="10.11"/>
+            <circle class="locationPoint" id="location6" cx="338.23" cy="179.45" r="10.11"/>
+            <circle class="locationPoint" id="location5" cx="206.92" cy="199.39" r="10.11"/>
+            <circle class="locationPoint" id="location4" cx="145.3" cy="163.06" r="10.11"/>
+            <circle class="locationPoint" id="location3" cx="22.68" cy="155.52" r="10.11"/>
+            <circle class="locationPoint" id="location2" cx="261.31" cy="125.05" r="10.11"/>
+            <circle class="locationPoint" id="location1" cx="285.18" cy="119.02" r="10.11"/>
+            <circle class="locationPoint" id="location0" cx="255.54" cy="104.59" r="10.11"/>
+            <circle class="locationPoint" id="location9" cx="218.3" cy="31.69" r="10.11"/>
         </svg>
     </div>
     <div id="infoSection">

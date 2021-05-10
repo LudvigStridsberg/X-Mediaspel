@@ -41,33 +41,16 @@
     font-family: var(--elite);
 }
 
-#plats1,
-#plats2,
-#plats3,
-#plats4,
-#plats5,
-#plats6,
-#plats7,
-#plats8,
-#plats9,
-#plats10 {
+.locationPoint {
     fill: var(--yellow) ; 
 }
 
-#plats1:active,
-#plats2:active,
-#plats3:active,
-#plats4:active,
-#plats5:active,
-#plats6:active,
-#plats7:active,
-#plats8:active,
-#plats9:active,
-#plats10:active {
+.locationPoint:active {
     fill: var(--green); 
 }
-.markedBlip {
+.markedLocation {
     stroke: var(--black);
     stroke-width: 4px;
     stroke-linejoin: round;
+    fill: var(--green);
 }

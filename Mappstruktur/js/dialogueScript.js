@@ -111,9 +111,9 @@ function printText(string, indicatorClass) {
     printNext();
 }
 
-document.getElementById("startBtn").addEventListener("click", e=> {
-    document.getElementById("dialogueWrapper").classList.remove("hidden");
-    document.getElementById("dialogueWrapper").classList.add("flexer");
-    document.getElementById("startBtn").classList.add("hidden");
-    dialogueBox.click();
-});
+// document.getElementById("startBtn").addEventListener("click", e=> {
+//     document.getElementById("dialogueWrapper").classList.remove("hidden");
+//     document.getElementById("dialogueWrapper").classList.add("flexer");
+//     document.getElementById("startBtn").classList.add("hidden");
+//     dialogueBox.click();
+// });
