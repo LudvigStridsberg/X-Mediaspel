@@ -14,7 +14,7 @@ function setState() {
         // STATE.key = value;
         // STATE.otherKey = othervalue;
         let user = getResource.user;
-        console.table(user);
+        console.table("rsrc currentUser", user);
         // let thisUser = getResource.user.find(user => user.id === currentUser);
         STATE.currentUser = user;
         STATE.currentPhase = user.storyPhase;
@@ -60,13 +60,6 @@ function patchState(key1, key2, value) {
             console.log(e);
         });
 }
-// function findUser(allUsers, id){
-
-//     let currentUser = allUsers.find(user => user.id === id);
-
-//     return currentUser;
-
-// }
 /*
    Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
    byta från en klass med display: none till en annan med t.ex display:flex etc.
@@ -96,6 +89,15 @@ function itemHandler() {
 
 function phaseChanger() {
     // 1 Uppdateta phase-nummer via patchState
+    if(STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue){
+        
+        STATE.currentUser.introDialogue = false;
+        STATE.currentUser.completedGame = false;
+        STATE.currentUser.outroDialogue = false;
+    }
+    let phaseIndex = STATE.currentPhase;
+    patchState("currentUser", "storyPhase", phaseIndex + 1);
+    // 1.1, kontrollera spel stadierna intro, completedGame och outro
     // 2 Få koordinaterna från phase-objektet, lägg i state
     // 3 Uppdatera script-taggar och php-includes
 }

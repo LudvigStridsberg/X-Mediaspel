@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = -1;
+let dialogueIndex = 5;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -60,6 +60,9 @@ function changeText(arrayChoice) {
         document.getElementById("startBtn").classList.remove("hidden");
         dialogueIndex = -1;
         patchState("currentUser", `${arrayChoice}Dialogue`, true);
+        if(arrayChoice == "outro" && STATE.currentUser.outroDialogue == true){
+            phaseChanger();
+        }
     }
 }
 

@@ -17,7 +17,7 @@
             "password": "1",
             "id": 1,
             "pronoun": "",
-            "storyPhase": 0,
+            "storyPhase": 1,
             "inventory": [],
             "hasPlayed": false,
             "introDialogue": false,
