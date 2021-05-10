@@ -38,10 +38,10 @@
 
 #invSection div:nth-child(1) {
     border: 2px solid var(--darkgray);
-    background-image: url(../../media/illustrations/malmu_icon.png);
+    /* background-image: url(../../media/illustrations/malmu_icon.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
 }
 
 #gemSection {

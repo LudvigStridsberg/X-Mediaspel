@@ -31,7 +31,7 @@
             "password": "1",
             "id": 1,
             "pronoun": "",
-            "storyPhase": 10,
+            "storyPhase": 0,
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
