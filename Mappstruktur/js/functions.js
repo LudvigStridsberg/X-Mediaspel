@@ -22,6 +22,7 @@ function setState() {
             STATE.dialogue = phases[STATE.currentPhase].dialogue;
             //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
             displayLocations();
+            itemHandler(user.inventory)
         });
 }
 
@@ -85,9 +86,36 @@ function gameInit() {
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
 // alltid där, vi måste byta mellan display: none och display: block/inline/whatever
 function itemHandler(itemObj) {
-    console.log("itemHandler", itemObj)
+    console.log("itemHandler", itemObj);
+
+    Object.entries(itemObj).forEach((entry, index) => {
+        const [key, value] = entry;
+        if(key !== "gems"){
+            if(value){
+                let itemDiv = document.querySelector(`#itemDiv${index}`);
+    
+                itemDiv.innerHTML = `<img src="../../media/illustrations/items/item${index}.png"></img>`;
+            }else{
+                let itemDiv = document.querySelector(`#itemDiv${index}`);
+
+                itemDiv.innerHTML = "";
+            }
+        }else{            
+            entry[1].forEach(((gem, gemIndex) => {
+        
+                if(gem) {
+                    let gemDiv = document.querySelector(`#gem${gemIndex}`);
+
+                    gemDiv.innerHTML = `<img src="../../media/illustrations/items/sten${gemIndex}.png"></img>`;
+                }else{
+                    let gemDiv = document.querySelector(`#gem${gemIndex}`);
+                    gemDiv.innerHTML = "";
+                }
+            }));
+        }
+    });
     //! kolla igenom detta också så allt funkar med phaseChanger
-    patchState("currentUser", "inventory", itemObj);
+    // patchState("currentUser", "inventory", itemObj);
 }
 
 function phaseChanger() {

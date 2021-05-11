@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = -1;
+let dialogueIndex = 8;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -59,11 +59,13 @@ function changeText(arrayChoice) {
         // ...update all elements with the new data...
         characterName.innerHTML = dialogueObj.name;
         printText(dialogueObj.script, indicatorClass);
-        image.src = "../../media/illustrations/" + dialogueObj.image;
+        image.src = "../../media/illustrations/characters/" + dialogueObj.image;
         //BUT, control if item has been handed!
         if(dialogueObj.items){
             //items exist
             itemHandler(dialogueObj.items);
+            patchState("currentUser", "inventory", dialogueObj.items);
+
         }
     } else {
         // ...otherwise we're out of dialogue, reset the page
