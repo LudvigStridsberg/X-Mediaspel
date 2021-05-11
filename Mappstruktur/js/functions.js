@@ -85,7 +85,31 @@ function gameInit() {
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
 // alltid där, vi måste byta mellan display: none och display: block/inline/whatever
 function itemHandler(itemObj) {
-    console.log("itemHandler", itemObj)
+    console.log("itemHandler", itemObj);
+
+    Object.entries(itemObj).forEach((item, index) => {
+        if(item[1]) {
+            let itemDiv = document.querySelector(`#itemDiv${index}`);
+            let itemImg = document.createElement("img");
+
+            itemImg.src = `../../media/illustrations/items/item${index}.png`;
+
+            itemDiv.innerHTML = itemImg;
+        }
+
+        if(item[0] == "gems") {
+            item[1].forEach((gem, gemIndex) => {
+                let gemDiv = document.querySelector(`#gem${gemIndex}`);
+                let gemImg = document.createElement("img"); 
+        
+                if(gem) {
+                    gemImg.src = `../../media/illustrations/items/gem${index}.png`;
+
+                    gemDiv.innerHTML = gemImg;
+                }
+            });
+        }
+    });
     //! kolla igenom detta också så allt funkar med phaseChanger
     patchState("currentUser", "inventory", itemObj);
 }

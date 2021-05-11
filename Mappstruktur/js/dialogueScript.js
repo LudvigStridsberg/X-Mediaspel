@@ -59,7 +59,7 @@ function changeText(arrayChoice) {
         // ...update all elements with the new data...
         characterName.innerHTML = dialogueObj.name;
         printText(dialogueObj.script, indicatorClass);
-        image.src = "../../media/illustrations/" + dialogueObj.image;
+        image.src = "../../media/illustrations/characters/" + dialogueObj.image;
         //BUT, control if item has been handed!
         if(dialogueObj.items){
             //items exist

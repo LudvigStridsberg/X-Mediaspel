@@ -9,15 +9,13 @@
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
-                "photo": false,
+                "photo": true,
                 "oldLetterItem": false,
                 "gems": [
                     false,
+                    true,
                     false,
-                    false,
-                    false,
-                    false,
-                    false,
+                    true,
                     false
                 ]
             },
@@ -32,23 +30,9 @@
             "id": 1,
             "pronoun": "",
             "storyPhase": 10,
-            "inventory": {
-                "mapItem": true,
-                "letterItem": false,
-                "photo": false,
-                "oldLetterItem": false,
-                "gems": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    false,
-                    false
-                ]
-            },
+            "inventory": false,
             "hasPlayed": false,
-            "introDialogue": false,
+            "introDialogue": true,
             "completedGame": false,
             "outroDialogue": false
         },
@@ -64,8 +48,6 @@
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    false,
-                    false,
                     false,
                     false,
                     false,
