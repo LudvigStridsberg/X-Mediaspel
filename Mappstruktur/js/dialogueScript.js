@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = -1;
+let dialogueIndex = 8;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -64,6 +64,8 @@ function changeText(arrayChoice) {
         if(dialogueObj.items){
             //items exist
             itemHandler(dialogueObj.items);
+            patchState("currentUser", "inventory", dialogueObj.items);
+
         }
     } else {
         // ...otherwise we're out of dialogue, reset the page

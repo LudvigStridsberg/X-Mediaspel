@@ -29,10 +29,22 @@
             "password": "1",
             "id": 1,
             "pronoun": "",
-            "storyPhase": 10,
-            "inventory": false,
+            "storyPhase": 4,
+            "inventory": {
+                "mapItem": true,
+                "letterItem": false,
+                "photo": false,
+                "oldLetterItem": false,
+                "gems": [
+                    true,
+                    true,
+                    false,
+                    false,
+                    false
+                ]
+            },
             "hasPlayed": false,
-            "introDialogue": true,
+            "introDialogue": false,
             "completedGame": false,
             "outroDialogue": false
         },

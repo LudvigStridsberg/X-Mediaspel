@@ -22,6 +22,7 @@ function setState() {
             STATE.dialogue = phases[STATE.currentPhase].dialogue;
             //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
             displayLocations();
+            itemHandler(user.inventory)
         });
 }
 
@@ -87,31 +88,34 @@ function gameInit() {
 function itemHandler(itemObj) {
     console.log("itemHandler", itemObj);
 
-    Object.entries(itemObj).forEach((item, index) => {
-        if(item[1]) {
-            let itemDiv = document.querySelector(`#itemDiv${index}`);
-            let itemImg = document.createElement("img");
+    Object.entries(itemObj).forEach((entry, index) => {
+        const [key, value] = entry;
+        if(key !== "gems"){
+            if(value){
+                let itemDiv = document.querySelector(`#itemDiv${index}`);
+    
+                itemDiv.innerHTML = `<img src="../../media/illustrations/items/item${index}.png"></img>`;
+            }else{
+                let itemDiv = document.querySelector(`#itemDiv${index}`);
 
-            itemImg.src = `../../media/illustrations/items/item${index}.png`;
-
-            itemDiv.innerHTML = itemImg;
-        }
-
-        if(item[0] == "gems") {
-            item[1].forEach((gem, gemIndex) => {
-                let gemDiv = document.querySelector(`#gem${gemIndex}`);
-                let gemImg = document.createElement("img"); 
+                itemDiv.innerHTML = "";
+            }
+        }else{            
+            entry[1].forEach(((gem, gemIndex) => {
         
                 if(gem) {
-                    gemImg.src = `../../media/illustrations/items/gem${index}.png`;
+                    let gemDiv = document.querySelector(`#gem${gemIndex}`);
 
-                    gemDiv.innerHTML = gemImg;
+                    gemDiv.innerHTML = `<img src="../../media/illustrations/items/sten${gemIndex}.png"></img>`;
+                }else{
+                    let gemDiv = document.querySelector(`#gem${gemIndex}`);
+                    gemDiv.innerHTML = "";
                 }
-            });
+            }));
         }
     });
     //! kolla igenom detta också så allt funkar med phaseChanger
-    patchState("currentUser", "inventory", itemObj);
+    // patchState("currentUser", "inventory", itemObj);
 }
 
 function phaseChanger() {
