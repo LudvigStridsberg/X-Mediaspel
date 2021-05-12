@@ -12,17 +12,17 @@
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    false,
-                    false,
+                    true,
+                    true,
                     false,
                     false,
                     false
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
-            "completedGame": false,
-            "outroDialogue": false
+            "introDialogue": true,
+            "completedGame": true,
+            "outroDialogue": true
         },
         {
             "username": "Sami",

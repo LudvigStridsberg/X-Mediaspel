@@ -44,6 +44,7 @@
     }
 </script>
 <script src="../../js/summaries.js"></script>
+<script src="../../js/pianoElements.js"></script>
 <script src="../../js/functions.js"></script>
 <script src="../../js/geolocation.js"></script>
 <script src="../../js/main.js"></script>

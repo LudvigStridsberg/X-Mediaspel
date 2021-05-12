@@ -7,13 +7,15 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = -1;
+let dialogueIndex = 15;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
 
     let arrayChoice = "";
     if (STATE.currentUser.introDialogue == false) {
+        arrayChoice = "intro";
+    } else if (!STATE.currentUser.completedGame) {
         arrayChoice = "intro";
     } else {
         arrayChoice = "outro";
@@ -146,12 +148,17 @@ function dialogueEnder(arrayChoice) {
 
     dialogueIndex = -1;
 
-    if (!phases[STATE.currentPhase].gamePhp) {
+    if (!phases[STATE.currentPhase].game) {
         dialogueInit();
     } else {
         dWrapper.classList.remove("flexer");
         dWrapper.classList.add("none");
         overlay.classList.remove("none");
+
+        let gameBtn = document.getElementById("interactiveBtn");
+        gameBtn.classList.add("important");
+
+        gameInit('piano');
     }
 
     document.getElementById("startBtn").classList.remove("none");

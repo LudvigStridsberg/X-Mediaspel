@@ -1,0 +1,105 @@
+#feedback {
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+}
+
+#keyboard {
+    width: 100%;
+    height: 91%;
+    padding: 2vh;
+}
+
+#pianoWrapper {
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--black);
+    box-sizing: border-box;
+}
+
+.whiteKey {
+    height: 14.28%;
+    border-bottom: 3px solid black;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+.whiteKey:active {
+    background-color: lightgray;
+}
+
+.blackKey:active {
+    background-color: darkgrey;
+}
+
+#B {
+    border-bottom: 0px;
+}
+
+.blackKey {
+    z-index: 10;
+    background-color: black;
+    height: 7.14%;
+    position: absolute;
+    left: 40%;
+    width: 55%;
+}
+
+#feedback {
+    width: 70%;
+    height: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 20;
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    box-sizing: border-box;
+}
+
+#again {
+    padding: 10px;
+    margin: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+.good {
+    border: 5px solid green;
+    color: darkgreen;
+}
+
+.bad {
+    border: 5px solid red;
+    color: darkred;
+}
+
+/* 3.57*/
+
+#sC {
+    top: 11.71%;
+}
+
+#sD {
+    top: 23.99%;
+}
+
+#sF {
+    bottom: 43.27%;
+}
+
+#sG {
+    bottom: 30.99%;
+}
+
+#sA {
+    bottom: 18.71%;
+}

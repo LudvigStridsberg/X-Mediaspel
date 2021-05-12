@@ -2,7 +2,7 @@
 
 const phases = {
     0: {
-        gamePhp: false, // Ev bildspelet???
+        game: false, // Ev bildspelet???
         backgroundImage: "GT-portal.png",
         targetLocation: { // Utblick/insikt-statyn vid posthusplatsen
             latitude: 0,
@@ -150,7 +150,7 @@ const phases = {
         }
     },
     1: {
-        gamePhp: false,
+        game: false,
         backgroundImage: "djurpojk.png",
         targetLocation: { // Stortorget, fontänen
             latitude: 0,
@@ -283,7 +283,7 @@ const phases = {
         }
     },
     2: {
-        gamePhp: false,
+        game: false,
         backgroundImage: "apor.png",
         targetLocation: { // Stadsteaterns ingång, vita bågar med apor
             latitude: 0,
@@ -481,7 +481,7 @@ const phases = {
         }
     },
     3: {
-        gamePhp: "../game_php/piano.php",
+        game: "piano",
         backgroundImage: "orkester.png",
         targetLocation: { // Orkestern, Stortorget
             latitude: 0,
@@ -744,7 +744,7 @@ const phases = {
         }
     },
     4: {
-        gamePhp: "", // Mini game med stjärntecken
+        game: "matcher", // Mini game med stjärntecken
         backgroundImage: "ledsna.png",
         targetLocation: { // Vid kanalen, ledsna gubben statyn
             latitude: 0,
@@ -952,7 +952,7 @@ const phases = {
         }
     },
     5: {
-        gamePhp: false,
+        game: false,
         backgroundImage: "zodiak.png",
         targetLocation: { // Föreningsgatan 15, zodiac-statyn
             latitude: 0,
@@ -1136,7 +1136,7 @@ const phases = {
         }
     },
     6: {
-        gamePhp: false,
+        game: false,
         backgroundImage: "triangel.png",
         targetLocation: { // Konstmuseet, pelarna
             latitude: 0,
@@ -1170,7 +1170,7 @@ const phases = {
         }
     },
     7: {
-        gamePhp: false, // Gåtan med antal bussar
+        game: false, // Gåtan med antal bussar
         backgroundImage: "kyrkG.png",
         targetLocation: { // Kyrkogården, GA-torg
             latitude: 0,
@@ -1406,7 +1406,7 @@ const phases = {
         }
     },
     8: {
-        gamePhp: false, // Ormens gåta
+        game: false, // Ormens gåta
         backgroundImage: "",
         targetLocation: { // Ormgrottan i Kungsparken
             latitude: 0,
@@ -1622,7 +1622,7 @@ const phases = {
         }
     },
     9: {
-        gamePhp: false,
+        game: false,
         backgroundImage: "",
         targetLocation: { // Paddlaren utan ansikte, Tekniska museet
             latitude: 0,
@@ -1716,7 +1716,7 @@ const phases = {
         }
     },
     10: {
-        gamePhp: false, // Ev placera stenar, eller behålla endast dialog?
+        game: false, // Ev placera stenar, eller behålla endast dialog?
         backgroundImage: "kockums.png",
         targetLocation: { // Kockums
             latitude: 0,
