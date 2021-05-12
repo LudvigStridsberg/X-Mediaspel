@@ -80,8 +80,19 @@ function dialogueInit() {
 
 // Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
 // byta från en klass med display: none till en annan med t.ex display:flex etc.
-function gameInit() {
+function gameInit(gameType) {
+    document.querySelector("#gameHolder").classList.add(gameType);
+     classChecker(gameType);
+    console.log("gameInit");
+}
 
+function classChecker(gameType) {
+    const gameHolder = document.querySelector("#gameHolder");
+    const gameScript = document.querySelector("#gameScript");
+    if (gameType == "piano") {
+        gameHolder.innerHTML = pianoString;
+        gameScript.setAttribute("src", `../../js/${gameType}Script.js`);
+    }
 }
 
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
@@ -121,7 +132,7 @@ function itemHandler(itemObj) {
 
 function phaseChanger() {
     // 1 Uppdateta phase-nummer via patchState
-    if (STATE.currentUser.introDialogue && STATE.currentUser.outroDialogue) {//! && STATE.currentUser.completedGame
+    if (STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue) {//! && STATE.currentUser.completedGame
 
         STATE.currentUser.introDialogue = false;
         STATE.currentUser.completedGame = false;
