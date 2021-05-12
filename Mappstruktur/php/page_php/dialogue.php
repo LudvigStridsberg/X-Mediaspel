@@ -6,7 +6,7 @@
 
 
 <link rel="stylesheet" href="../../css/dialogue.css">
-<div id="overlayStandby" class="none">
+<div id="overlayStandby" class="">
     <img src="../../media/illustrations/malmu_icon.png" alt="Malmu">
     <img src="../../media/illustrations/searching.gif" alt="Letar efter kontakt..">
         <div class="textlayer">
@@ -15,8 +15,7 @@
         </div>
 </div>
 <div class="flexer">
-    <div class="" id="dialogueWrapper">
-        <button id="startBtn">go!</button>
+    <div class="none" id="dialogueWrapper">
         <img src="" id="characterImg">
         <div id="dialogueBox">
             <div id="characterName"></div>

@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 8;
+let dialogueIndex = -1;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -43,11 +43,6 @@ function changeText(arrayChoice) {
 
     // If this is the last object in the array the indicator should get
     // the "done" class. Otherwise its the "more" class
-    // if (dialogueIndex == STATE.dialogue.outroB.length - 1) {
-    //     indicatorClass = "done";
-    // } else {
-    //     indicatorClass = "more";
-    // }
     if (dialogueIndex == STATE.dialogue[arrayChoice].length - 1) {
         indicatorClass = "done";
     } else {
@@ -56,12 +51,32 @@ function changeText(arrayChoice) {
 
     // If the object exists...
     if (dialogueObj != undefined) {
+
         // ...update all elements with the new data...
-        characterName.innerHTML = dialogueObj.name;
         printText(dialogueObj.script, indicatorClass);
-        image.src = "../../media/illustrations/characters/" + dialogueObj.image;
-        //BUT, control if item has been handed!
-        if(dialogueObj.items){
+
+        /*
+         Check the name. If it is BSK the name-sign should be hidden.
+         If it is either that or Jag the character image's source should
+         be empty.png. If it is neither the name-sign should be displayed
+         and the appropiate picture shown. 
+        */
+        if (dialogueObj.name == "BSK") {
+            characterName.classList.add("none");
+            image.src = "../../media/illustrations/characters/empty.png";
+        } else if (dialogueObj.name == "Jag") {
+            characterName.classList.remove("none");
+            characterName.innerHTML = dialogueObj.name;
+            image.src = "../../media/illustrations/characters/empty.png";
+        } else {
+            characterName.classList.remove("none");
+            characterName.innerHTML = dialogueObj.name;
+            image.src = "../../media/illustrations/characters/" + dialogueObj.image;
+        }
+
+        // BUT, control if item has been handed!
+        if (dialogueObj.items) {
+
             //items exist
             itemHandler(dialogueObj.items);
             patchState("currentUser", "inventory", dialogueObj.items);
@@ -69,14 +84,7 @@ function changeText(arrayChoice) {
         }
     } else {
         // ...otherwise we're out of dialogue, reset the page
-        document.getElementById("dialogueWrapper").classList.remove("flexer");
-        document.getElementById("dialogueWrapper").classList.add("none");
-        document.getElementById("startBtn").classList.remove("none");
-        dialogueIndex = -1;
-        patchState("currentUser", `${arrayChoice}Dialogue`, true);
-        if(arrayChoice == "outro" && STATE.currentUser.outroDialogue == true){
-            phaseChanger();
-        }
+        dialogueEnder(arrayChoice);
     }
 }
 
@@ -126,8 +134,24 @@ function printText(string, indicatorClass) {
 }
 
 document.getElementById("startBtn").addEventListener("click", e=> {
-    document.getElementById("dialogueWrapper").classList.remove("none");
-    document.getElementById("dialogueWrapper").classList.add("flexer");
-    document.getElementById("startBtn").classList.add("none");
-    dialogueBox.click();
+    dialogueInit();
 });
+
+function dialogueEnder(arrayChoice) {
+    let dWrapper = document.getElementById("dialogueWrapper");
+    let overlay = document.getElementById("overlayStandby");
+
+    dWrapper.classList.remove("flexer");
+    dWrapper.classList.add("none");
+    overlay.classList.remove("none");
+
+    document.getElementById("startBtn").classList.remove("none");
+
+    dialogueIndex = -1;
+
+    patchState("currentUser", `${arrayChoice}Dialogue`, true);
+
+    if (arrayChoice == "outro" && STATE.currentUser.outroDialogue == true){
+        phaseChanger();
+    }
+}

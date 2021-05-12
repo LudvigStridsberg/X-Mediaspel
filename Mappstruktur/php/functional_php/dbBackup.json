@@ -1,7 +1,7 @@
 {
     "users": [
         {
-            "username": "ludde",
+            "username": "Ludde",
             "password": "1",
             "id": 0,
             "pronoun": "",
@@ -9,20 +9,20 @@
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
-                "photo": true,
+                "photo": false,
                 "oldLetterItem": false,
                 "gems": [
                     false,
-                    true,
                     false,
-                    true,
+                    false,
+                    false,
                     false
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
+            "introDialogue": true,
             "completedGame": false,
-            "outroDialogue": false
+            "outroDialogue": true
         },
         {
             "username": "Sami",
@@ -33,7 +33,7 @@
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
-                "photo": true,
+                "photo": false,
                 "oldLetterItem": false,
                 "gems": [
                     true,

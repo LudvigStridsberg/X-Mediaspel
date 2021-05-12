@@ -67,13 +67,14 @@ function patchState(key1, key2, value) {
    Vi måste också göra så att den int som indikerar vilket objekt i arrayen som
    kommer näst blir 0.
 */
-function dialogueInit(dialogueType) {
+function dialogueInit() {
     let dWrapper = document.getElementById("dialogueWrapper");
-    dialogueTemp = STATE.dialogue[dialogueType];
-    // Use toggle?
-    
+    let overlay = document.getElementById("overlayStandby");
     dWrapper.classList.remove("none");
     dWrapper.classList.add("flexer");
+    overlay.classList.add("none");
+    dWrapper.style.backgroundImage = `url("../../media/photos/${phases[STATE.currentPhase].backgroundImage}")`;
+    document.getElementById("startBtn").classList.add("none");
     dialogueBox.click();
 }
 
