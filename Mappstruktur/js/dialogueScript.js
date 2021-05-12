@@ -138,18 +138,23 @@ document.getElementById("startBtn").addEventListener("click", e=> {
 });
 
 function dialogueEnder(arrayChoice) {
-    let dWrapper = document.getElementById("dialogueWrapper");
-    let overlay = document.getElementById("overlayStandby");
 
-    dWrapper.classList.remove("flexer");
-    dWrapper.classList.add("none");
-    overlay.classList.remove("none");
+    const dWrapper = document.getElementById("dialogueWrapper");
+    const overlay = document.getElementById("overlayStandby");
 
-    document.getElementById("startBtn").classList.remove("none");
+    patchState("currentUser", `${arrayChoice}Dialogue`, true);
 
     dialogueIndex = -1;
 
-    patchState("currentUser", `${arrayChoice}Dialogue`, true);
+    if (!phases[STATE.currentPhase].gamePhp) {
+        dialogueInit();
+    } else {
+        dWrapper.classList.remove("flexer");
+        dWrapper.classList.add("none");
+        overlay.classList.remove("none");
+    }
+
+    document.getElementById("startBtn").classList.remove("none");
 
     if (arrayChoice == "outro" && STATE.currentUser.outroDialogue == true){
         phaseChanger();
