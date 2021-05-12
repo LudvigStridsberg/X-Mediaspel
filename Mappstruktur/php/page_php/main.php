@@ -25,6 +25,7 @@
                 <?php include "map.php"; ?>
             </div>
             <div id="dialogue">
+                <button id="startBtn">go!</button>
                 <?php include "dialogue.php"; ?>
             </div>
             <div id="interactive">
