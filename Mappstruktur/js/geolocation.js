@@ -73,24 +73,38 @@ function compareLocationFunction(locationData) {
     let {latitude, longitude} = locationData;
     let latOk = false;
     let lonOk = false;
+    let latClose = false;
+    let lonClose = false;
 
     console.log(gettingLocation);
 
+    if (latitude >= targetLat - 0.001 && latitude <= targetLat + 0.001) {
+        latClose = true;
+    }
+    if (longitude >= targetLon - 0.001 && longitude <= targetLon + 0.001) {
+        lonClose = true;
+    }
+
+    if (latClose && lonClose){
+        replaceText('.textLayer p', 'Du är nära en anslutningplats.');
+    } else {
+        replaceText('.textLayer p', 'Ta dig till en anslutningsplats.');
+    }
+    
     if (latitude >= targetLat - 0.0002 && latitude <= targetLat + 0.0002) {
         latOk = true;
     }
-
     if (longitude >= targetLon - 0.0002 && longitude <= targetLon + 0.0002) {
         lonOk = true;
     }
 
     // If they have arrived we don't want to repeatedly start the dialogue after the first time
-    if (latOk && lonOk && STATE.dialogue.introDialogue == false) {
+    if (latOk && lonOk && STATE.currentUser.introDialogue == false) {
         navigator.geolocation.clearWatch(gpsID);
         dialogueInit("intro");
     }
 
-    if(latOk && lonOk && STATE.dialogue.introDialogue == true && STATE.currentUser.gameComplete == true && STATE.dialogue.outroDialogue == false) {
+    if(latOk && lonOk && STATE.currentUser.introDialogue == true && STATE.currentUser.gameComplete == true && STATE.currentUser.outroDialogue == false) {
         navigator.geolocation.clearWatch(gpsID);
         dialogueInit("outro");
     }
