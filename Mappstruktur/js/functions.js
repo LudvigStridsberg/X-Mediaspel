@@ -192,3 +192,8 @@ function displayLocations() {
         });
     });
 }
+
+function replaceText(element, text) {
+    const el = document.querySelector(element);
+    el.innerHTML  = text;
+}
