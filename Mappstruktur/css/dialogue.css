@@ -56,6 +56,7 @@
     position: absolute;
     right: 15px;
     bottom: 15px;
+    animation: indicatorBlink 1s infinite alternate linear;
 }
 
 .none {
@@ -67,14 +68,12 @@
     border: solid var(--black);
     border-width: 0px 4px 4px 0px;
     transform: rotate(-45deg);
-    animation: arrowBlink .5s 0s infinite alternate;
 }
 
 .done {
     display: inline-block;
     background-color: var(--black);
     bottom: 60px;
-    animation: doneBlink 1s infinite alternate linear;
 }
 
 #overlayStandby {
@@ -109,12 +108,7 @@
     z-index: -2;
 }
 
-@keyframes arrowBlink {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes doneBlink {
+@keyframes indicatorBlink {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }

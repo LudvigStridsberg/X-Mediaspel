@@ -78,6 +78,11 @@ function changeText(arrayChoice) {
             itemHandler(dialogueObj.items);
             patchState("currentUser", "inventory", dialogueObj.items);
 
+            const inventoryBtn = document.getElementById("inventoryBtn");
+            inventoryBtn.classList.add("important");
+            setTimeout(() => {
+                inventoryBtn.classList.remove("important");
+            }, 3000);
         }
     } else {
         // ...otherwise we're out of dialogue, reset the page
@@ -144,6 +149,7 @@ function dialogueEnder(arrayChoice) {
     dialogueIndex = -1;
 
     if (!phases[STATE.currentPhase].game) {
+        patchState("currentUser", "completedGame", true);
         dialogueInit();
     } else {
         dWrapper.classList.remove("flexer");
@@ -161,7 +167,7 @@ function dialogueEnder(arrayChoice) {
 
     document.getElementById("startBtn").classList.remove("none");
 
-    if (arrayChoice == "outro" && STATE.currentUser.outroDialogue == true){
+    if (arrayChoice == "outro"){
         phaseChanger();
     }
 }
