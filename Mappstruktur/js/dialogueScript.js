@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 15;
+let dialogueIndex = 1;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -65,16 +65,11 @@ function changeText(arrayChoice) {
         */
         if (dialogueObj.name == "BSK") {
             characterName.classList.add("none");
-            image.src = "../../media/illustrations/characters/empty.png";
-        } else if (dialogueObj.name == "Jag") {
-            characterName.classList.remove("none");
-            characterName.innerHTML = dialogueObj.name;
-            image.src = "../../media/illustrations/characters/empty.png";
         } else {
             characterName.classList.remove("none");
             characterName.innerHTML = dialogueObj.name;
-            image.src = "../../media/illustrations/characters/" + dialogueObj.image;
         }
+        image.src = "../../media/illustrations/characters/" + dialogueObj.image;
 
         // BUT, control if item has been handed!
         if (dialogueObj.items) {
@@ -156,7 +151,10 @@ function dialogueEnder(arrayChoice) {
         overlay.classList.remove("none");
 
         let gameBtn = document.getElementById("interactiveBtn");
-        gameBtn.classList.add("important");
+
+        if (arrayChoice != "outro") {
+            gameBtn.classList.add("important");
+        }
 
         gameInit('piano');
     }
