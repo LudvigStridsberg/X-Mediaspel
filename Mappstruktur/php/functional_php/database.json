@@ -5,7 +5,7 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 4,
+            "storyPhase": 5,
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
@@ -14,7 +14,7 @@
                 "gems": [
                     true,
                     true,
-                    false,
+                    true,
                     false,
                     false
                 ]
