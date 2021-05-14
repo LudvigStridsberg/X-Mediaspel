@@ -46,7 +46,7 @@ function arrayCheck() {
             feedbackText.innerText = 'Good job!';
             patchState("currentUser", "completedGame", true);
             dialogueInit("outro");
-
+            // gameDeactivation();
             let gameBtn = document.getElementById("interactiveBtn");
             gameBtn.classList.remove("important");
         } else {

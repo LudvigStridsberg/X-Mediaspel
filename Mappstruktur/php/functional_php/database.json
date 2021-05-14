@@ -3,9 +3,9 @@
         {
             "username": "Ludde",
             "password": "1",
-            "id": 0,
+            "id": 3,
             "pronoun": "",
-            "storyPhase": 4,
+            "storyPhase": 0,
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
@@ -20,8 +20,8 @@
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
-            "completedGame": false,
+            "introDialogue": true,
+            "completedGame": true,
             "outroDialogue": false
         },
         {

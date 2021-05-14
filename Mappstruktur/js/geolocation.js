@@ -74,7 +74,7 @@ function compareLocationFunction(locationData) {
     let latOk = false;
     let lonOk = false;
 
-    console.log(gettingLocation);
+    console.log(targetLat, targetLon, locationData);
 
     if (latitude >= targetLat - 0.0002 && latitude <= targetLat + 0.0002) {
         latOk = true;
@@ -107,5 +107,9 @@ let options = {
     maximumAge: 0 // don't use old location data
 };
 
-// Uncomment to activate geolocation
-// const gpsID = navigator.geolocation.watchPosition(GPS.smoothPosition.bind(GPS), errorHandler, options);
+let gpsID;
+
+function startGeolocation() {
+    // Uncomment to activate geolocation
+     gpsID = navigator.geolocation.watchPosition(GPS.smoothPosition.bind(GPS), errorHandler, options);
+}

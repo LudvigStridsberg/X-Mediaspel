@@ -22,7 +22,7 @@ function setState() {
             STATE.dialogue = phases[STATE.currentPhase].dialogue;
             //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
             displayLocations();
-            itemHandler(user.inventory)
+            itemHandler(user.inventory);
         });
 }
 
@@ -95,6 +95,13 @@ function classChecker(gameType) {
     }
 }
 
+function gameDeactivation() {
+    const gameHolder = document.querySelector("#gameHolder");
+    const gameScript = document.querySelector("#gameScript");
+    gameHolder.innerHTML = "";
+    gameScript.setAttribute ("src", "");
+}
+
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
 // alltid där, vi måste byta mellan display: none och display: block/inline/whatever
 function itemHandler(itemObj) {
@@ -140,10 +147,13 @@ function phaseChanger() {
     }
     let phaseIndex = STATE.currentPhase;
     patchState("currentUser", "storyPhase", phaseIndex + 1);
+    
     // 1.1, kontrollera spel stadierna intro, completedGame och outro
     // 2 Få koordinaterna från phase-objektet, lägg i state
     // 3 Uppdatera script-taggar och php-includes
+    navigator.geolocation.clearWatch(gpsID);
     displayLocations();
+    startGeolocation();
 }
 
 function importantBtn(theButton) {
@@ -190,3 +200,7 @@ function displayLocations() {
         });
     });
 }
+
+setTimeout(() => {
+    startGeolocation();
+}, 3000);

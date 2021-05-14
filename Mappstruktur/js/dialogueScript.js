@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 15;
+let dialogueIndex = -1;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -114,7 +114,7 @@ function printText(string, indicatorClass) {
 
         // Set a ID for the timeout, so that we can close it when we are out of letters
         // Each letter-print prepares the next one
-        let id = setTimeout(printNext, 1);
+        let id = setTimeout(printNext, 10);
 
         // If this function call printed the last letter...
         if (lastLetter) {
@@ -148,17 +148,20 @@ function dialogueEnder(arrayChoice) {
 
     dialogueIndex = -1;
 
-    if (!phases[STATE.currentPhase].game) {
+    if (!phases[STATE.currentPhase].game && !STATE.currentUser.outroDialogue) {
+        patchState("currentUser", "completedGame", true);
         dialogueInit();
     } else {
         dWrapper.classList.remove("flexer");
         dWrapper.classList.add("none");
         overlay.classList.remove("none");
 
-        let gameBtn = document.getElementById("interactiveBtn");
-        gameBtn.classList.add("important");
+        if(!STATE.currentUser.completedGame) {
+            let gameBtn = document.getElementById("interactiveBtn");
+            gameBtn.classList.add("important");
 
-        gameInit('piano');
+            gameInit('piano');
+        }
     }
 
     document.getElementById("startBtn").classList.remove("none");
