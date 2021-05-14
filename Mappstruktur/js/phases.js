@@ -38,7 +38,7 @@ const phases = {
                 {
                     name: "Portmästarn",
                     image: "portmastaren.png",
-                    script: "Jag är portmästaren av den undre världen, men de flesta brukar kalla mig Gatekeepern. Nu behöver jag din hjälp.",
+                    script: "Jag är portmästaren av den undre världen, men de flesta brukar kalla mig Portmästarn. Nu behöver jag din hjälp.",
                 },
                 {
                     name: "Jag",
@@ -1221,7 +1221,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Marky pekar mot Portmästaren och de båda älvorna börjar skratta hysteriskt. Gatekeepern verkar oberörd. Han verkar inte vara så värst omtyckt",
+                    script: "Marky pekar mot Portmästaren och de båda älvorna börjar skratta hysteriskt. Portmästarn verkar oberörd. Han verkar inte vara så värst omtyckt",
                 },
                 {
                     name: "Jag",
@@ -1417,7 +1417,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "portmastaren_ormen.png",
-                    script: "Gatekeepern är så uppslukad i sin konversation att han inte märker dig. Han tittar upp mot ormen vars huvud hänger från taket på grottan",
+                    script: "Portmästarn är så uppslukad i sin konversation att han inte märker dig. Han tittar upp mot ormen vars huvud hänger från taket på grottan",
                 },
                 {
                     name: "Portmästaren",
@@ -1437,7 +1437,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Gatekeepern vänder sig hastigt och tittar på dig. Hans kroppsspråk påminner om en femåring som blev tagen på bar gärning med handen i kakburken.",
+                    script: "Portmästarn vänder sig hastigt och tittar på dig. Hans kroppsspråk påminner om en femåring som blev tagen på bar gärning med handen i kakburken.",
                 },
                 {
                     name: "Portmästaren",
@@ -1472,7 +1472,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Tystnaden från Gatekeepern hintar om att han inte riktigt tror på dig. Ormen sänker sitt huvud ytterligare för att komma närmare ditt ansikte.",
+                    script: "Tystnaden från Portmästarn hintar om att han inte riktigt tror på dig. Ormen sänker sitt huvud ytterligare för att komma närmare ditt ansikte.",
                 },
                 {
                     name: "BSK",
@@ -1507,7 +1507,7 @@ const phases = {
                 {
                     name: "Ormen",
                     image: "ormen.png",
-                    script: "Gatekeepern och jag försstår varandra på ett ssätt som ingen annan gör. Vi vet båda hur det är att inte passsa in och lämnass vid ssidlinjen.",
+                    script: "Portmästarn och jag försstår varandra på ett ssätt som ingen annan gör. Vi vet båda hur det är att inte passsa in och lämnass vid ssidlinjen.",
                 },
                 {
                     name: "Ormen",
@@ -1643,7 +1643,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Han hinner knappt avsluta sin mening innan ett kvävt rop stjäler er uppmärksamhet. Gatekeepern tar ett steg tillbaka av chock.",
+                    script: "Han hinner knappt avsluta sin mening innan ett kvävt rop stjäler er uppmärksamhet. Portmästarn tar ett steg tillbaka av chock.",
                 },
                 {
                     name: "BSK",
@@ -1836,7 +1836,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Gatekeepern är ju faktiskt den som varit vid din sida genom hela er resa. Han måste vara upprörd av en anledning.",
+                    script: "Portmästarn är ju faktiskt den som varit vid din sida genom hela er resa. Han måste vara upprörd av en anledning.",
                 },
                 {
                     name: "Jag",
@@ -1886,7 +1886,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Sekunder senare håller Gatekeepern i en stor krona, prydd av alla tio ädelstenar, som han sätter på sitt huvud. Allting blir svart.",
+                    script: "Sekunder senare håller Portmästarn i en stor krona, prydd av alla tio ädelstenar, som han sätter på sitt huvud. Allting blir svart.",
                 },
                 {
                     name: "BSK",
