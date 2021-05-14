@@ -5,8 +5,8 @@ const phases = {
         game: false, // Ev bildspelet???
         backgroundImage: "GT-portal.png",
         targetLocation: { // Utblick/insikt-statyn vid posthusplatsen
-            latitude: 0,
-            longitude: 0
+            latitude: 55.609612,
+            longitude: 12.997689
         },
         dialogue: {
             intro: [
@@ -153,8 +153,8 @@ const phases = {
         game: false,
         backgroundImage: "djurpojk.png",
         targetLocation: { // Stortorget, fontänen
-            latitude: 0,
-            longitude: 0
+            latitude: 55.606443,
+            longitude: 13.000660
         },
         dialogue: {
             intro: [
@@ -286,8 +286,8 @@ const phases = {
         game: false,
         backgroundImage: "apor.png",
         targetLocation: { // Stadsteaterns ingång, vita bågar med apor
-            latitude: 0,
-            longitude: 0
+            latitude: 55.605760,
+            longitude: 13.003052
         },
         dialogue: {
             intro: [
@@ -484,8 +484,8 @@ const phases = {
         game: "piano",
         backgroundImage: "orkester.png",
         targetLocation: { // Orkestern, Stortorget
-            latitude: 0,
-            longitude: 0
+            latitude: 55.605512,
+            longitude: 13.001284
         },
         dialogue: {
             intro: [
@@ -747,8 +747,8 @@ const phases = {
         game: "matcher", // Mini game med stjärntecken
         backgroundImage: "ledsna.png",
         targetLocation: { // Vid kanalen, ledsna gubben statyn
-            latitude: 0,
-            longitude: 0
+            latitude: 55.603130,
+            longitude: 13.007152
         },
         dialogue: {
             intro: [
@@ -955,8 +955,8 @@ const phases = {
         game: false,
         backgroundImage: "zodiak.png",
         targetLocation: { // Föreningsgatan 15, zodiac-statyn
-            latitude: 0,
-            longitude: 0
+            latitude: 55.597149,
+            longitude: 13.003764
         },
         dialogue: {
             intro: [
@@ -1139,8 +1139,8 @@ const phases = {
         game: false,
         backgroundImage: "triangel.png",
         targetLocation: { // Konstmuseet, pelarna
-            latitude: 0,
-            longitude: 0
+            latitude: 55.595002,
+            longitude: 12.998266
         },
         dialogue: {
             intro: [
@@ -1173,8 +1173,8 @@ const phases = {
         game: false, // Gåtan med antal bussar
         backgroundImage: "kyrkG.png",
         targetLocation: { // Kyrkogården, GA-torg
-            latitude: 0,
-            longitude: 0
+            latitude: 55.602268,
+            longitude: 12.997046
         },
         dialogue: {
             intro: [
@@ -1409,8 +1409,8 @@ const phases = {
         game: false, // Ormens gåta
         backgroundImage: "",
         targetLocation: { // Ormgrottan i Kungsparken
-            latitude: 0,
-            longitude: 0
+            latitude: 55.603584,
+            longitude: 12.992652
         },
         dialogue: {
             intro: [
@@ -1625,8 +1625,8 @@ const phases = {
         game: false,
         backgroundImage: "",
         targetLocation: { // Paddlaren utan ansikte, Tekniska museet
-            latitude: 0,
-            longitude: 0
+            latitude: 55.604184,
+            longitude: 12.982823
         },
         dialogue: {
             intro: [
@@ -1719,8 +1719,8 @@ const phases = {
         game: false, // Ev placera stenar, eller behålla endast dialog?
         backgroundImage: "kockums.png",
         targetLocation: { // Kockums
-            latitude: 0,
-            longitude: 0
+            latitude: 55.609295,
+            longitude: 12.977192
         },
         dialogue: {
             intro: [
