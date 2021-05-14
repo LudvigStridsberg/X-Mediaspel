@@ -126,6 +126,8 @@ function itemHandler(itemObj) {
             }));
         }
     });
+
+
     //! kolla igenom detta också så allt funkar med phaseChanger
     // patchState("currentUser", "inventory", itemObj);
 }

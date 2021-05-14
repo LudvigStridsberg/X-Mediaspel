@@ -5,31 +5,31 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 4,
+            "storyPhase": 2,
             "inventory": {
                 "mapItem": true,
-                "letterItem": false,
+                "letterItem": true,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    true,
-                    true,
-                    true,
+                    false,
+                    false,
+                    false,
                     false,
                     false
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": true,
-            "completedGame": true,
-            "outroDialogue": true
+            "introDialogue": false,
+            "completedGame": false,
+            "outroDialogue": false
         },
         {
             "username": "Sami",
             "password": "1",
             "id": 1,
             "pronoun": "",
-            "storyPhase": 4,
+            "storyPhase": 1,
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,

@@ -145,7 +145,7 @@ h2 {
 }
 
 .important {
-    animation: importantAnim 1s infinite alternate;
+    animation: importantAnim .5s infinite alternate;
 }
 
 @keyframes importantAnim {
