@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 1;
+let dialogueIndex = 25;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -162,7 +162,7 @@ function dialogueEnder(arrayChoice) {
             gameBtn.classList.add("important");
         }
 
-        gameInit('piano');
+        gameInit(phases[STATE.currentPhase].game);
     }
 
     document.getElementById("startBtn").classList.remove("none");
