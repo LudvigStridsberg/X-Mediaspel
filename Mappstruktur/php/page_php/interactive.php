@@ -3,7 +3,7 @@
 ?>
 
 <a class="viewLink left" href="#dialogue">Tillbaka</a>
-<div id="gameHolder" class="flexer piano"></div>
+<div id="gameHolder" class="flexer"></div>
 <script id="gameScript"></script>
 
 

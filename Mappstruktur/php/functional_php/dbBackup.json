@@ -5,22 +5,22 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 2,
+            "storyPhase": 4,
             "inventory": {
                 "mapItem": true,
-                "letterItem": true,
+                "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    false,
-                    false,
-                    false,
+                    true,
+                    true,
+                    true,
                     false,
                     false
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
+            "introDialogue": true,
             "completedGame": false,
             "outroDialogue": false
         },

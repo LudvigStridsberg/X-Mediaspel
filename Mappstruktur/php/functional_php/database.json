@@ -5,16 +5,16 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 1,
+            "storyPhase": 4,
             "inventory": {
                 "mapItem": true,
-                "letterItem": true,
+                "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    false,
-                    false,
-                    false,
+                    true,
+                    true,
+                    true,
                     false,
                     false
                 ]
@@ -22,7 +22,7 @@
             "hasPlayed": false,
             "introDialogue": true,
             "completedGame": true,
-            "outroDialogue": true
+            "outroDialogue": false
         },
         {
             "username": "Sami",

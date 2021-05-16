@@ -82,7 +82,7 @@ function dialogueInit() {
 // byta från en klass med display: none till en annan med t.ex display:flex etc.
 function gameInit(gameType) {
     document.querySelector("#gameHolder").classList.add(gameType);
-     classChecker(gameType);
+    classChecker(gameType);
     console.log("gameInit");
 }
 
@@ -91,8 +91,10 @@ function classChecker(gameType) {
     const gameScript = document.querySelector("#gameScript");
     if (gameType == "piano") {
         gameHolder.innerHTML = pianoString;
-        gameScript.setAttribute("src", `../../js/${gameType}Script.js`);
+    } else if (gameType == "matcher") {
+        gameHolder.innerHTML = matcherString;
     }
+    gameScript.setAttribute("src", `../../js/${gameType}Script.js`);
 }
 
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
