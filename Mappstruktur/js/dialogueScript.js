@@ -7,7 +7,7 @@ const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 25;
+let dialogueIndex = 20;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;

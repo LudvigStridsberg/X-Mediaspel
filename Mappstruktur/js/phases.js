@@ -1406,8 +1406,8 @@ const phases = {
         }
     },
     8: {
-        game: false, // Ormens gåta
-        backgroundimage: "empty.png",
+        game: "snakeQuest", // Ormens gåta
+        backgroundImage: "empty.png",
         targetLocation: { // Ormgrottan i Kungsparken
             latitude: 55.603584,
             longitude: 12.992652
