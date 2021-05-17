@@ -168,20 +168,18 @@ function importantBtn(theButton) {
 
 function displayLocations() {
     let locationArray = document.querySelectorAll(".locationPoint");
-    let prevLocation;
     locationArray.forEach(location => {
         let idNumber = location.id.substring(location.id.length - 1, location.id.length);
-
-
 
         if (location.id.length > 9) {
             idNumber = location.id.substring(location.id.length - 2, location.id.length);
         }
 
         if (idNumber > STATE.currentPhase) {
-            location.classList.toggle('none');
+            location.classList.add("none");
+        } else {
+            location.classList.remove("none");
         }
-
 
         location.addEventListener("click", function () {
             let prevSelected = document.querySelector(".markedLocation");
@@ -198,7 +196,6 @@ function displayLocations() {
             this.classList.toggle("markedLocation");
 
             sumText.innerHTML = summaries[idNumber - 1];
-
         });
     });
 }
