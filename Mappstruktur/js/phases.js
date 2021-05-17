@@ -1170,7 +1170,7 @@ const phases = {
         }
     },
     7: {
-        game: false, // Gåtan med antal bussar
+        game: "fairyQuest", // Gåtan med antal bussar
         backgroundImage: "kyrkG.png",
         targetLocation: { // Kyrkogården, GA-torg
             latitude: 55.602268,
