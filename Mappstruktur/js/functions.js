@@ -97,11 +97,12 @@ function classChecker(gameType) {
         case "matcher":
             gameHolder.innerHTML = matcherString;
             break;
+        case "fairyQuest":
         case "snakeQuest":
             gameHolder.innerHTML = questString;
             break;
     }
-    gameScript.setAttribute("src", `../../js/${gameType}Script.js`);
+    gameScript.setAttribute("src", `../../js/gameScripts/${gameType}Script.js`);
 }
 
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
