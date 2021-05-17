@@ -52,3 +52,17 @@ const matcherString =
         '</div>' +
     '</div>' +
 '</div>';
+
+const questString =
+'<link rel="stylesheet" href="../../css/interactive.css">' +
+'<div id="interWrapper">' +
+    '<div id="interLogo"></div>' +
+    '<form id="questAnswer" action="" method="POST">' +
+        '<div id="questTitle">' +
+            '<p></p>' +
+        '</div>' +
+        '<p id="questFeedback"></p>' +
+        '<input id="questGuess" type="text" name="questOne" placeholder="Svar...">' +
+        '<button id="questSubmit">Svara</button>' +
+    '</form>' +
+'</div>';

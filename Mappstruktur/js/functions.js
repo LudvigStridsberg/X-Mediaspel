@@ -89,10 +89,17 @@ function gameInit(gameType) {
 function classChecker(gameType) {
     const gameHolder = document.querySelector("#gameHolder");
     const gameScript = document.querySelector("#gameScript");
-    if (gameType == "piano") {
-        gameHolder.innerHTML = pianoString;
-    } else if (gameType == "matcher") {
-        gameHolder.innerHTML = matcherString;
+
+    switch (gameType) {
+        case "piano":
+            gameHolder.innerHTML = pianoString;
+            break;
+        case "matcher":
+            gameHolder.innerHTML = matcherString;
+            break;
+        case "snakeQuest":
+            gameHolder.innerHTML = questString;
+            break;
     }
     gameScript.setAttribute("src", `../../js/${gameType}Script.js`);
 }
