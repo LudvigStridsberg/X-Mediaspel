@@ -16,8 +16,8 @@ const pianoString =
         '<div class="whiteKey" id="B"></div>' +
         '<div class="hidden" id="feedback">' +
             '<p id="feedbackText"></p>' +
-            '<button id="again">Go again!</button>' +
-            '<p>Notes by</p>' +
+            '<button id="again">Försök igen</button>' +
+            '<p>Not-ljud av</p>' +
             '<a href="https://freesound.org/people/ion_/">ion_</a>' +
         '</div>' +
     '</div>' +

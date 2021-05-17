@@ -43,16 +43,21 @@ function arrayCheck() {
         if(result) {
             feedback.classList.remove('hidden');
             feedback.classList.add('good', 'visible');
-            feedbackText.innerText = 'Good job!';
+            feedbackText.innerText = 'Bra jobbat! Prova att gå tilbaka till dialogfönstret.';
             patchState("currentUser", "completedGame", true);
             dialogueInit("outro");
 
+            // Minor CSS-changes
+            again.style.display = "none";
+            feedbackText.style.marginBottom = "20px";
+
+            // make the interactive-button not keep blinking
             let gameBtn = document.getElementById("interactiveBtn");
             gameBtn.classList.remove("important");
         } else {
             feedback.classList.remove('hidden');
             feedback.classList.add('bad', 'visible');
-            feedbackText.innerText = 'Bad job!';
+            feedbackText.innerText = 'Det lät inte rätt... Prova en gång till.';
         }
     }
 }

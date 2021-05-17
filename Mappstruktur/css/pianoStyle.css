@@ -1,7 +1,6 @@
 #feedback {
     margin: 0px;
     padding: 0px;
-    font-size: 30px;
 }
 
 #keyboard {
@@ -19,17 +18,17 @@
 
 .whiteKey {
     height: 14.28%;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid var(--black);
     box-sizing: border-box;
     background-color: var(--white);
 }
 
 .whiteKey:active {
-    background-color: lightgray;
+    background-color: var(--gray);
 }
 
 .blackKey:active {
-    background-color: darkgrey;
+    background-color: var(--gray);
 }
 
 #B {
@@ -38,30 +37,35 @@
 
 .blackKey {
     z-index: 10;
-    background-color: black;
+    background-color: var(--black);
     height: 7.14%;
     position: absolute;
-    left: 40%;
+    left: 40.5%;
     width: 55%;
 }
 
 #feedback {
     width: 70%;
-    height: 40%;
+    height: 30%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--white);
     z-index: 20;
     position: absolute;
     left: 15%;
     top: 30%;
     box-sizing: border-box;
+    text-align: center;
+    font-family: var(--elite);
 }
 
 #again {
     padding: 10px;
-    margin: 40px;
+    margin: 20px;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    font-family: var(--elite);
 }
 
 .hidden {
@@ -73,13 +77,11 @@
 }
 
 .good {
-    border: 5px solid green;
-    color: darkgreen;
+    border: 5px solid var(--green);
 }
 
 .bad {
-    border: 5px solid red;
-    color: darkred;
+    border: 5px solid var(--red);
 }
 
 /* 3.57*/
