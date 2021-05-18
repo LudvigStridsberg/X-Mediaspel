@@ -5,9 +5,10 @@ const characterName = document.getElementById("characterName");
 const dialogueBox = document.getElementById("dialogueBox");
 const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
+const hTextfield = document.querySelector(".histTextfield");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 20;
+let dialogueIndex = -1;
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
@@ -53,6 +54,10 @@ function changeText(arrayChoice) {
 
     // If the object exists...
     if (dialogueObj != undefined) {
+
+        let dialogueString = document.createElement("p");
+        dialogueString.innerText = `${dialogueObj.name}: ${dialogueObj.script}`;
+        hTextfield.appendChild(dialogueString);
 
         // ...update all elements with the new data...
         printText(dialogueObj.script, indicatorClass);

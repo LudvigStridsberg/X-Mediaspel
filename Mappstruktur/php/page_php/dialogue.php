@@ -27,11 +27,13 @@
 
 <div id="overlayHistorik" class="none">
     <a class="closeBtn">
-        <img src="../../media/illustrations/icons/closeBtn.png" alt="Stäng">
+        <img id ="closeImg" src="../../media/illustrations/icons/closeBtn.png" alt="Stäng">
     </a>
     <div class="histTextfield">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur obcaecati rem aliquam dolorum, repudiandae
-            dolores atque maiores iste fuga consectetur, minus amet.</p>
+        <!-- <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur obcaecati rem aliquam dolorum, repudiandae
+                dolores atque maiores iste fuga consectetur, minus amet.
+            </p> -->
     </div>
 </div>
 

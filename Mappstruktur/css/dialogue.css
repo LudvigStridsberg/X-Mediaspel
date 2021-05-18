@@ -45,10 +45,11 @@
     z-index: 2;
 }
 
-#dialogueBox>p {
+#dialogueBox > p {
     margin: 8%;
     font-family: var(--elite);
     line-height: 23px;
+    user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
 }
@@ -107,13 +108,16 @@
     height: 80%;
     width: 90vw;
     z-index: 10;
-    overflow: scroll;
     background-color: var(--white);
     border: 3px solid var(--black);
     font-family: var(--elite);
 }
 .histTextfield {
-    padding: 15% 10%;
+    overflow-y: scroll;
+    padding: 5% 10% 0% 10%;
+    height: 90%;
+    position: absolute;
+    top: 20px;
 }
 .closeBtn {
     position: absolute;
@@ -133,6 +137,11 @@
     padding: 2vh 2vh;
     opacity: .8;
     z-index: -2;
+}
+
+.histTextfield > p {
+    border-bottom: 1px dashed var(--black);
+    padding: 5px 0px;
 }
 
 @keyframes indicatorBlink {
