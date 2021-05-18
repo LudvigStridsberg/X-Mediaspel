@@ -21,7 +21,7 @@
             },
             "hasPlayed": false,
             "introDialogue": false,
-            "completedGame": false,
+            "completedGame": true,
             "outroDialogue": false
         },
         {
@@ -53,14 +53,14 @@
             "password": "1",
             "id": 2,
             "pronoun": "",
-            "storyPhase": 0,
+            "storyPhase": 3,
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    false,
+                    true,
                     false,
                     false,
                     false,

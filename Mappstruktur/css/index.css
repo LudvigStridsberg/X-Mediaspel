@@ -30,7 +30,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
 }
 
 #login_wrapper,
@@ -75,32 +74,14 @@ form button {
     border-bottom: 1px solid var(--c-reg-bg);
 }
 
-#reg_wrapper form input {
-    border-bottom: 1px solid var(--c-btn-bg);
-    color: var(--c-reg-para);
-}
-
-#reg_wrapper form button {
-    background-color: transparent;
-    border: 1px solid var(--c-btn-bg);
-    color: var(--c-reg-para);
-}
-
 #login_wrapper form button:active {
     border: 2px solid var(--c-reg-bg);
 }
 
-#reg_wrapper form button:active {
-    background-color: var(--c-btn-bg);
-    color: var(--c-reg-bg);
+.logoWrapper {
+    width: 100%;
+    padding: 20%;
 }
-
-.temp_logo {
-    position: absolute;
-    top: 5%;
-    left: 10%;
-}
-
 .feedback {
     color: red;
     text-align: center;

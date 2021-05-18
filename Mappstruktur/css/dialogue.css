@@ -49,6 +49,8 @@
     margin: 8%;
     font-family: var(--elite);
     line-height: 23px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 #indicator {
@@ -97,6 +99,31 @@
     opacity: .4;
     /* filter: saturate(3); */
 }
+#overlayHistorik {
+    box-sizing: border-box;
+    position: absolute;
+    top: 8%;
+    left: 5vw;
+    height: 80%;
+    width: 90vw;
+    z-index: 10;
+    overflow: scroll;
+    background-color: var(--white);
+    border: 3px solid var(--black);
+    font-family: var(--elite);
+}
+.histTextfield {
+    padding: 15% 10%;
+}
+.closeBtn {
+    position: absolute;
+    right: 0;
+}
+.closeBtn img {
+    width: 25px;
+    padding: 10px;
+    box-sizing: content-box;
+}
 .textlayer {
     position: absolute;
     background-color: var(--white);
@@ -111,4 +138,14 @@
 @keyframes indicatorBlink {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+#startBtn { 
+    position: absolute;
+    left: 1vh;
+    top:1vh; 
+    padding: .5vh 1vh;
+    z-index: 100;
+    background-color: var(--green);
+    border: 3px solid var(--black);
 }

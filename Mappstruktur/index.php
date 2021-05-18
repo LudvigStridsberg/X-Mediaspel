@@ -7,9 +7,10 @@
     </head>
     <body>
         <div id="lp_wrapper">
-            <h1 class="temp_logo">X-media logo</h1>
             <div id="login_wrapper">
-                <img class="logo">
+                <div class="logoWrapper">
+                <img src="../../media/illustrations/malmu_logo.svg" alt="Malmu logo">
+                </div>
                 <form id="loginForm" action="php/functional_php/admin/login.php" method="POST">
                 <p class="feedback">
                     <?php 
@@ -18,7 +19,7 @@
                         } 
                     ?>
                 </p>
-                <h1>Logga in</h1>
+                <h1>Anslut till uppkoppling</h1>
                     <input type="text" name="loginUsername" placeholder="Användarnamn">
                     <input type="password" name="loginPassword" placeholder="Lösenord">
                     <button type="submit">Logga in</button>

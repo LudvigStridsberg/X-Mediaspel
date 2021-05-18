@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../../css/map.css">
-<a class="viewLink right" href="#dialogue">Tillbaka</a>
+<a class="viewLink right backBtn" href="#dialogue">Tillbaka</a>
 
 <div id="mapWrapper">
     <div id="mapSection">

@@ -28,6 +28,7 @@
     place-content: center;
     gap: 1vh;
     background-color: var(--lightgray);
+    margin-top: 20vh;
     margin-bottom: 4vh;
     box-sizing: border-box;
 }
