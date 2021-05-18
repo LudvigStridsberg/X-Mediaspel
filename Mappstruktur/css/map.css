@@ -40,6 +40,10 @@
     padding: 5%;
     font-family: var(--elite);
 }
+.infoTextWrapper p {
+    -moz-user-select: text;
+    -webkit-user-select: text;
+}
 
 .locationPoint {
     fill: var(--yellow) ; 

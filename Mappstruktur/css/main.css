@@ -1,6 +1,9 @@
 * {
     padding: 0px;
     margin: 0px;
+    scroll-behavior: smooth;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 :root {
@@ -73,28 +76,50 @@
     background-color: darkgrey;
     border-bottom: 5px solid rgb(100, 100, 100);
 }
+#mainBtnNav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 0vh;
+}
 
 .viewLink {
-    position: absolute;
-    bottom: 1vh;
     text-decoration: none;
     padding: 10px;
+    margin: 0vh .2vh;
+    color: var(--black);
+    font-family: var(--elite);
+    box-sizing: border-box;
+    z-index: 3;
+}
+.icon {
+    width: 50%;
+}
+
+.iconBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backBtn {
     background-color: var(--white);
     color: var(--black);
     font-family: var(--elite);
     border: 1px solid var(--black);
-    box-sizing: border-box;
-}
 
+}
 .viewLink:active {
     background-color: var(--gray);
 }
 
 .logoutBtn {
+    position: absolute;
     bottom: unset;
     top: 1vh;
     right: 1vh;
     background-color: var(--red);
+    font-size: 12px;
 }
 
 #dialogue>a:nth-of-type(2) {
@@ -113,18 +138,23 @@
 }
 
 .right {
+    position: absolute;
     right: 1vh;
+    bottom: 1vh;
 }
 
 .left {
+    position: absolute;
     left: 1vh;
+    bottom: 1vh;
 }
 
 .middle {
+    position: absolute;
     width: max-content;
     left: 0;
     right: 0;
-    bottom: 2vh;
+    bottom: 1vh;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -143,6 +173,7 @@
 h2 {
     font-family: var(--barriecito);
 }
+
 
 .important {
     animation: importantAnim .5s infinite alternate;
