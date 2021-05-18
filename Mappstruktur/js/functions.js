@@ -81,9 +81,13 @@ function dialogueInit() {
 // Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
 // byta från en klass med display: none till en annan med t.ex display:flex etc.
 function gameInit(gameType) {
-    document.querySelector("#gameHolder").classList.add(gameType);
-    classChecker(gameType);
-    console.log("gameInit");
+    if(gameType == true && STATE.currentPhase == 10) {
+        endgame();
+    } else {
+        document.querySelector("#gameHolder").classList.add(gameType);
+        classChecker(gameType);
+        console.log("gameInit");
+    }
 }
 
 function classChecker(gameType) {

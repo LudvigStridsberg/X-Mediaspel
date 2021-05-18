@@ -5,7 +5,7 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 5,
+            "storyPhase": 10,
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
@@ -15,13 +15,13 @@
                     true,
                     true,
                     true,
-                    false,
-                    false
+                    true,
+                    true
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
-            "completedGame": false,
+            "introDialogue": true,
+            "completedGame": true,
             "outroDialogue": false
         },
         {

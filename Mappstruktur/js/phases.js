@@ -1716,7 +1716,7 @@ const phases = {
         }
     },
     10: {
-        game: false, // Ev placera stenar, eller behålla endast dialog?
+        game: true, // Ev placera stenar, eller behålla endast dialog?
         backgroundImage: "kockums.png",
         targetLocation: { // Kockums
             latitude: 55.609295,
