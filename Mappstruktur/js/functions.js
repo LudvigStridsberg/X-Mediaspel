@@ -151,6 +151,10 @@ function phaseChanger() {
         STATE.currentUser.outroDialogue = false;
     }
     let phaseIndex = STATE.currentPhase;
+
+    const textfield = document.querySelector(".histTextfield");
+    textfield.innerHTML = "";
+
     patchState("currentUser", "storyPhase", phaseIndex + 1);
     // 1.1, kontrollera spel stadierna intro, completedGame och outro
     // 2 Få koordinaterna från phase-objektet, lägg i state
@@ -204,3 +208,14 @@ function replaceText(element, text) {
     const el = document.querySelector(element);
     el.innerHTML  = text;
 }
+
+
+document.querySelector(".histBtn").addEventListener("click", function() {
+    const overlay = document.getElementById("overlayHistorik");
+    overlay.classList.toggle("none");
+});
+
+document.querySelector("#closeImg").addEventListener("click", function() {
+    const overlay = document.getElementById("overlayHistorik");
+    overlay.classList.add("none");
+});

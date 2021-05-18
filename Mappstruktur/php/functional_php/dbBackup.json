@@ -15,14 +15,14 @@
                     true,
                     true,
                     true,
-                    true,
-                    true
+                    false,
+                    false
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
+            "introDialogue": true,
             "completedGame": true,
-            "outroDialogue": false
+            "outroDialogue": true
         },
         {
             "username": "Sami",
