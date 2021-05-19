@@ -30,6 +30,7 @@ function setState() {
 // Ska kallas från dialog-funktionen och från varje spel-script
 // Call setState
 function patchState(key1, key2, value) {
+    protecc(1.5);
 
     // Update the local State
     // let {key, value} = patchObj;
@@ -145,8 +146,10 @@ function itemHandler(itemObj) {
 function protecc(seconds) {
     let loadScr = document.querySelector('#loadingScreen');
     loadScr.classList.remove('none');
-    let timerID = setTimer(() => {
+    loadScr.classList.add('flex');
+    setTimeout(() => {
         loadScr.classList.add('none');
+        loadScr.classList.remove('flex');
     }, seconds * 1000);
 }
 

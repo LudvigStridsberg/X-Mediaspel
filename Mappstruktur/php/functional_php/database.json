@@ -5,33 +5,23 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-<<<<<<< Updated upstream
-            "storyPhase": 5,
-=======
-            "storyPhase": 0,
->>>>>>> Stashed changes
+            "storyPhase": 10,
             "inventory": {
-                "mapItem": false,
+                "mapItem": true,
                 "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-<<<<<<< Updated upstream
                     true,
                     true,
                     true,
-=======
-                    false,
-                    false,
-                    false,
->>>>>>> Stashed changes
-                    false,
-                    false
+                    true,
+                    true
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
-            "completedGame": false,
+            "introDialogue": true,
+            "completedGame": true,
             "outroDialogue": false
         },
         {
