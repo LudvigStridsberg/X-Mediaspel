@@ -213,13 +213,12 @@ function replaceText(element, text) {
     el.innerHTML  = text;
 }
 
-
 document.querySelector(".histBtn").addEventListener("click", function() {
     const overlay = document.getElementById("overlayHistorik");
     overlay.classList.toggle("none");
 });
 
-document.querySelector("#closeImg").addEventListener("click", function() {
+document.querySelector(".closeBtn").addEventListener("click", function() {
     const overlay = document.getElementById("overlayHistorik");
     overlay.classList.add("none");
 });

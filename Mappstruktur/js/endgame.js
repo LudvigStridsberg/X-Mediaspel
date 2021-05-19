@@ -1,10 +1,13 @@
 "use strict";
 
 function endgame() {
-    let gkBtn = document.createElement("button");
-    let adelBtn = document.createElement("button");
-    let oldBtns = document.querySelectorAll("#mainBtnNav > a");
-    let parent = document.getElementById("mainBtnNav");
+    const gkBtn = document.createElement("button");
+    const adelBtn = document.createElement("button");
+    const oldBtns = document.querySelectorAll("#mainBtnNav > a");
+    const parent = document.getElementById("mainBtnNav");
+    const icon = document.querySelector("#overlayStandby > img:nth-of-type(1)");
+    const imgElement = document.querySelector("#overlayStandby > img:nth-of-type(2)");
+    const textOverlay = document.querySelector(".textlayer");
 
     let countdown = document.createElement("p");
     countdown.id = "countdown";
@@ -32,22 +35,37 @@ function endgame() {
         }, 2000);
     });
 
+    // Append the elements
     parent.appendChild(gkBtn);
     parent.appendChild(countdown);
     parent.appendChild(adelBtn);
 
-    countdown.classList.add("important");
+    // Change the style of the elements in #overlayStandby
+    imgElement.src = "../../media/illustrations/endgame.png";
+    imgElement.style.opacity = 1;
+
+    icon.classList.add("none");
+
+    // Change the text in textlayer
+    textOverlay.classList.add("important");
+    textOverlay.style.zIndex = 1;
+    document.querySelector(".textlayer > h2").innerText = "Vem ska få stenarna?";
+    document.querySelector(".textlayer > p").innerText = "";
+
     var timeleft = 15;
     var downloadTimer = setInterval(function(){
-    if(timeleft <= 0){
-        clearInterval(downloadTimer);
-        document.getElementById("countdown").classList.add("none");
-        gkBtn.click();
-        parent.classList.remove("flexer");
-        parent.classList.add("none");
-    } else {
-        document.getElementById("countdown").innerHTML = timeleft;
-    }
-    timeleft -= 1;
+        if(timeleft <= 5) {
+            document.getElementById("countdown").style.color = "red";
+        }
+        if(timeleft <= 0){
+            clearInterval(downloadTimer);
+            // document.getElementById("countdown").classList.add("none");
+            // gkBtn.click();
+            // parent.classList.remove("flexer");
+            // parent.classList.add("none");
+        } else {
+            document.getElementById("countdown").innerHTML = timeleft;
+        }
+        timeleft -= 1;
     }, 1000);
 }
