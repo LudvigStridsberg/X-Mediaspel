@@ -20,7 +20,7 @@
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": true,
+            "introDialogue": false,
             "completedGame": false,
             "outroDialogue": false
         },
