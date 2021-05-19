@@ -109,6 +109,7 @@
     font-family: var(--barriecito);
     color: var(--black);
     border: 3px solid var(--black);
+    background-color: rgba(20, 18, 23, 0.8);
 }
 
 .viewLink {
