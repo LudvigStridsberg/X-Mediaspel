@@ -142,6 +142,14 @@ function itemHandler(itemObj) {
     // patchState("currentUser", "inventory", itemObj);
 }
 
+function protecc(seconds) {
+    let loadScr = document.querySelector('#loadingScreen');
+    loadScr.classList.remove('none');
+    let timerID = setTimer(() => {
+        loadScr.classList.add('none');
+    }, seconds * 1000);
+}
+
 function phaseChanger() {
     // 1 Uppdateta phase-nummer via patchState
     if (STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue) {//! && STATE.currentUser.completedGame

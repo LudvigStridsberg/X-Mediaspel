@@ -25,6 +25,14 @@
     </div>
 </div>
 
+<div id="loadingScreen" class="">
+    <img src="../../media/illustrations/malmu_logo.svg" alt="Malmu">
+    <div class="loadingText">
+        <h2>Återupprättar kontakt med Malmu</h2>
+        <p>Vänligen vänta...</p>
+    </div>
+</div>
+
 <div id="overlayHistorik" class="none">
     <a class="closeBtn">
         <img id ="closeImg" src="../../media/illustrations/icons/closeBtn.png" alt="Stäng">
