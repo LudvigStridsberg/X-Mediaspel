@@ -111,7 +111,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Det hugger till av ren och skär igenkänning.",
+                    script: "Du hugger till.",
                 },
                 {
                     name: "Portmästarn",
@@ -161,7 +161,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Du står på torget och ser dig omkring för att se om du får syn på Portmästarn. Torget myllrar av fantasiväsen.",
+                    script: "Du står på torget och ser dig omkring för att se om du får syn på Portmästarn. Det myllrar av fantasiväsen.",
                 },
                 {
                     name: "BSK",
@@ -408,7 +408,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: " Ljuset dansar runt i bara några sekunder innan det lägger sig igen.",
+                    script: "Ljuset dansar runt i bara några sekunder innan det lägger sig igen.",
 
                 },
                 {
@@ -612,8 +612,8 @@ const phases = {
                     script: "Bandledaren skrattar hon också. Hon vänder sig till sina medlemmar.",
                 },
                 {
-                    name: "BSK",
-                    image: "empty.png",
+                    name: "Bandledaren",
+                    image: "bandledaren.png",
                     script: "Ja, förlåt mina vänner, men det var väl ett välbehövligt skratt?",
                 },
                 {
@@ -929,7 +929,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Stenens mitt är så mörkt grön att det nästan ser svar ut, medan de spräckliga kanterna är i en ljusare nyans. Detta måste vara en jadeit.",
+                    script: "Stenens mitt är så mörkt grön att det nästan ser svart ut, medan de spräckliga kanterna är i en ljusare nyans. Detta måste vara en jadeit.",
                     items:{
                         mapItem: true,
                         letterItem: false,
@@ -968,7 +968,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Desto närmare ni går, ju mer påtagliga blir de lågfrekventa ljudvågorna som får hela atmosfären att pulsera.",
+                    script: "Ju närmare ni går, desto mer påtagliga blir de lågfrekventa ljudvågorna som får hela atmosfären att pulsera.",
                 },
                 {
                     name: "BSK",
@@ -1457,7 +1457,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Zodiaken sa åt dig att lita på din magkänsla. Den säger just nu åt dig att dra en vit lögn.",
+                    script: "Zodiaken sa åt dig att lita på din magkänsla. Just nu säger den åt dig att dra en vit lögn.",
                 },
                 {
                     name: "Jag",
@@ -1752,7 +1752,7 @@ const phases = {
                 {
                     name: "Portmästaren",
                     image: "portmastaren.png",
-                    script: "Jag har bara ett sista ste ",//! ska det vara STE???
+                    script: "Jag har bara ett sista ste--",
                 },
                 {
                     name: "Ädeln",
