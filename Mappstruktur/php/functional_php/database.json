@@ -21,7 +21,7 @@
             },
             "hasPlayed": false,
             "introDialogue": true,
-            "completedGame": true,
+            "completedGame": false,
             "outroDialogue": false
         },
         {
