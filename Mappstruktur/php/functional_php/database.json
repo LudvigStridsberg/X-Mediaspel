@@ -69,9 +69,9 @@
             },
             "hasPlayed": false,
             "introDialogue": true,
-            "completedGame": false,
+            "completedGame": true,
             "outroDialogue": false,
-            "outroADialogue": false
+            "outroADialogue": true
         }
     ]
 }

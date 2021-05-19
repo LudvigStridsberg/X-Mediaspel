@@ -41,10 +41,10 @@ function endgame() {
     var downloadTimer = setInterval(function(){
     if(timeleft <= 0){
         clearInterval(downloadTimer);
-        // document.getElementById("countdown").classList.add("none");
-        // gkBtn.click();
-        // gkBtn.classList.add("none");
-        // adelBtn.classList.add("none");
+        document.getElementById("countdown").classList.add("none");
+        gkBtn.click();
+        parent.classList.remove("flexer");
+        parent.classList.add("none");
     } else {
         document.getElementById("countdown").innerHTML = timeleft;
     }

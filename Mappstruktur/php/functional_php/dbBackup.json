@@ -68,10 +68,10 @@
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
-            "completedGame": false,
+            "introDialogue": true,
+            "completedGame": true,
             "outroDialogue": false,
-            "outroADialogue": false
+            "outroADialogue": true
         }
     ]
 }

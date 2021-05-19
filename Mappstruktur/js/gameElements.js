@@ -61,7 +61,7 @@ const questString =
         '<div id="questTitle">' +
             '<p></p>' +
         '</div>' +
-        '<p id="questFeedback"></p>' +
+        '<p id="questFeedback" class="none"></p>' +
         '<input id="questGuess" type="text" name="questOne" placeholder="Svar...">' +
         '<button id="questSubmit">Svara</button>' +
     '</form>' +
