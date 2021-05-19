@@ -10,7 +10,8 @@ questTitle.innerText = "\"De tar inte bara en men flera personer till inte bara 
 questSubmit.addEventListener("click", e => {
     e.preventDefault();
     let guess = questGuess.value.toLowerCase();
-
+    questFeedback.classList.remove("none");
+    
     if (guess == "6" || guess == "sex") {
         questFeedback.innerText = "Rätt svar! Gå tillbaka till dialogfönstret";
         patchState("currentUser", "completedGame", true);

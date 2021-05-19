@@ -16,8 +16,8 @@
 #characterImg {
     position: relative;
     width: 100%;
-    bottom: -10%;
-    left: -10%;
+    bottom: -4%;
+    /* left: -10%; */
     z-index: 0;
 }
 
@@ -36,17 +36,19 @@
 }
 
 #dialogueBox {
-    position: absolute;
-    bottom: 7vh;
+    position: relative;
+    bottom: -1vh;
     border: 3px solid var(--black);
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(244, 244, 244, 0.9);
     width: 95%;
-    height: 20%;
+    height: 22%;
     z-index: 2;
+    padding: 4vh 2vh 2vh 2vh;
+    box-sizing: border-box;
 }
 
 #dialogueBox > p {
-    margin: 8%;
+    /* margin: 8%; */
     font-family: var(--elite);
     line-height: 23px;
     user-select: none;

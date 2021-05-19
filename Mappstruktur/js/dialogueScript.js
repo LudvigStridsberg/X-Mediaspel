@@ -9,18 +9,26 @@ const hTextfield = document.querySelector(".histTextfield");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
 let dialogueIndex = -1;
+let endgameChoice = "";
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
-
-    let arrayChoice = "";
+    
+    let arrayChoice = endgameChoice;
     if (STATE.currentUser.introDialogue == false) {
         arrayChoice = "intro";
     } else if (!STATE.currentUser.completedGame) {
+        console.log("gick in här");
         arrayChoice = "intro";
-    } else {
+    } else if(arrayChoice == "outroA"){
+        arrayChoice = "outroA";
+    } else if(arrayChoice == "outroB") {
+        arrayChoice = "outroB";
+    } 
+    else {
         arrayChoice = "outro";
     }
+    console.log(arrayChoice, endgameChoice);
 
     changeText(arrayChoice);
 });
