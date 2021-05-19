@@ -1822,14 +1822,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Portmästaren är ursinnig. Du minns Zodiakens ord. Lita på din magkänsla.",
-                    items:{
-                        mapItem: true,
-                        letterItem: false,
-                        photo: false,
-                        oldLetterItem: false,
-                        gems:[true, true, true, true, true]
-                    }
+                    script: "Portmästaren är ursinnig. Du minns Zodiakens ord. Lita på din magkänsla."
                 }, // Spelaren gör slutvalet // Annorlunda outros på denna
             ],
             outroA: [ // Ger stenarna till Portis //!Kontrollera att alla stenar är false

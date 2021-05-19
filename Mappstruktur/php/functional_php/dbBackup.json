@@ -20,7 +20,7 @@
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
+            "introDialogue": true,
             "completedGame": false,
             "outroDialogue": false
         },
@@ -53,7 +53,7 @@
             "password": "1",
             "id": 2,
             "pronoun": "",
-            "storyPhase": 3,
+            "storyPhase": 10,
             "inventory": {
                 "mapItem": true,
                 "letterItem": false,
@@ -61,16 +61,17 @@
                 "oldLetterItem": false,
                 "gems": [
                     true,
-                    false,
-                    false,
-                    false,
-                    false
+                    true,
+                    true,
+                    true,
+                    true
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": true,
+            "introDialogue": false,
             "completedGame": false,
-            "outroDialogue": false
+            "outroDialogue": false,
+            "outroADialogue": false
         }
     ]
 }
