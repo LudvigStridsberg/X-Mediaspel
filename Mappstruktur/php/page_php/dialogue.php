@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="../../css/dialogue.css">
 
 <a class="viewLink logoutBtn" href="../functional_php/admin/logout.php">Avbryt signal</a>
-<div id="mainBtnNav">
+<div id="mainBtnNav" class="flexer">
+
     <a class="viewLink iconBtn" href="#map">
         <img class="icon" src="../../media/illustrations/icons/map.png" alt="Karta">
     </a>
@@ -34,14 +35,11 @@
 </div>
 
 <div id="overlayHistorik" class="none">
-    <a class="closeBtn">
-        <img id ="closeImg" src="../../media/illustrations/icons/closeBtn.png" alt="Stäng">
-    </a>
-    <div class="histTextfield">
-        <!-- <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur obcaecati rem aliquam dolorum, repudiandae
-                dolores atque maiores iste fuga consectetur, minus amet.
-            </p> -->
+    <div id="histInnerWrapper">
+        <a class="closeBtn">
+            <img id ="closeImg" src="../../media/illustrations/icons/closeBtn.png" alt="Stäng">
+        </a>
+        <div class="histTextfield"></div>
     </div>
 </div>
 

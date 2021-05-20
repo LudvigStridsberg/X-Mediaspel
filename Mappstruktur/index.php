@@ -4,12 +4,14 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Special+Elite&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="lp_wrapper">
             <div id="login_wrapper">
                 <div class="logoWrapper">
-                <img src="../../media/illustrations/malmu_logo.svg" alt="Malmu logo">
+                <img src="media/illustrations/malmu_logo.svg" alt="Malmu logo">
                 </div>
                 <form id="loginForm" action="php/functional_php/admin/login.php" method="POST">
                 <p class="feedback">
@@ -19,7 +21,7 @@
                         } 
                     ?>
                 </p>
-                <h1>Anslut till uppkoppling</h1>
+                <h1>ANSLUT TILL PORTAL</h1>
                     <input type="text" name="loginUsername" placeholder="Användarnamn">
                     <input type="password" name="loginPassword" placeholder="Lösenord">
                     <button type="submit">Logga in</button>

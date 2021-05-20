@@ -28,6 +28,7 @@
     /* Extra colors */
     --lightgray: #a1a0a0;
     --darkgray: #636363;
+    --warningRed: #dd3f3f; 
 
 }
 
@@ -77,11 +78,38 @@
     border-bottom: 5px solid rgb(100, 100, 100);
 }
 #mainBtnNav {
-    display: flex;
+    height: 75px;
     width: 100%;
-    justify-content: center;
     position: absolute;
     bottom: 0vh;
+}
+#mainBtnNav button {
+    width: 34vw;
+    height: 15vh;
+    background-color: var(--white);
+    font-family: var(--elite);
+    font-size: 15px;
+    color: var(--black);
+    border: 3px solid var(--black);
+}
+#mainBtnNav button:first-of-type {
+    border-right: none;
+}
+#mainBtnNav button:last-of-type {
+    border-left: none;
+}
+#mainBtnNav p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 30vw;
+    height: 15vh;
+    font-size: 50px;
+    font-family: var(--barriecito);
+    color: var(--black);
+    border: 3px solid var(--black);
+    background-color: rgba(20, 18, 23, 0.8);
 }
 
 .viewLink {
@@ -101,7 +129,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(244, 244, 244, 0.9);
+    border: 3px solid var(--black);
 }
+.iconBtn:first-of-type {
+    margin-left: 1.3vh;
+}
+.iconBtn:last-of-type {
+    margin-right: 1.3vh;
+}
+
 .backBtn {
     background-color: var(--white);
     color: var(--black);
@@ -118,8 +155,9 @@
     bottom: unset;
     top: 1vh;
     right: 1vh;
-    background-color: var(--red);
+    background-color: var(--warningRed);
     font-size: 12px;
+    padding: 8px 10px;
 }
 
 #dialogue>a:nth-of-type(2) {

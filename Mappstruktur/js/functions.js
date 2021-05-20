@@ -82,14 +82,18 @@ function dialogueInit() {
 // Elementen kommer att vara laddade, här kommer vi göra de synliga genom att
 // byta från en klass med display: none till en annan med t.ex display:flex etc.
 function gameInit(gameType) {
-    document.querySelector("#gameHolder").classList.add(gameType);
-    classChecker(gameType);
-    console.log("gameInit");
+    if(gameType == true && STATE.currentPhase == 10) {
+        endgame();
+    } else {
+        document.querySelector("#gameHolder").classList.add(gameType);
+        classChecker(gameType);
+        console.log("gameInit");
+    }
 }
 
 function classChecker(gameType) {
     const gameHolder = document.querySelector("#gameHolder");
-    const gameScript = document.querySelector("#gameScript");
+    const gameScript = document.createElement("script");
 
     switch (gameType) {
         case "piano":
@@ -104,6 +108,7 @@ function classChecker(gameType) {
             break;
     }
     gameScript.setAttribute("src", `../../js/gameScripts/${gameType}Script.js`);
+    gameHolder.appendChild(gameScript);
 }
 
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
@@ -163,8 +168,13 @@ function phaseChanger() {
     }
     let phaseIndex = STATE.currentPhase;
 
+    // Empty the dialogue-history
     const textfield = document.querySelector(".histTextfield");
     textfield.innerHTML = "";
+
+    // Delete all game-elements
+    const gameHolder = document.getElementById("gameHolder");
+    gameHolder.innerHTML = "";
 
     patchState("currentUser", "storyPhase", phaseIndex + 1);
     // 1.1, kontrollera spel stadierna intro, completedGame och outro
@@ -220,13 +230,12 @@ function replaceText(element, text) {
     el.innerHTML  = text;
 }
 
-
 document.querySelector(".histBtn").addEventListener("click", function() {
     const overlay = document.getElementById("overlayHistorik");
     overlay.classList.toggle("none");
 });
 
-document.querySelector("#closeImg").addEventListener("click", function() {
+document.querySelector(".closeBtn").addEventListener("click", function() {
     const overlay = document.getElementById("overlayHistorik");
     overlay.classList.add("none");
 });
