@@ -69,6 +69,10 @@
     display: none;
 }
 
+.flex {
+    display: flex;
+}
+
 .more {
     display: inline-block;
     border: solid var(--black);
@@ -125,6 +129,42 @@
     border: 3px solid var(--black);
     font-family: var(--elite);
 }
+
+
+#loadingScreen {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.loadingText {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingText p {
+    font-family: 'Special Elite', sans-serif;
+}
+
+#spin {
+    margin-bottom: 5vh;
+    height: 20vw;
+    animation-name: spin;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
 .histTextfield {
     overflow-y: scroll;
     padding: 5% 10% 0% 10%;
@@ -160,6 +200,15 @@
 @keyframes indicatorBlink {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 #startBtn { 
