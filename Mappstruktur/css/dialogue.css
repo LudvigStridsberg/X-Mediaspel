@@ -16,7 +16,7 @@
 #characterImg {
     position: relative;
     width: 100%;
-    bottom: -4%;
+    bottom: 10%;
     /* left: -10%; */
     z-index: 0;
 }
@@ -36,8 +36,8 @@
 }
 
 #dialogueBox {
-    position: relative;
-    bottom: -1vh;
+    position: absolute;
+    bottom: 70px;
     border: 3px solid var(--black);
     background-color: rgba(244, 244, 244, 0.9);
     width: 95%;
@@ -50,7 +50,8 @@
 #dialogueBox > p {
     /* margin: 8%; */
     font-family: var(--elite);
-    line-height: 23px;
+    font-size: 15px;
+    line-height: 20px;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -103,6 +104,16 @@
     /* filter: saturate(3); */
 }
 #overlayHistorik {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    z-index: 10;
+    background-color:  rgba(135, 134, 137, 0.7);
+}
+#histInnerWrapper {
     box-sizing: border-box;
     position: absolute;
     top: 8%;

@@ -51,18 +51,25 @@ function endgame() {
     textOverlay.style.zIndex = 1;
     document.querySelector(".textlayer > h2").innerText = "Vem ska få stenarna?";
     document.querySelector(".textlayer > p").innerText = "";
+    // Change the style of the wrapper #mainBtnNav
+    parent.style.bottom = "17px";
 
     var timeleft = 15;
     var downloadTimer = setInterval(function(){
-        if(timeleft <= 5) {
-            document.getElementById("countdown").style.color = "red";
-        }
-        if(timeleft <= 0){
+
+    // Changes the color of the countdown element in steps from green->yellow->red, 0 == removes counter.   
+        if(timeleft <= 15) {
+            document.getElementById("countdown").style.color = "#5FBC7C";
+        } if(timeleft <= 10) {
+            document.getElementById("countdown").style.color = "#E7C55F";
+        } if(timeleft <= 5) {
+            document.getElementById("countdown").style.color = "#dd3f3f";
+        } if(timeleft <= 0){
             clearInterval(downloadTimer);
-            // document.getElementById("countdown").classList.add("none");
-            // gkBtn.click();
-            // parent.classList.remove("flexer");
-            // parent.classList.add("none");
+            document.getElementById("countdown").classList.add("none");
+            gkBtn.click();
+            parent.classList.remove("flexer");
+            parent.classList.add("none");
         } else {
             document.getElementById("countdown").innerHTML = timeleft;
         }
