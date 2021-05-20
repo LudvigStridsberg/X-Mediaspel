@@ -455,7 +455,7 @@ const phases = {
                 {
                     name: "Jag",
                     image: "empty.png",
-                    script: "jag heter " + getUsername() + ".",
+                    script: "Jag heter " + getUsername() + ".",
                 },
                 {
                     name: "Hipp",
