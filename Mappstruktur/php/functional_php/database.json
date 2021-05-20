@@ -53,25 +53,25 @@
             "password": "1",
             "id": 2,
             "pronoun": "",
-            "storyPhase": 10,
+            "storyPhase": 0,
             "inventory": {
-                "mapItem": true,
+                "mapItem": false,
                 "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": true,
-            "completedGame": true,
+            "introDialogue": false,
+            "completedGame": false,
             "outroDialogue": false,
-            "outroADialogue": true
+            "outroADialogue": false
         }
     ]
 }
