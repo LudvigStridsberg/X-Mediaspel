@@ -47,6 +47,7 @@ function endgame() {
     adelBtn.addEventListener("click", function() {
         endgameChoice = "outroB";
         clearInterval(countdownTimer);
+        parent.classList.add("none");
         patchState("currentUser", "completedGame", true);
         setTimeout(() => {
             dialogueInit();
@@ -56,6 +57,7 @@ function endgame() {
     gkBtn.addEventListener("click", function() {
         endgameChoice = "outroA";
         clearInterval(countdownTimer);
+        parent.classList.add("none");
         patchState("currentUser", "completedGame", true);
         setTimeout(() => {
             dialogueInit();
