@@ -159,7 +159,7 @@ function dialogueEnder(arrayChoice) {
 
     dialogueIndex = -1;
 
-    if (!phases[STATE.currentPhase].game) {
+    if (!phases[STATE.currentPhase].game && arrayChoice == "intro") {
         patchState("currentUser", "completedGame", true);
         dialogueInit();
     } else {

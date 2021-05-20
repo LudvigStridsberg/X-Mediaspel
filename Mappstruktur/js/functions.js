@@ -92,7 +92,7 @@ function gameInit(gameType) {
 
 function classChecker(gameType) {
     const gameHolder = document.querySelector("#gameHolder");
-    const gameScript = document.querySelector("#gameScript");
+    const gameScript = document.createElement("script");
 
     switch (gameType) {
         case "piano":
@@ -107,6 +107,7 @@ function classChecker(gameType) {
             break;
     }
     gameScript.setAttribute("src", `../../js/gameScripts/${gameType}Script.js`);
+    gameHolder.appendChild(gameScript);
 }
 
 // Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
@@ -156,8 +157,13 @@ function phaseChanger() {
     }
     let phaseIndex = STATE.currentPhase;
 
+    // Empty the dialogue-history
     const textfield = document.querySelector(".histTextfield");
     textfield.innerHTML = "";
+
+    // Delete all game-elements
+    const gameHolder = document.getElementById("gameHolder");
+    gameHolder.innerHTML = "";
 
     patchState("currentUser", "storyPhase", phaseIndex + 1);
     // 1.1, kontrollera spel stadierna intro, completedGame och outro

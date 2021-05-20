@@ -5,18 +5,18 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 10,
+            "storyPhase": 2,
             "inventory": {
                 "mapItem": true,
-                "letterItem": false,
+                "letterItem": true,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
                 ]
             },
             "hasPlayed": false,
