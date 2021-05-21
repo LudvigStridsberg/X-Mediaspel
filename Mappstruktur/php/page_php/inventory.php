@@ -5,7 +5,7 @@
         <img src="../../media/illustrations/malmu_icon.png" alt="">
     </div> -->
     <div id="invSection">
-        <div id="itemDiv0"></div>
+        <a href="#map" id="itemDiv0"></a>
         <div id="itemDiv1"></div>
         <div id="itemDiv2"></div>
         <div id="itemDiv3"></div>
