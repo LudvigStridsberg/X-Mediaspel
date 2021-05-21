@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     scroll-behavior: smooth;
+    user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
 }
@@ -32,10 +33,12 @@
 
 }
 
+
 #wrapper {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    /* position: fixed; */
     scroll-behavior: smooth;
 }
 
@@ -81,7 +84,7 @@
     height: 75px;
     width: 100%;
     position: absolute;
-    bottom: 0vh;
+    bottom: 0;
 }
 #mainBtnNav button {
     width: 34vw;
@@ -189,10 +192,10 @@
 
 .middle {
     position: absolute;
-    width: max-content;
+    width: 30vw;
     left: 0;
     right: 0;
-    bottom: 1vh;
+    bottom: 10vh;
     margin-left: auto;
     margin-right: auto;
     text-align: center;

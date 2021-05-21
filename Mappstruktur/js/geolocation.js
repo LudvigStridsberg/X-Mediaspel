@@ -86,15 +86,15 @@ function compareLocationFunction(locationData) {
     }
 
     if (latClose && lonClose){
-        replaceText('.textLayer p', 'Du är nära en anslutningplats.');
+        // replaceText('.textLayer p', 'Du är nära en anslutningplats.');
     } else {
-        replaceText('.textLayer p', 'Ta dig till en anslutningsplats.');
+        // replaceText('.textLayer p', 'Ta dig till en anslutningsplats.');
     }
     
-    if (latitude >= targetLat - 0.0002 && latitude <= targetLat + 0.0002) {
+    if (latitude >= targetLat - 0.0005 && latitude <= targetLat + 0.0005) {
         latOk = true;
     }
-    if (longitude >= targetLon - 0.0002 && longitude <= targetLon + 0.0002) {
+    if (longitude >= targetLon - 0.0005 && longitude <= targetLon + 0.0005) {
         lonOk = true;
     }
 

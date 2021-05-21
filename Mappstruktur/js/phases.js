@@ -72,13 +72,12 @@ const phases = {
                 },
                 {
                     name: "Portmästarn",
-
                     image: "portmastaren.png",
                     script: "Den undre världen drivs av magi, fantasi och kreativitet från den övre världen, och ju mer ni ger, desto mer får ni tillbaka...",
                 },
                 {
                     name: "Portmästarn",
-                    image: "empty.png",
+                    image: "portmastaren.png",
                     script: "..om världarna är i balans så att säga.",
                 },
                 {
@@ -99,6 +98,21 @@ const phases = {
             ],
             outro: [
                 {
+                    name: "Portmästarn",
+                    image: "portmastaren.png",
+                    script: "Tio ädelstenar är fördelade mellan den övre och undre världen. De representerar olika saker såsom visdom, kärlek, kreativitet och styrka.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "portmastaren.png",
+                    script: "Dessa stenar ska ligga vid en väldigt speciell portal som är kärnan till relationen av våra världar. Men med tiden så glider de ifrån varandra - det är oundvikligt.",
+                },
+                {
+                    name: "Portmästarn",
+                    image: "portmastaren.png",
+                    script: "När de glider ifrån varandra så börjar det få konsekvenser i båda våra världar, eftersom det rubbar balansen. Ju längre ifrån varandra stenarna är, desto större blir konsekvenserna.",
+                },
+                {
                     name: "Jag",
                     image: "empty.png",
                     script: "Och de här konsekvenserna är?",
@@ -111,7 +125,7 @@ const phases = {
                 {
                     name: "BSK",
                     image: "empty.png",
-                    script: "Du hugger till.",
+                    script: "Du känner hur det knyter sig lite i magen av tanken.",
                 },
                 {
                     name: "Portmästarn",
@@ -277,7 +291,7 @@ const phases = {
                     name: "Ödlan",
                     image: "djurpojken_odla.png",
                     // Här kommer gåtan igen i dialogrutan
-                    script: "Kom ihåg: Hipp är rena rama teater apan du vet säkert vart du kan hitta honom, han borde inte vara så långt härifrån.",
+                    script: "Kom ihåg: Hipp är rena rama teaterapan du vet säkert vart du kan hitta honom, han borde inte vara så långt härifrån.",
                 },
             ]
         }
