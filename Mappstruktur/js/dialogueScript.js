@@ -182,9 +182,8 @@ function dialogueEnder(arrayChoice) {
 
         if (arrayChoice != "outro") {
             gameBtn.classList.add("important");
+            gameInit(phases[STATE.currentPhase].game);
         }
-
-        gameInit(phases[STATE.currentPhase].game);
     }
 
     // document.getElementById("startBtn").classList.remove("none");

@@ -5,7 +5,7 @@ const GPS = {
         // om er app ska användas inne i stan. Eller så kanske det inte alls behövs.
 
         timeThreshold: 15000,    // Locations older than 15000 miliseconds (6 secs) don't count.
-        maxDistance: 0.0008,    // about 20 meters (in gps coordinates)
+        maxDistance: 0.0008,    // about 80 meters (in gps coordinates)
         minLocations: 3,        // We need at least 3 "good" locations.
                                 //      (A good location is a location that is close to the others.)
     },
@@ -104,7 +104,12 @@ function compareLocationFunction(locationData) {
         dialogueInit("intro");
     }
 
-    if(latOk && lonOk && STATE.currentUser.introDialogue == true && STATE.currentUser.gameComplete == true && STATE.currentUser.outroDialogue == false) {
+    if(latOk && lonOk && STATE.currentUser.introDialogue == true && STATE.currentUser.completedGame == false) {
+        navigator.geolocation.clearWatch(gpsID);
+        gameInit(phases[STATE.currentPhase].game);
+    }
+
+    if(latOk && lonOk && STATE.currentUser.introDialogue == true && STATE.currentUser.completedGame == true && STATE.currentUser.outroDialogue == false) {
         navigator.geolocation.clearWatch(gpsID);
         dialogueInit("outro");
     }

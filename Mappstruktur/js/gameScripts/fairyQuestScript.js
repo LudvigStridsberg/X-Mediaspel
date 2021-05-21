@@ -8,7 +8,6 @@ const questTitle = document.querySelector("#questTitle > p");
 questTitle.innerText = "\"De tar inte bara en men flera personer till inte bara ett men flera ställen men frågan är hur många av dem tar personer till ställen från stället som döptes efter kungen, eller kungen som döptes efter stället?\"";
 
 questSubmit.addEventListener("click", e => {
-    e.preventDefault();
     let guess = questGuess.value.toLowerCase();
     questFeedback.classList.remove("none");
     

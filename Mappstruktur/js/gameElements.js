@@ -57,12 +57,12 @@ const questString =
 '<link rel="stylesheet" href="../../css/interactive.css">' +
 '<div id="interWrapper">' +
     '<div id="interLogo"></div>' +
-    '<form id="questAnswer" action="" method="POST">' +
+    '<div id="questAnswer">' +
         '<div id="questTitle">' +
             '<p></p>' +
         '</div>' +
         '<p id="questFeedback" class="none"></p>' +
         '<input id="questGuess" type="text" name="questOne" placeholder="Svar...">' +
         '<button id="questSubmit">Svara</button>' +
-    '</form>' +
+    '</div>' +
 '</div>';
