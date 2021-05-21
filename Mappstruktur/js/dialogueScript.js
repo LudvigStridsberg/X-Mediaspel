@@ -159,10 +159,10 @@ function dialogueEnder(arrayChoice) {
     // the corresponding page
     //! Change to website-links!
     if (arrayChoice == "outroA") {
-        window.location = "https://malmu.se/php/page_php/bend.html";
+        window.location = "bend.html";
         break;
     } else if (arrayChoice == "outroB") {
-        window.location = "https://malmu.se/php/page_php/gend.html";
+        window.location = "gend.html";
         break;
     }
 
