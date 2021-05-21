@@ -146,9 +146,9 @@ function printText(string, indicatorClass) {
     printNext();
 }
 
-document.getElementById("startBtn").addEventListener("click", e=> {
-    dialogueInit();
-});
+// document.getElementById("startBtn").addEventListener("click", e=> {
+//     dialogueInit();
+// });
 
 function dialogueEnder(arrayChoice) {
 
@@ -159,9 +159,11 @@ function dialogueEnder(arrayChoice) {
     // the corresponding page
     //! Change to website-links!
     if (arrayChoice == "outroA") {
-        window.location = "bend.html";
+        window.location = "https://malmu.se/php/page_php/bend.html";
+        break;
     } else if (arrayChoice == "outroB") {
-        window.location = "gend.html";
+        window.location = "https://malmu.se/php/page_php/gend.html";
+        break;
     }
 
     patchState("currentUser", `${arrayChoice}Dialogue`, true);
@@ -185,7 +187,7 @@ function dialogueEnder(arrayChoice) {
         gameInit(phases[STATE.currentPhase].game);
     }
 
-    document.getElementById("startBtn").classList.remove("none");
+    // document.getElementById("startBtn").classList.remove("none");
 
     if (arrayChoice == "outro"){
         phaseChanger();

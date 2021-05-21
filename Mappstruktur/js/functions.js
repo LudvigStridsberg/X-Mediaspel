@@ -75,7 +75,7 @@ function dialogueInit() {
     dWrapper.classList.add("flexer");
     overlay.classList.add("none");
     dWrapper.style.backgroundImage = `url("../../media/photos/${phases[STATE.currentPhase].backgroundImage}")`;
-    document.getElementById("startBtn").classList.add("none");
+    // document.getElementById("startBtn").classList.add("none");
     dialogueBox.click();
 }
 
@@ -185,6 +185,9 @@ function phaseChanger() {
     // 2 Få koordinaterna från phase-objektet, lägg i state
     // 3 Uppdatera script-taggar och php-includes
     displayLocations();
+    setTimeout(() => {
+        activateGeolocation();
+    }, 5000);
 }
 
 function importantBtn(theButton) {
