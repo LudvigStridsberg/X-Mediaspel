@@ -1,12 +1,11 @@
 {
     "users": [
         {
-            "username": "Lolle",
+            "username": "Ludde",
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 1,
-
+            "storyPhase": 10,
             "inventory": {
                 "mapItem": true,
                 "letterItem": true,
@@ -22,7 +21,7 @@
             },
             "hasPlayed": false,
             "introDialogue": true,
-            "completedGame": false,
+            "completedGame": true,
             "outroDialogue": false
         },
         {
@@ -54,25 +53,25 @@
             "password": "1",
             "id": 2,
             "pronoun": "",
-            "storyPhase": 10,
+            "storyPhase": 0,
             "inventory": {
-                "mapItem": true,
+                "mapItem": false,
                 "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": true,
-            "completedGame": true,
+            "introDialogue": false,
+            "completedGame": false,
             "outroDialogue": false,
-            "outroADialogue": true
+            "outroADialogue": false
         }
     ]
 }

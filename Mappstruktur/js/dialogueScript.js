@@ -155,6 +155,15 @@ function dialogueEnder(arrayChoice) {
     const dWrapper = document.getElementById("dialogueWrapper");
     const overlay = document.getElementById("overlayStandby");
 
+    // If the user has finished the game we should send them to
+    // the corresponding page
+    //! Change to website-links!
+    if (arrayChoice == "outroA") {
+        window.location = "bend.html";
+    } else if (arrayChoice == "outroB") {
+        window.location = "gend.html";
+    }
+
     patchState("currentUser", `${arrayChoice}Dialogue`, true);
 
     dialogueIndex = -1;

@@ -1,11 +1,11 @@
 {
     "users": [
         {
-            "username": "Lolle",
+            "username": "Ludde",
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 2,
+            "storyPhase": 10,
             "inventory": {
                 "mapItem": true,
                 "letterItem": true,
@@ -20,9 +20,10 @@
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
-            "completedGame": false,
-            "outroDialogue": false
+            "introDialogue": true,
+            "completedGame": true,
+            "outroDialogue": false,
+            "outroADialogue": true
         },
         {
             "username": "Sami",
