@@ -1,4 +1,4 @@
-<a class="viewLink middle backBtn" href="#dialogue">Tillbaka</a>
+<a class="viewLink middle backBtn" id="invBackBtn" href="#dialogue">Tillbaka</a>
 <link rel="stylesheet" href="../../css/inventory.css">
 <div id="invWrapper">
     <!-- <div id="invImgSection">

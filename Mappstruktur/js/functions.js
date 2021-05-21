@@ -243,3 +243,16 @@ document.querySelector(".closeBtn").addEventListener("click", function() {
     const overlay = document.getElementById("overlayHistorik");
     overlay.classList.add("none");
 });
+
+document.getElementById("inventoryBtn").addEventListener("click", function() {
+    toggleDialogue();
+});
+
+document.getElementById("invBackBtn").addEventListener("click", function() {
+    toggleDialogue();
+});
+
+function toggleDialogue(){
+    const dialogueWindow = document.getElementById("dialogue");
+    dialogueWindow.classList.toggle("none");
+}

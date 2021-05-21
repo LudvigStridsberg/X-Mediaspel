@@ -40,6 +40,7 @@
     overflow: hidden;
     /* position: fixed; */
     scroll-behavior: smooth;
+    background-color: var(--gray);
 }
 
 #slider {
@@ -84,7 +85,7 @@
     height: 75px;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 1vh;
 }
 #mainBtnNav button {
     width: 34vw;
@@ -147,7 +148,6 @@
     color: var(--black);
     font-family: var(--elite);
     border: 1px solid var(--black);
-
 }
 .viewLink:active {
     background-color: var(--gray);
@@ -180,14 +180,14 @@
 
 .right {
     position: absolute;
-    right: 1vh;
-    bottom: 1vh;
+    right: 2.5vh;
+    bottom: 4vh;
 }
 
 .left {
     position: absolute;
-    left: 1vh;
-    bottom: 1vh;
+    left: 2.5vh;
+    bottom: 4vh;
 }
 
 .middle {
