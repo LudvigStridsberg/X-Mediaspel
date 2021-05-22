@@ -263,3 +263,17 @@ function toggleDialogue(){
     const dialogueWindow = document.getElementById("dialogue");
     dialogueWindow.classList.toggle("none");
 }
+
+function resetState(){
+    STATE.currentUser.storyPhase = 0;
+    STATE.currentUser.introDialogue = false;
+    STATE.currentUser.completedGame = false;
+    STATE.currentUser.inventory = {
+        mapItem: false,
+        letterItem: false,
+        photo: false,
+        oldLetterItem: false,
+        gems:[false, false, false, false, false]
+    }
+    patchState("currentUser", "outroDialogue", false);
+}

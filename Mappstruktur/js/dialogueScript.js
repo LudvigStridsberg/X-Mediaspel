@@ -159,9 +159,11 @@ function dialogueEnder(arrayChoice) {
     // the corresponding page
     //! Change to website-links!
     if (arrayChoice == "outroA") {
+        resetState();
         window.location = "bend.html";
         return;
     } else if (arrayChoice == "outroB") {
+        resetState();
         window.location = "gend.html";
         return;
     }
