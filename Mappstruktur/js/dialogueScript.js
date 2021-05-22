@@ -8,7 +8,7 @@ const indicator = document.getElementById("indicator");
 const hTextfield = document.querySelector(".histTextfield");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 10;
+let dialogueIndex = -1;
 let endgameChoice = "";
 
 dialogueBox.addEventListener("click", e => {
@@ -125,7 +125,7 @@ function printText(string, indicatorClass) {
 
         // Set a ID for the timeout, so that we can close it when we are out of letters
         // Each letter-print prepares the next one
-        let id = setTimeout(printNext, 1);
+        let id = setTimeout(printNext, 30);
 
         // If this function call printed the last letter...
         if (lastLetter) {
@@ -160,10 +160,10 @@ function dialogueEnder(arrayChoice) {
     //! Change to website-links!
     if (arrayChoice == "outroA") {
         window.location = "bend.html";
-        break;
+        return;
     } else if (arrayChoice == "outroB") {
         window.location = "gend.html";
-        break;
+        return;
     }
 
     patchState("currentUser", `${arrayChoice}Dialogue`, true);
@@ -184,6 +184,7 @@ function dialogueEnder(arrayChoice) {
             gameBtn.classList.add("important");
             gameInit(phases[STATE.currentPhase].game);
         }
+
     }
 
     // document.getElementById("startBtn").classList.remove("none");
