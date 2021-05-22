@@ -30,7 +30,7 @@ function setState() {
 // Ska kallas från dialog-funktionen och från varje spel-script
 // Call setState
 function patchState(key1, key2, value) {
-    protecc(3);
+    protecc(3.5);
 
     // Update the local State
     // let {key, value} = patchObj;
@@ -185,7 +185,6 @@ function phaseChanger() {
     // 1.1, kontrollera spel stadierna intro, completedGame och outro
     // 2 Få koordinaterna från phase-objektet, lägg i state
     // 3 Uppdatera script-taggar och php-includes
- 
     setTimeout(() => {
         activateGeolocation();
     }, 5000);
@@ -248,14 +247,15 @@ document.querySelector(".closeBtn").addEventListener("click", function() {
     overlay.classList.add("none");
 });
 
+document.getElementById("itemDiv0").addEventListener("click", function() {
+    toggleDialogue();
+});
+
 document.getElementById("inventoryBtn").addEventListener("click", function() {
     toggleDialogue();
 });
 
 document.getElementById("invBackBtn").addEventListener("click", function() {
-    toggleDialogue();
-});
-document.getElementById("itemDiv0").addEventListener("click", function() {
     toggleDialogue();
 });
 
