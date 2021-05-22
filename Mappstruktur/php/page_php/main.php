@@ -21,7 +21,7 @@
 <body>
     <div id="wrapper">
         <div id="slider">
-            <div id="map">
+            <div id="map" class="none">
                 <?php include "map.php"; ?>
             </div>
             <div id="dialogue">

@@ -22,7 +22,12 @@ function setState() {
             STATE.dialogue = phases[STATE.currentPhase].dialogue;
             //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
             displayLocations();
-            itemHandler(user.inventory)
+            itemHandler(user.inventory);
+
+            if (STATE.currentPhase > 0) {
+                document.getElementById("map").classList.remove("none");
+                document.querySelector(".mapBtn").classList.remove("none");
+            }
         });
 }
 
@@ -259,12 +264,12 @@ document.getElementById("invBackBtn").addEventListener("click", function() {
     toggleDialogue();
 });
 
-function toggleDialogue(){
+function toggleDialogue() {
     const dialogueWindow = document.getElementById("dialogue");
     dialogueWindow.classList.toggle("none");
 }
 
-function resetState(){
+function resetState() {
     STATE.currentUser.storyPhase = 0;
     STATE.currentUser.introDialogue = false;
     STATE.currentUser.completedGame = false;
