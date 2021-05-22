@@ -57,6 +57,7 @@ function patchState(key1, key2, value) {
             // This has to be set here as this has to happen after the state
             // in the database has been updated
             setState();
+            displayLocations();
         })
         .catch(e => {
             console.log(e);
@@ -184,7 +185,7 @@ function phaseChanger() {
     // 1.1, kontrollera spel stadierna intro, completedGame och outro
     // 2 Få koordinaterna från phase-objektet, lägg i state
     // 3 Uppdatera script-taggar och php-includes
-    displayLocations();
+ 
     setTimeout(() => {
         activateGeolocation();
     }, 5000);
