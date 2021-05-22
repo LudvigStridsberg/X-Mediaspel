@@ -76,7 +76,7 @@ function dialogueInit() {
     dWrapper.classList.add("flexer");
     overlay.classList.add("none");
     dWrapper.style.backgroundImage = `url("../../media/photos/${phases[STATE.currentPhase].backgroundImage}")`;
-    // document.getElementById("startBtn").classList.add("none");
+    document.getElementById("startBtn").classList.add("none");
     dialogueBox.click();
 }
 

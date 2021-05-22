@@ -99,6 +99,19 @@ function changeText(arrayChoice) {
         // ...otherwise we're out of dialogue, reset the page
         dialogueEnder(arrayChoice);
     }
+
+    if (dialogueObj.sunray == true){
+        const pilen = document.getElementById("pilen");
+        const mapBtn = document.querySelector(".mapBtn");
+        mapBtn.classList.add("important");
+        setTimeout(() => {
+            mapBtn.classList.remove("important");
+        }, 3000);
+        pilen.classList.remove("none");
+    } else if(dialogueObj.sunray == false) {
+        const pilen = document.getElementById("pilen");
+        pilen.classList.add("none");
+    }
 }
 
 function printText(string, indicatorClass) {
@@ -146,9 +159,9 @@ function printText(string, indicatorClass) {
     printNext();
 }
 
-// document.getElementById("startBtn").addEventListener("click", e=> {
-//     dialogueInit();
-// });
+document.getElementById("startBtn").addEventListener("click", e=> {
+    dialogueInit();
+});
 
 function dialogueEnder(arrayChoice) {
 
@@ -189,7 +202,7 @@ function dialogueEnder(arrayChoice) {
 
     }
 
-    // document.getElementById("startBtn").classList.remove("none");
+    document.getElementById("startBtn").classList.remove("none");
 
     if (arrayChoice == "outro"){
         phaseChanger();

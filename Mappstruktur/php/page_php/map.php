@@ -752,11 +752,11 @@
             <circle class="locationPoint teatern none" id="location3" cx="285.18" cy="119.02" r="10.11" />
             <circle class="locationPoint apPojke none" id="location2" cx="255.54" cy="104.59" r="10.11" />
             <circle class="locationPoint inblick none" id="location1" cx="218.3" cy="31.69" r="10.11" />
-            <g id="pilen">
+            <g id="pilen" class="none">
                 <g>
                     <g>
-                        <line class="st20" x1="93.2" y1="159.9" x2="139.2" y2="163.1" />
                         <g>
+                            <line class="st20" x1="93.2" y1="159.9" x2="139.2" y2="163.1" />
                             <polygon class="st21" points="103.3,205.6 28.8,155.5 109.4,116" />
                         </g>
                     </g>

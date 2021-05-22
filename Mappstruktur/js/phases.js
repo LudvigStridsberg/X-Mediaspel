@@ -1626,6 +1626,7 @@ const phases = {
                     name: "BSK",
                     image: "empty.png",
                     script: "Till sist lägger sig stenarna i en formation och börjar lysa i unison. Stenarna har varsin skarp stråle och de pekar alla på en och samma plats på din karta.",
+                    sunray: true,
                 },
                 {
                     name: "Portmästaren",
@@ -1648,6 +1649,7 @@ const phases = {
                     name: "BSK",
                     image: "empty.png",
                     script: "Ni är på platsen dit stenarna pekade er.",
+                    sunray: false,
                 },
                 {
                     name: "Portmästaren",
