@@ -8,7 +8,7 @@ const indicator = document.getElementById("indicator");
 const hTextfield = document.querySelector(".histTextfield");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = -1;
+let dialogueIndex = 10;
 let endgameChoice = "";
 
 dialogueBox.addEventListener("click", e => {
@@ -90,10 +90,7 @@ function changeText(arrayChoice) {
             patchState("currentUser", "inventory", dialogueObj.items);
 
             const inventoryBtn = document.getElementById("inventoryBtn");
-            inventoryBtn.classList.add("important");
-            setTimeout(() => {
-                inventoryBtn.classList.remove("important");
-            }, 3000);
+            importantBtn(inventoryBtn);
         }
     } else {
         // ...otherwise we're out of dialogue, reset the page
@@ -103,10 +100,7 @@ function changeText(arrayChoice) {
     if (dialogueObj.sunray == true){
         const pilen = document.getElementById("pilen");
         const mapBtn = document.querySelector(".mapBtn");
-        mapBtn.classList.add("important");
-        setTimeout(() => {
-            mapBtn.classList.remove("important");
-        }, 3000);
+        importantBtn(mapBtn);
         pilen.classList.remove("none");
     } else if(dialogueObj.sunray == false) {
         const pilen = document.getElementById("pilen");
@@ -138,7 +132,7 @@ function printText(string, indicatorClass) {
 
         // Set a ID for the timeout, so that we can close it when we are out of letters
         // Each letter-print prepares the next one
-        let id = setTimeout(printNext, 30);
+        let id = setTimeout(printNext, 1);
 
         // If this function call printed the last letter...
         if (lastLetter) {
@@ -170,14 +164,17 @@ function dialogueEnder(arrayChoice) {
 
     // If the user has finished the game we should send them to
     // the corresponding page
-    //! Change to website-links!
     if (arrayChoice == "outroA") {
         resetState();
-        window.location = "bend.html";
+        setTimeout(() => {
+            window.location = "bend.html";
+        }, 3500);
         return;
     } else if (arrayChoice == "outroB") {
         resetState();
-        window.location = "gend.html";
+        setTimeout(() => {
+            window.location = "gend.html";
+        }, 3500);
         return;
     }
 
