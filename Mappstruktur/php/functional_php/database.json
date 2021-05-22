@@ -5,11 +5,11 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 1,
+            "storyPhase": 3,
             "inventory": {
                 "mapItem": true,
-                "letterItem": false,
-                "photo": false,
+                "letterItem": true,
+                "photo": true,
                 "oldLetterItem": false,
                 "gems": [
                     false,

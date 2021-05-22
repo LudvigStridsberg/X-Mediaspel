@@ -127,8 +127,16 @@ function itemHandler(itemObj) {
         if(key !== "gems"){
             if(value){
                 let itemDiv = document.querySelector(`#itemDiv${index}`);
+
+                let itemImg = document.createElement("img");
+
+                itemImg.src = `../../media/illustrations/items/item${index}.png`;
+
+                itemImg.addEventListener("click", function() {
+                    itemViewer(itemImg.src);
+                });
     
-                itemDiv.innerHTML = `<img src="../../media/illustrations/items/item${index}.png"></img>`;
+                itemDiv.appendChild(itemImg);
             }else{
                 let itemDiv = document.querySelector(`#itemDiv${index}`);
 
@@ -148,10 +156,13 @@ function itemHandler(itemObj) {
             }));
         }
     });
-
-
     //! kolla igenom detta också så allt funkar med phaseChanger
     // patchState("currentUser", "inventory", itemObj);
+}
+
+function itemViewer(image) {
+    const bigImg = document.querySelector("#invImgSection > img");
+    bigImg.src = image;
 }
 
 function protecc(seconds) {
