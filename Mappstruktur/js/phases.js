@@ -498,8 +498,8 @@ const phases = {
         game: "piano",
         backgroundImage: "orkester.png",
         targetLocation: { // Orkestern, Stortorget
-            latitude: 55.605512,
-            longitude: 13.001284
+            latitude: 55.605370,
+            longitude: 13.001270
         },
         dialogue: {
             intro: [
