@@ -22,7 +22,7 @@
     <img src="../../media/illustrations/searching.gif" alt="Letar efter kontakt..">
     <div class="textlayer">
         <h2>Söker Uppkoppling...</h2>
-        <p>Ta dig till en anslutningsplats</p>
+        <p id="standbyInfo">Ta dig till en anslutningsplats</p>
     </div>
 </div>
 
