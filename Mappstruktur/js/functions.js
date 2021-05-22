@@ -30,7 +30,7 @@ function setState() {
 // Ska kallas från dialog-funktionen och från varje spel-script
 // Call setState
 function patchState(key1, key2, value) {
-    protecc(3);
+    protecc(3.5);
 
     // Update the local State
     // let {key, value} = patchObj;
@@ -229,9 +229,9 @@ function displayLocations() {
     });
 }
 
-function replaceText(element, text) {
-    const el = document.querySelector(element);
-    el.innerHTML  = text;
+function replaceTextLayer(text) {
+    const el = document.querySelector('#standbyInfo');
+    el.innerHTML = text;
 }
 
 document.querySelector(".histBtn").addEventListener("click", function() {

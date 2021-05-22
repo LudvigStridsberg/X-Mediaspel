@@ -86,9 +86,9 @@ function compareLocationFunction(locationData) {
     }
 
     if (latClose && lonClose){
-        // replaceText('.textLayer p', 'Du är nära en anslutningplats.');
+        replaceTextLayer('Du är nära en anslutningplats.');
     } else {
-        // replaceText('.textLayer p', 'Ta dig till en anslutningsplats.');
+        replaceTextLayer('Ta dig till en anslutningsplats.');
     }
     
     if (latitude >= targetLat - 0.0005 && latitude <= targetLat + 0.0005) {
