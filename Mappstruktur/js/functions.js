@@ -254,6 +254,9 @@ document.getElementById("inventoryBtn").addEventListener("click", function() {
 document.getElementById("invBackBtn").addEventListener("click", function() {
     toggleDialogue();
 });
+document.getElementById("itemDiv0").addEventListener("click", function() {
+    toggleDialogue();
+});
 
 function toggleDialogue(){
     const dialogueWindow = document.getElementById("dialogue");
