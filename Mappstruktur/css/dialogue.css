@@ -1,12 +1,12 @@
 #dialogue>div:last-of-type {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: column;
 }
 
 #dialogueWrapper {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-position: center;
     background-size: cover;
     flex-direction: column;
@@ -16,7 +16,7 @@
 #characterImg {
     position: relative;
     width: 100%;
-    bottom: 10%;
+    bottom: 5%;
     /* left: -10%; */
     z-index: 0;
 }
@@ -37,7 +37,7 @@
 
 #dialogueBox {
     position: absolute;
-    bottom: 70px;
+    bottom: 80px;
     border: 3px solid var(--black);
     background-color: rgba(244, 244, 244, 0.9);
     width: 95%;
@@ -138,7 +138,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.5);
 }

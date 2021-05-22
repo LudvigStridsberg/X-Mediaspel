@@ -146,9 +146,9 @@ function printText(string, indicatorClass) {
     printNext();
 }
 
-document.getElementById("startBtn").addEventListener("click", e=> {
-    dialogueInit();
-});
+// document.getElementById("startBtn").addEventListener("click", e=> {
+//     dialogueInit();
+// });
 
 function dialogueEnder(arrayChoice) {
 
@@ -160,8 +160,10 @@ function dialogueEnder(arrayChoice) {
     //! Change to website-links!
     if (arrayChoice == "outroA") {
         window.location = "bend.html";
+        break;
     } else if (arrayChoice == "outroB") {
         window.location = "gend.html";
+        break;
     }
 
     patchState("currentUser", `${arrayChoice}Dialogue`, true);
@@ -180,12 +182,11 @@ function dialogueEnder(arrayChoice) {
 
         if (arrayChoice != "outro") {
             gameBtn.classList.add("important");
+            gameInit(phases[STATE.currentPhase].game);
         }
-
-        gameInit(phases[STATE.currentPhase].game);
     }
 
-    document.getElementById("startBtn").classList.remove("none");
+    // document.getElementById("startBtn").classList.remove("none");
 
     if (arrayChoice == "outro"){
         phaseChanger();

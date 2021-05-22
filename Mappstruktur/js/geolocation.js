@@ -4,8 +4,8 @@ const GPS = {
         // Värden nedan fungar bra om man är i en park eller så. Ni kanske vill trixa med dem
         // om er app ska användas inne i stan. Eller så kanske det inte alls behövs.
 
-        timeThreshold: 10000,    // Locations older than 15000 miliseconds (6 secs) don't count.
-        maxDistance: 0.0001,    // about 10 meters (in gps coordinates)
+        timeThreshold: 15000,    // Locations older than 15000 miliseconds (6 secs) don't count.
+        maxDistance: 0.0008,    // about 80 meters (in gps coordinates)
         minLocations: 3,        // We need at least 3 "good" locations.
                                 //      (A good location is a location that is close to the others.)
     },
@@ -76,12 +76,12 @@ function compareLocationFunction(locationData) {
     let latClose = false;
     let lonClose = false;
 
-    console.log(gettingLocation);
+    console.log(locationData);
 
-    if (latitude >= targetLat - 0.001 && latitude <= targetLat + 0.001) {
+    if (latitude >= targetLat - 0.0008 && latitude <= targetLat + 0.0008) {
         latClose = true;
     }
-    if (longitude >= targetLon - 0.001 && longitude <= targetLon + 0.001) {
+    if (longitude >= targetLon - 0.005 && longitude <= targetLon + 0.005) {
         lonClose = true;
     }
 
@@ -104,7 +104,12 @@ function compareLocationFunction(locationData) {
         dialogueInit("intro");
     }
 
-    if(latOk && lonOk && STATE.currentUser.introDialogue == true && STATE.currentUser.gameComplete == true && STATE.currentUser.outroDialogue == false) {
+    if(latOk && lonOk && STATE.currentUser.introDialogue == true && STATE.currentUser.completedGame == false) {
+        navigator.geolocation.clearWatch(gpsID);
+        gameInit(phases[STATE.currentPhase].game);
+    }
+
+    if(latOk && lonOk && STATE.currentUser.introDialogue == true && STATE.currentUser.completedGame == true && STATE.currentUser.outroDialogue == false) {
         navigator.geolocation.clearWatch(gpsID);
         dialogueInit("outro");
     }
@@ -118,8 +123,12 @@ function errorHandler(err) {
 let options = {
     enableHighAccuracy: true,
     timeout: 5000,
-    maximumAge: 0 // don't use old location data
+    maximumAge: 15000 // don't use old location data
 };
 
-// Uncomment to activate geolocation
-// const gpsID = navigator.geolocation.watchPosition(GPS.smoothPosition.bind(GPS), errorHandler, options);
+let gpsID;
+function activateGeolocation() {
+    gpsID = navigator.geolocation.watchPosition(GPS.smoothPosition.bind(GPS), errorHandler, options);
+}
+
+activateGeolocation();

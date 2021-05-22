@@ -57,6 +57,7 @@ function patchState(key1, key2, value) {
             // This has to be set here as this has to happen after the state
             // in the database has been updated
             setState();
+            displayLocations();
         })
         .catch(e => {
             console.log(e);
@@ -75,7 +76,7 @@ function dialogueInit() {
     dWrapper.classList.add("flexer");
     overlay.classList.add("none");
     dWrapper.style.backgroundImage = `url("../../media/photos/${phases[STATE.currentPhase].backgroundImage}")`;
-    document.getElementById("startBtn").classList.add("none");
+    // document.getElementById("startBtn").classList.add("none");
     dialogueBox.click();
 }
 
@@ -184,7 +185,10 @@ function phaseChanger() {
     // 1.1, kontrollera spel stadierna intro, completedGame och outro
     // 2 Få koordinaterna från phase-objektet, lägg i state
     // 3 Uppdatera script-taggar och php-includes
-    displayLocations();
+ 
+    setTimeout(() => {
+        activateGeolocation();
+    }, 5000);
 }
 
 function importantBtn(theButton) {
@@ -243,3 +247,19 @@ document.querySelector(".closeBtn").addEventListener("click", function() {
     const overlay = document.getElementById("overlayHistorik");
     overlay.classList.add("none");
 });
+
+document.getElementById("inventoryBtn").addEventListener("click", function() {
+    toggleDialogue();
+});
+
+document.getElementById("invBackBtn").addEventListener("click", function() {
+    toggleDialogue();
+});
+document.getElementById("itemDiv0").addEventListener("click", function() {
+    toggleDialogue();
+});
+
+function toggleDialogue(){
+    const dialogueWindow = document.getElementById("dialogue");
+    dialogueWindow.classList.toggle("none");
+}
