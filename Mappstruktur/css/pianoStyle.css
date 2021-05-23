@@ -5,7 +5,7 @@
 
 #keyboard {
     width: 100%;
-    height: 91%;
+    height: 88%;
     padding: 2vh;
 }
 
@@ -38,10 +38,23 @@
 .blackKey {
     z-index: 10;
     background-color: var(--black);
-    height: 7.14%;
+    height: 7%;
     position: absolute;
     left: 40.5%;
     width: 55%;
+}
+
+#feedbackHolder {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100vw;
+    z-index: 10;
+    background-color:  rgba(135, 134, 137, 0.7);
 }
 
 #feedback {
@@ -68,14 +81,6 @@
     font-family: var(--elite);
 }
 
-.hidden {
-    display: none;
-}
-
-.visible {
-    display: flex;
-}
-
 .good {
     border: 5px solid var(--green);
 }
@@ -87,21 +92,21 @@
 /* 3.57*/
 
 #sC {
-    top: 11.71%;
+    top: 11.5%;
 }
 
 #sD {
-    top: 23.99%;
+    top: 24%;
 }
 
 #sF {
-    bottom: 43.27%;
+    bottom: 44.5%;
 }
 
 #sG {
-    bottom: 30.99%;
+    bottom: 32%;
 }
 
 #sA {
-    bottom: 18.71%;
+    bottom: 20%;
 }

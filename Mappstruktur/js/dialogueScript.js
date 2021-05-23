@@ -8,7 +8,7 @@ const indicator = document.getElementById("indicator");
 const hTextfield = document.querySelector(".histTextfield");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = -1;
+let dialogueIndex = 10;
 let endgameChoice = "";
 
 dialogueBox.addEventListener("click", e => {
@@ -91,21 +91,23 @@ function changeText(arrayChoice) {
 
             const inventoryBtn = document.getElementById("inventoryBtn");
             importantBtn(inventoryBtn);
+
+            // Pretty specific case, so it is last
+            if (dialogueObj.sunray == true){
+                const pilen = document.getElementById("pilen");
+                const mapBtn = document.querySelector(".mapBtn");
+                importantBtn(mapBtn);
+                pilen.classList.remove("none");
+            } else if(dialogueObj.sunray == false) {
+                const pilen = document.getElementById("pilen");
+                pilen.classList.add("none");
+            }
         }
     } else {
         // ...otherwise we're out of dialogue, reset the page
         dialogueEnder(arrayChoice);
     }
 
-    if (dialogueObj.sunray == true){
-        const pilen = document.getElementById("pilen");
-        const mapBtn = document.querySelector(".mapBtn");
-        importantBtn(mapBtn);
-        pilen.classList.remove("none");
-    } else if(dialogueObj.sunray == false) {
-        const pilen = document.getElementById("pilen");
-        pilen.classList.add("none");
-    }
 }
 
 function printText(string, indicatorClass) {

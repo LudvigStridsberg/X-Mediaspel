@@ -14,11 +14,13 @@ const pianoString =
         '<div class="whiteKey" id="A"></div>' +
         '<div class="blackKey" id="sA"></div>' +
         '<div class="whiteKey" id="B"></div>' +
-        '<div class="hidden" id="feedback">' +
-            '<p id="feedbackText"></p>' +
-            '<button id="again">Försök igen</button>' +
-            '<p>Not-ljud av</p>' +
-            '<a href="https://freesound.org/people/ion_/">ion_</a>' +
+        '<div id="feedbackHolder" class="none">' +
+            '<div id="feedback" class="none">' +
+                '<p id="feedbackText"></p>' +
+                '<button id="again">Försök igen</button>' +
+                '<p>Not-ljud av</p>' +
+                '<a href="https://freesound.org/people/ion_/">ion_</a>' +
+            '</div>' +
         '</div>' +
     '</div>' +
 '</div>';
