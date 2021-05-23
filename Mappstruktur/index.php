@@ -24,7 +24,7 @@
                 <h1>ANSLUT TILL PORTAL</h1>
                     <input type="text" name="loginUsername" placeholder="Användarnamn">
                     <input type="password" name="loginPassword" placeholder="Lösenord">
-                    <button type="submit">Logga in</button>
+                    <button type="submit">Anslut</button>
                 </form>
             </div>
         </div>
