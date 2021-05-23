@@ -1814,7 +1814,7 @@ const phases = {
                     name: "BSK",
                     image: "empty.png",
                     script: "Portmästarn, som annars alltid haft ett visst lugn, ser onekligen stressad ut.",
-
+                },
                 {
                     name: "Portmästarn",
                     image: "portmastaren.png",
