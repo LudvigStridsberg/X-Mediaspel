@@ -169,13 +169,13 @@ function dialogueEnder(arrayChoice) {
     if (arrayChoice == "outroA") {
         resetState();
         setTimeout(() => {
-            window.location = "bend.html";
+            window.location.href = "bend.html";
         }, 3500);
         return;
     } else if (arrayChoice == "outroB") {
         resetState();
         setTimeout(() => {
-            window.location = "gend.html";
+            window.location.href = "gend.html";
         }, 3500);
         return;
     }

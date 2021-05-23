@@ -5,10 +5,10 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 8,
+            "storyPhase": 0,
             "inventory": {
-                "mapItem": true,
-                "letterItem": true,
+                "mapItem": false,
+                "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
@@ -20,8 +20,8 @@
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": true,
-            "completedGame": true,
+            "introDialogue": false,
+            "completedGame": false,
             "outroDialogue": false
         },
         {
