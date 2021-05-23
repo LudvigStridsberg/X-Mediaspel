@@ -8,7 +8,7 @@
             "storyPhase": 1,
             "inventory": {
                 "mapItem": true,
-                "letterItem": false,
+                "letterItem": true,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
@@ -20,8 +20,8 @@
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": false,
-            "completedGame": false,
+            "introDialogue": true,
+            "completedGame": true,
             "outroDialogue": false
         },
         {
