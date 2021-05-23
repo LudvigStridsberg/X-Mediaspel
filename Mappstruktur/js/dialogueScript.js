@@ -8,7 +8,7 @@ const indicator = document.getElementById("indicator");
 const hTextfield = document.querySelector(".histTextfield");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 10;
+let dialogueIndex = -1;
 let endgameChoice = "";
 
 dialogueBox.addEventListener("click", e => {

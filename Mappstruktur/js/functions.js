@@ -26,7 +26,7 @@ function setState() {
 
             if (STATE.currentPhase > 0) {
                 document.getElementById("map").classList.remove("none");
-                document.querySelector(".mapBtn").classList.remove("none");
+                document.querySelector(".mapBtn > img").src = "../../media/illustrations/icons/map.png";
             }
         });
 }
@@ -206,11 +206,12 @@ function phaseChanger() {
     }, 5000);
 }
 
+// Temporarily add the class important to a element
 function importantBtn(theButton) {
     theButton.classlist.add("important");
 
     setTimeout(function () {
-        theButton.classlist.remove("important");
+        theButton.classList.remove("important");
     }, 5000);
 }
 

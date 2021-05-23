@@ -6,6 +6,7 @@ const matcherSTATE = {
 }
 
 const grid = document.getElementById('grid');
+const modalContainer = document.getElementById('modalContainer');
 const modal = document.getElementById('modal');
 const modal2 = document.getElementById('modal2');
 const tryAgain = document.getElementById('tryAgain');
@@ -51,6 +52,8 @@ function chechForWin(){
     if (matcherSTATE.score >= 15 && !haveWon){
         console.log('you win');
         // Om poängen är samma eller högre än 15 kommer en modal med text att spelaren klarat det
+        modalContainer.classList.remove("none");
+        modalContainer.classList.add("flexer");
         modal2.style.display = 'flex';
 
         // Patch STATE and start outro-dialogue
@@ -69,7 +72,10 @@ function checkForLoose(){
     //window.setInterval(function(){
         // Function som kollar när moves är slut
         if (matcherSTATE.moves <= 0){
+            moveDisplay.innerText = 0;
             console.log('you loose');
+            modalContainer.classList.remove("none");
+            modalContainer.classList.add("flexer");
             modal.style.display = 'flex';
         }
     //}, 2000);
@@ -112,6 +118,7 @@ tryAgain.addEventListener('click', function(){
 function restartGame() {
     console.log('game restarted');
     modal.style.display = 'none';
+    modalContainer.classList.add("none");
     matcherSTATE.score = 0;
     scoreDisplay.innerHTML = matcherSTATE.score;
 

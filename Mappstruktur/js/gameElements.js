@@ -38,19 +38,21 @@ const matcherString =
         '</div>' +
     '</div>' +
     '<div id="grid" class="gridSize"></div>' +
-    '<div id="modal" class="gridSize">' +
-        '<div>Åh nej...</div>' +
-        '<div id="score-board-modal">' +
-            '<div>Du sorterade för få stjärntecken... Kan du inte testa igen?</div>' +
-            '<div id="scoreDisplay-modal"></div>' +
+    '<div id="modalContainer" class="none">' +
+        '<div id="modal" class="gridSize">' +
+            '<div>Åh nej...</div>' +
+            '<div id="score-board-modal">' +
+                '<div>Du sorterade för få stjärntecken... Kan du inte testa igen?</div>' +
+                '<div id="scoreDisplay-modal"></div>' +
+            '</div>' +
+            '<button id="tryAgain">Jo, klart!</button>' +
         '</div>' +
-        '<button id="tryAgain">Jo, klart!</button>' +
-    '</div>' +
-    '<div id="modal2" class="gridSize">' +
-        '<div class="flexer" id="score-board-modal2">' +
-            '<div id="thanks">Wow, du klarade det! Tack från djupet av mitt hjärta!</div>' +
+        '<div id="modal2" class="gridSize">' +
+            '<div class="flexer" id="score-board-modal2">' +
+                '<div id="thanks">Bra jobbat! Nu kan du gå tillbaka till dialogrutan.</div>' +
+            '</div>' +
         '</div>' +
-    '</div>' +
+    '<div>' +
 '</div>';
 
 const questString =
