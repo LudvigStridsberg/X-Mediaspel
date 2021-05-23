@@ -1,0 +1,107 @@
+#feedback {
+    margin: 0px;
+    padding: 0px;
+}
+
+#keyboard {
+    width: 100%;
+    height: 91%;
+    padding: 2vh;
+}
+
+#pianoWrapper {
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--black);
+    box-sizing: border-box;
+}
+
+.whiteKey {
+    height: 14.28%;
+    border-bottom: 3px solid var(--black);
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+.whiteKey:active {
+    background-color: var(--gray);
+}
+
+.blackKey:active {
+    background-color: var(--gray);
+}
+
+#B {
+    border-bottom: 0px;
+}
+
+.blackKey {
+    z-index: 10;
+    background-color: var(--black);
+    height: 7.14%;
+    position: absolute;
+    left: 40.5%;
+    width: 55%;
+}
+
+#feedback {
+    width: 70%;
+    height: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    z-index: 20;
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: var(--elite);
+}
+
+#again {
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    font-family: var(--elite);
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+.good {
+    border: 5px solid var(--green);
+}
+
+.bad {
+    border: 5px solid var(--red);
+}
+
+/* 3.57*/
+
+#sC {
+    top: 11.71%;
+}
+
+#sD {
+    top: 23.99%;
+}
+
+#sF {
+    bottom: 43.27%;
+}
+
+#sG {
+    bottom: 30.99%;
+}
+
+#sA {
+    bottom: 18.71%;
+}

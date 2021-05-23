@@ -17,7 +17,7 @@
 }
 
 #questTitle {
-    width: max-content;
+    max-width: 100%;
     background-color: var(--white);
     border: 3px solid var(--black);
     padding: 1.2vh 2vh;
@@ -45,7 +45,7 @@
     align-self: end;
 }
 
-.feedbackQuest {
+#questFeedback {
     color: var(--red);
     background-color: var(--white);
     width: max-content;

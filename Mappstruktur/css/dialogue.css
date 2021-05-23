@@ -1,14 +1,12 @@
 #dialogue>div:last-of-type {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: column;
 }
 
 #dialogueWrapper {
-    display: flex;
     width: 100vw;
-    height: 100vh;
-    background-image: url('../../media/illustrations/ledsna_klar.png');
+    height: 100%;
     background-position: center;
     background-size: cover;
     flex-direction: column;
@@ -18,8 +16,8 @@
 #characterImg {
     position: relative;
     width: 100%;
-    bottom: -10%;
-    left: -10%;
+    bottom: 5%;
+    /* left: -10%; */
     z-index: 0;
 }
 
@@ -39,18 +37,24 @@
 
 #dialogueBox {
     position: absolute;
-    bottom: 7vh;
+    bottom: 80px;
     border: 3px solid var(--black);
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(244, 244, 244, 0.9);
     width: 95%;
-    height: 20%;
+    height: 22%;
     z-index: 2;
+    padding: 4vh 2vh 2vh 2vh;
+    box-sizing: border-box;
 }
 
-#dialogueBox>p {
-    margin: 8%;
+#dialogueBox > p {
+    /* margin: 8%; */
     font-family: var(--elite);
-    line-height: 23px;
+    font-size: 15px;
+    line-height: 20px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 #indicator {
@@ -58,10 +62,15 @@
     position: absolute;
     right: 15px;
     bottom: 15px;
+    animation: indicatorBlink 1s infinite alternate linear;
 }
 
 .none {
     display: none;
+}
+
+.flex {
+    display: flex;
 }
 
 .more {
@@ -69,14 +78,12 @@
     border: solid var(--black);
     border-width: 0px 4px 4px 0px;
     transform: rotate(-45deg);
-    animation: arrowBlink .5s 0s infinite alternate;
 }
 
 .done {
     display: inline-block;
     background-color: var(--black);
     bottom: 60px;
-    animation: doneBlink 1s infinite alternate linear;
 }
 
 #overlayStandby {
@@ -90,7 +97,7 @@
 #overlayStandby img:nth-child(1) {
     position: absolute;
     width: 70%;
-    top: 20%;
+    top: 17%;
     left: 16%
 }
 #overlayStandby img:nth-child(2) {
@@ -99,6 +106,83 @@
     /* width: 100%; */
     opacity: .4;
     /* filter: saturate(3); */
+}
+#standbyInfo {
+    font-family: var(--elite);
+}
+#overlayHistorik {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    z-index: 10;
+    background-color:  rgba(135, 134, 137, 0.7);
+}
+#histInnerWrapper {
+    box-sizing: border-box;
+    position: absolute;
+    top: 8%;
+    left: 5vw;
+    height: 80%;
+    width: 90vw;
+    z-index: 10;
+    background-color: var(--white);
+    border: 3px solid var(--black);
+    font-family: var(--elite);
+}
+
+
+#loadingScreen {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.loadingText {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingText p {
+    font-family: 'Special Elite', sans-serif;
+}
+
+#spin {
+    margin-bottom: 5vh;
+    height: 20vw;
+    animation-name: spin;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+.histTextfield {
+    overflow-y: scroll;
+    padding: 5% 10% 0% 10%;
+    height: 90%;
+    position: absolute;
+    top: 20px;
+}
+.closeBtn {
+    position: absolute;
+    right: 0;
+}
+.closeBtn img {
+    width: 25px;
+    padding: 10px;
+    box-sizing: content-box;
 }
 .textlayer {
     position: absolute;
@@ -111,12 +195,31 @@
     z-index: -2;
 }
 
-@keyframes arrowBlink {
+.histTextfield > p {
+    border-bottom: 1px dashed var(--black);
+    padding: 5px 0px;
+}
+
+@keyframes indicatorBlink {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
 
-@keyframes doneBlink {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#startBtn { 
+    position: absolute;
+    left: 1vh;
+    top:1vh; 
+    padding: .5vh 1vh;
+    z-index: 100;
+    background-color: var(--green);
+    border: 3px solid var(--black);
 }

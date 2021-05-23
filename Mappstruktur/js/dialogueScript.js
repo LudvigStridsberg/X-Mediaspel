@@ -5,17 +5,26 @@ const characterName = document.getElementById("characterName");
 const dialogueBox = document.getElementById("dialogueBox");
 const text = document.querySelector("#dialogueBox > p");
 const indicator = document.getElementById("indicator");
+const hTextfield = document.querySelector(".histTextfield");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
 let dialogueIndex = -1;
+let endgameChoice = "";
 
 dialogueBox.addEventListener("click", e => {
     dialogueIndex++;
-
-    let arrayChoice = "";
+    
+    let arrayChoice = endgameChoice;
     if (STATE.currentUser.introDialogue == false) {
         arrayChoice = "intro";
-    } else {
+    } else if (!STATE.currentUser.completedGame) {
+        arrayChoice = "intro";
+    } else if(endgameChoice == "outroA"){
+        arrayChoice = "outroA";
+    } else if(endgameChoice == "outroB") {
+        arrayChoice = "outroB";
+    } 
+    else {
         arrayChoice = "outro";
     }
 
@@ -43,11 +52,6 @@ function changeText(arrayChoice) {
 
     // If this is the last object in the array the indicator should get
     // the "done" class. Otherwise its the "more" class
-    // if (dialogueIndex == STATE.dialogue.outroB.length - 1) {
-    //     indicatorClass = "done";
-    // } else {
-    //     indicatorClass = "more";
-    // }
     if (dialogueIndex == STATE.dialogue[arrayChoice].length - 1) {
         indicatorClass = "done";
     } else {
@@ -56,25 +60,44 @@ function changeText(arrayChoice) {
 
     // If the object exists...
     if (dialogueObj != undefined) {
+
+        let dialogueString = document.createElement("p");
+        dialogueString.innerText = `${dialogueObj.name}: ${dialogueObj.script}`;
+        hTextfield.appendChild(dialogueString);
+
         // ...update all elements with the new data...
-        characterName.innerHTML = dialogueObj.name;
         printText(dialogueObj.script, indicatorClass);
-        image.src = "../../media/illustrations/" + dialogueObj.image;
-        //BUT, control if item has been handed!
-        if(dialogueObj.items){
+
+        /*
+         Check the name. If it is BSK the name-sign should be hidden.
+         If it is either that or Jag the character image's source should
+         be empty.png. If it is neither the name-sign should be displayed
+         and the appropiate picture shown. 
+        */
+        if (dialogueObj.name == "BSK") {
+            characterName.classList.add("none");
+        } else {
+            characterName.classList.remove("none");
+            characterName.innerHTML = dialogueObj.name;
+        }
+        image.src = "../../media/illustrations/characters/" + dialogueObj.image;
+
+        // BUT, control if item has been handed!
+        if (dialogueObj.items) {
+
             //items exist
             itemHandler(dialogueObj.items);
+            patchState("currentUser", "inventory", dialogueObj.items);
+
+            const inventoryBtn = document.getElementById("inventoryBtn");
+            inventoryBtn.classList.add("important");
+            setTimeout(() => {
+                inventoryBtn.classList.remove("important");
+            }, 3000);
         }
     } else {
         // ...otherwise we're out of dialogue, reset the page
-        document.getElementById("dialogueWrapper").classList.remove("flexer");
-        document.getElementById("dialogueWrapper").classList.add("none");
-        document.getElementById("startBtn").classList.remove("none");
-        dialogueIndex = -1;
-        patchState("currentUser", `${arrayChoice}Dialogue`, true);
-        if(arrayChoice == "outro" && STATE.currentUser.outroDialogue == true){
-            phaseChanger();
-        }
+        dialogueEnder(arrayChoice);
     }
 }
 
@@ -102,7 +125,7 @@ function printText(string, indicatorClass) {
 
         // Set a ID for the timeout, so that we can close it when we are out of letters
         // Each letter-print prepares the next one
-        let id = setTimeout(printNext, 1);
+        let id = setTimeout(printNext, 30);
 
         // If this function call printed the last letter...
         if (lastLetter) {
@@ -123,9 +146,50 @@ function printText(string, indicatorClass) {
     printNext();
 }
 
-document.getElementById("startBtn").addEventListener("click", e=> {
-    document.getElementById("dialogueWrapper").classList.remove("none");
-    document.getElementById("dialogueWrapper").classList.add("flexer");
-    document.getElementById("startBtn").classList.add("none");
-    dialogueBox.click();
-});
+// document.getElementById("startBtn").addEventListener("click", e=> {
+//     dialogueInit();
+// });
+
+function dialogueEnder(arrayChoice) {
+
+    const dWrapper = document.getElementById("dialogueWrapper");
+    const overlay = document.getElementById("overlayStandby");
+
+    // If the user has finished the game we should send them to
+    // the corresponding page
+    //! Change to website-links!
+    if (arrayChoice == "outroA") {
+        window.location = "bend.html";
+        return;
+    } else if (arrayChoice == "outroB") {
+        window.location = "gend.html";
+        return;
+    }
+
+    patchState("currentUser", `${arrayChoice}Dialogue`, true);
+
+    dialogueIndex = -1;
+
+    if (!phases[STATE.currentPhase].game && arrayChoice == "intro") {
+        patchState("currentUser", "completedGame", true);
+        dialogueInit();
+    } else {
+        dWrapper.classList.remove("flexer");
+        dWrapper.classList.add("none");
+        overlay.classList.remove("none");
+
+        let gameBtn = document.getElementById("interactiveBtn");
+
+        if (arrayChoice != "outro") {
+            gameBtn.classList.add("important");
+            gameInit(phases[STATE.currentPhase].game);
+        }
+
+    }
+
+    // document.getElementById("startBtn").classList.remove("none");
+
+    if (arrayChoice == "outro"){
+        phaseChanger();
+    }
+}

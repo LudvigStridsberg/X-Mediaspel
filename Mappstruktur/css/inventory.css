@@ -28,13 +28,18 @@
     place-content: center;
     gap: 1vh;
     background-color: var(--lightgray);
+    margin-top: 20vh;
     margin-bottom: 4vh;
     box-sizing: border-box;
 }
 
-#invSection div {
+#invSection div, #invSection a {
     border: 2px solid var(--darkgray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 #invSection div:nth-child(1) {
     border: 2px solid var(--darkgray);
@@ -44,51 +49,33 @@
     background-position: center; */
 }
 
+#invSection > div > img, #invSection > a > img {
+    width: 90%;
+}
+
 #gemSection {
     display: grid;
-    grid-template-columns: repeat(4, 70px);
+    grid-template-columns: repeat(3, 70px);
     grid-template-rows: repeat(2, 70px);
     place-content: center;
     gap: 1vh;
 }
 
-#gemSection div:nth-child(1) {
+#gemSection > div {
     background-color: var(--darkgray);
     border-radius: 50%;
 }
 
-#gemSection div:nth-child(2) {
-    background-color: var(--darkgray);
-    border-radius: 50%;
-}
-
-#gemSection div:nth-child(3) {
-    background-color: var(--darkgray);
-    border-radius: 50%;
+#gemSection > div > img{
+    width: 100%;
 }
 
 #gemSection div:nth-child(4) {
-    background-color: var(--darkgray);
-    border-radius: 50%;
+    position: relative;
+    left: 50%;
 }
 
 #gemSection div:nth-child(5) {
-    background-color: var(--darkgray);
-    border-radius: 50%;
-    position: relative;
-    left: 50%;
-}
-
-#gemSection div:nth-child(6) {
-    background-color: var(--darkgray);
-    border-radius: 50%;
-    position: relative;
-    left: 50%;
-}
-
-#gemSection div:nth-child(7) {
-    background-color: var(--darkgray);
-    border-radius: 50%;
     position: relative;
     left: 50%;
 }

@@ -4,13 +4,17 @@
     --s-heading: calc(var(--s-para) * 1.618);
 
     /*? Colors */
-    --c-para: #000000;
+    --c-para: #131116;
     --c-btn-bg: #f4f4f4;
     --c-bg-main: #c2c2c2;
     --c-reg-bg: #131313;
     --c-reg-para: var(--c-bg-main);
     --c-login-bg: var(--c-bg-main);
     --c-login-para: var(--c-reg-bg);
+
+    /*? Fonts */
+    --barriecito: 'Barriecito', cursive;
+    --elite: 'Special Elite', cursive;
 }
 
 * {
@@ -30,7 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    font-family: var(--barriecito);
 }
 
 #login_wrapper,
@@ -51,56 +55,45 @@ body {
     color: var(--c-reg-para);
 }
 
-form input {
+#loginForm input {
     width: 100%;
     height: 50px;
     background: transparent;
     border: none;
-    font-size: 18px;
+    font-family: var(--elite);
+    font-size: 20px;
     outline-style: none;
     margin-bottom: 20px;
 }
 
-form button {
+#loginForm button {
     width: 100%;
     height: 50px;
-    border-radius: 10px;
-    border: none;
+    border: 2px solid var(--c-reg-bg);
     background-color: var(--c-btn-bg);
-    font-size: 17px;
+    font-family: var(--elite);
+    font-size: 20px;
     font-weight: bold;
+    margin-top: 2vh;
+}
+
+#loginForm h1 {
+    text-align: center;
+    margin-bottom: 2vh;
 }
 
 #login_wrapper form input {
-    border-bottom: 1px solid var(--c-reg-bg);
-}
-
-#reg_wrapper form input {
-    border-bottom: 1px solid var(--c-btn-bg);
-    color: var(--c-reg-para);
-}
-
-#reg_wrapper form button {
-    background-color: transparent;
-    border: 1px solid var(--c-btn-bg);
-    color: var(--c-reg-para);
+    border-bottom: 2px solid var(--c-reg-bg);
 }
 
 #login_wrapper form button:active {
     border: 2px solid var(--c-reg-bg);
 }
 
-#reg_wrapper form button:active {
-    background-color: var(--c-btn-bg);
-    color: var(--c-reg-bg);
+.logoWrapper {
+    width: 100%;
+    padding: 8% 15%;
 }
-
-.temp_logo {
-    position: absolute;
-    top: 5%;
-    left: 10%;
-}
-
 .feedback {
     color: red;
     text-align: center;

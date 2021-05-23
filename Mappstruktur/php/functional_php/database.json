@@ -1,14 +1,14 @@
 {
     "users": [
         {
-            "username": "ludde",
+            "username": "Ludde",
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 0,
+            "storyPhase": 10,
             "inventory": {
                 "mapItem": true,
-                "letterItem": false,
+                "letterItem": true,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
@@ -16,6 +16,29 @@
                     false,
                     false,
                     false,
+                    false
+                ]
+            },
+            "hasPlayed": false,
+            "introDialogue": true,
+            "completedGame": true,
+            "outroDialogue": false,
+            "outroADialogue": true
+        },
+        {
+            "username": "Sami",
+            "password": "1",
+            "id": 1,
+            "pronoun": "",
+            "storyPhase": 1,
+            "inventory": {
+                "mapItem": true,
+                "letterItem": false,
+                "photo": false,
+                "oldLetterItem": false,
+                "gems": [
+                    true,
+                    true,
                     false,
                     false,
                     false
@@ -27,39 +50,13 @@
             "outroDialogue": false
         },
         {
-            "username": "Sami",
-            "password": "1",
-            "id": 1,
-            "pronoun": "",
-            "storyPhase": 10,
-            "inventory": {
-                "mapItem": true,
-                "letterItem": false,
-                "photo": false,
-                "oldLetterItem": false,
-                "gems": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    false,
-                    false
-                ]
-            },
-            "hasPlayed": false,
-            "introDialogue": true,
-            "completedGame": false,
-            "outroDialogue": false
-        },
-        {
             "username": "Emil",
             "password": "1",
             "id": 2,
             "pronoun": "",
             "storyPhase": 0,
             "inventory": {
-                "mapItem": true,
+                "mapItem": false,
                 "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
@@ -68,15 +65,14 @@
                     false,
                     false,
                     false,
-                    false,
-                    false,
                     false
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": true,
+            "introDialogue": false,
             "completedGame": false,
-            "outroDialogue": false
+            "outroDialogue": false,
+            "outroADialogue": false
         }
     ]
 }

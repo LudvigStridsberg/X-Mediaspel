@@ -4,8 +4,8 @@ const GPS = {
         // Värden nedan fungar bra om man är i en park eller så. Ni kanske vill trixa med dem
         // om er app ska användas inne i stan. Eller så kanske det inte alls behövs.
 
-        timeThreshold: 10000,    // Locations older than 15000 miliseconds (6 secs) don't count.
-        maxDistance: 0.0001,    // about 10 meters (in gps coordinates)
+        timeThreshold: 15000,    // Locations older than 15000 miliseconds (6 secs) don't count.
+        maxDistance: 0.0008,    // about 80 meters (in gps coordinates)
         minLocations: 3,        // We need at least 3 "good" locations.
                                 //      (A good location is a location that is close to the others.)
     },
@@ -73,24 +73,43 @@ function compareLocationFunction(locationData) {
     let {latitude, longitude} = locationData;
     let latOk = false;
     let lonOk = false;
+    let latClose = false;
+    let lonClose = false;
 
-    console.log(gettingLocation);
+    console.log(locationData);
 
-    if (latitude >= targetLat - 0.0002 && latitude <= targetLat + 0.0002) {
-        latOk = true;
+    if (latitude >= targetLat - 0.0008 && latitude <= targetLat + 0.0008) {
+        latClose = true;
+    }
+    if (longitude >= targetLon - 0.005 && longitude <= targetLon + 0.005) {
+        lonClose = true;
     }
 
-    if (longitude >= targetLon - 0.0002 && longitude <= targetLon + 0.0002) {
+    if (latClose && lonClose){
+        replaceTextLayer('Du är nära en anslutningplats.');
+    } else {
+        replaceTextLayer('Ta dig till en anslutningsplats.');
+    }
+    
+    if (latitude >= targetLat - 0.0005 && latitude <= targetLat + 0.0005) {
+        latOk = true;
+    }
+    if (longitude >= targetLon - 0.0005 && longitude <= targetLon + 0.0005) {
         lonOk = true;
     }
 
     // If they have arrived we don't want to repeatedly start the dialogue after the first time
-    if (latOk && lonOk && STATE.dialogue.introDialogue == false) {
+    if (latOk && lonOk && STATE.currentUser.introDialogue == false) {
         navigator.geolocation.clearWatch(gpsID);
         dialogueInit("intro");
     }
 
-    if(latOk && lonOk && STATE.dialogue.introDialogue == true && STATE.currentUser.gameComplete == true && STATE.dialogue.outroDialogue == false) {
+    if(latOk && lonOk && STATE.currentUser.introDialogue == true && STATE.currentUser.completedGame == false) {
+        navigator.geolocation.clearWatch(gpsID);
+        gameInit(phases[STATE.currentPhase].game);
+    }
+
+    if(latOk && lonOk && STATE.currentUser.introDialogue == true && STATE.currentUser.completedGame == true && STATE.currentUser.outroDialogue == false) {
         navigator.geolocation.clearWatch(gpsID);
         dialogueInit("outro");
     }
@@ -104,8 +123,12 @@ function errorHandler(err) {
 let options = {
     enableHighAccuracy: true,
     timeout: 5000,
-    maximumAge: 0 // don't use old location data
+    maximumAge: 15000 // don't use old location data
 };
 
-// Uncomment to activate geolocation
-// const gpsID = navigator.geolocation.watchPosition(GPS.smoothPosition.bind(GPS), errorHandler, options);
+let gpsID;
+function activateGeolocation() {
+    gpsID = navigator.geolocation.watchPosition(GPS.smoothPosition.bind(GPS), errorHandler, options);
+}
+
+activateGeolocation();

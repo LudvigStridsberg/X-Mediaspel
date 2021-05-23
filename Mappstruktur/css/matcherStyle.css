@@ -1,0 +1,73 @@
+#matcherWrapper {
+    height: 60%;
+    width: 100%;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    font-family: var(--elite);
+}
+
+#grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 18%);
+    grid-auto-columns: 18vw;
+    grid-gap: 5px;
+    height: 100%;
+    width: 100%;
+    padding: 20px 0;
+}
+
+#modal, #modal2 {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: var(--gray);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#modal2 {
+    background-color: var(--green);
+}
+
+#clue {
+    display: none;
+}
+
+#modal button {
+    padding: 10px;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: var(--elite);
+    border: 1px solid var(--black);
+    box-sizing: border-box;
+}
+
+.square {
+    border: 3px solid var(--black);
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+#panel {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#panel > div {
+    background-color: var(--white);
+    border: 3px solid black;
+    padding: 10px;
+}

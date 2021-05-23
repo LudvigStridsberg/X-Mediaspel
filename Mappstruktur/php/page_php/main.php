@@ -25,6 +25,7 @@
                 <?php include "map.php"; ?>
             </div>
             <div id="dialogue">
+                <!-- <button id="startBtn">go!</button> -->
                 <?php include "dialogue.php"; ?>
             </div>
             <div id="interactive">
@@ -43,9 +44,11 @@
     }
 </script>
 <script src="../../js/summaries.js"></script>
+<script src="../../js/gameElements.js"></script>
 <script src="../../js/functions.js"></script>
 <script src="../../js/geolocation.js"></script>
 <script src="../../js/main.js"></script>
 <script src="../../js/phases.js"></script>
 <script src="../../js/dialogueScript.js"></script>
+<script src="../../js/endgame.js"></script>
 </html>
