@@ -1215,7 +1215,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Deras fnitter är så intensivt att det nästan låter aggressivt. Portmästarn drar en tung suck.",
 
                 },
@@ -1236,7 +1236,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Marky pekar mot Portmästarn och de båda älvorna börjar skratta hysteriskt. Portmästarn verkar oberörd. Han verkar inte vara så värst omtyckt",
 
                 },
@@ -1297,7 +1297,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Den andra älvan tryckte undan ett skratt. Portmästarn står med armarna i kors och tittar bort. Han verkar inte vara särskilt intresserad av konversationen.",
 
                 },
@@ -1392,7 +1392,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Älvorna skrattar åt sin imitation av deras syster. Vilka svin. Hon var ju bara orolig för er. Portmästarn vänder sig mot dig.",
 
                 },
@@ -1456,7 +1456,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Portmästarn vänder sig hastigt och tittar på dig. Hans kroppsspråk påminner om en femåring som blev tagen på bar gärning med handen i kakburken.",
                 },
                 {
@@ -1491,7 +1491,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Tystnaden från Portmästarn hintar om att han inte riktigt tror på dig. Ormen sänker sitt huvud ytterligare för att komma närmare ditt ansikte.",
 
                 },
@@ -1603,7 +1603,7 @@ const phases = {
                 }, // Inventory lyser upp - ny sten
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Portmästarn springer fram till där du står och frågar dig ängsligt.",
 
                 },
@@ -1614,12 +1614,12 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Du visar den godisliknande stenen för Portmästarn. Plötsligt sker något konstigt. Rubinen i din hand beter sig som att ha fått sitt eget liv.",
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Trots att du står still tumlar den runt i din handflata. Portmästarn växlar mellan att titta på dig och stenen",
                 },
                 {
@@ -1666,7 +1666,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Han hinner knappt avsluta sin mening innan ett kvävt rop stjäler er uppmärksamhet. Portmästarn tar ett steg tillbaka av chock.",
                 },
                 {
@@ -1762,7 +1762,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Som att han kan läsa dina tankar talar Portmästarn till dig",
                 },
                 {
@@ -1827,7 +1827,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Portmästarn börjar höja rösten och hans gestalt ser nästan ut att växa i samband med volymen. Han böjer sig över dig.",
                 },
                 {
@@ -1847,7 +1847,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Portmästarn är ursinnig. Du minns Zodiakens ord. Lita på din magkänsla.",
                     items:{
                         mapItem: true,
@@ -1862,17 +1862,17 @@ const phases = {
             outroA: [ // Ger stenarna till Portis //!Kontrollera att alla stenar är false
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Portmästarn är ju faktiskt den som varit vid din sida genom hela er resa. Han måste vara upprörd av en anledning.",
                 },
                 {
                     name: "Jag",
-                    image: "",
+                    image: "empty.png",
                     script: "Okej. Du får dem. Jag litar på dig mer än de andra.",
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Du hinner knappt räcka fram alla stenarna innan han har roffat åt sig dem ur dina händer. Portmästarn skratt som börjar blygsamt blir snabbt maniskt.",
 
                 },
@@ -1908,7 +1908,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Alla tio stenar, fem från den övre världen och fem från den undre världen svävar nu mellan Portmästarns händer.",
 
                 },
@@ -1961,7 +1961,7 @@ const phases = {
             outroB: [ // Ger stenarna till ädeln //! kontroll ifall stenarna är true
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Du tar ett kliv tillbaka från den vansinniga Portmästarn. Det här var det alla hade varnat dig för.",
 
                 },
@@ -1982,7 +1982,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Medan du placerade dina stenar hade Portmästarn gjort ett desperat försök att stjäla dem..",
 
                 },
@@ -2003,7 +2003,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Ur den omtöcknade Portmästarns ficka flyger den undre världens stenar fram..",
 
                 },
@@ -2019,7 +2019,7 @@ const phases = {
                 },
                 {
                     name: "BSK",
-                    image: "",
+                    image: "empty.png",
                     script: "Desperat försöker Portmästarn springa till Ädeln som återigen knuffar bak honom, denna gången med ännu mer kraft.",
 
                 },
