@@ -7,6 +7,7 @@ function endgame() {
     const parent = document.getElementById("mainBtnNav");
     const icon = document.querySelector("#overlayStandby > img:nth-of-type(1)");
     const imgElement = document.querySelector("#overlayStandby > img:nth-of-type(2)");
+    const imgDialogue = document.querySelector("#dialogueWrapper");
     const textOverlay = document.querySelector(".textlayer");
 
     // Create the countdown-element
@@ -61,6 +62,7 @@ function endgame() {
         patchState("currentUser", "completedGame", true);
         setTimeout(() => {
             dialogueInit();
+            imgDialogue.style.backgroundImage = 'url("../../media/photos/kockums_dark.png")';
         }, 2000);
     });
 

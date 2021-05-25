@@ -26,6 +26,7 @@ function setState() {
 
             if (STATE.currentPhase > 0) {
                 document.getElementById("map").classList.remove("none");
+                document.querySelector(".mapBtn").classList.remove("transp");
                 document.querySelector(".mapBtn > img").src = "../../media/illustrations/icons/map.png";
             }
         });
@@ -64,7 +65,7 @@ function patchState(key1, key2, value) {
             displayLocations();
         })
         .catch(e => {
-            console.log(e);
+            console.log(e.Error, e.JSON, e.Object);
         });
 }
 /*
@@ -80,7 +81,7 @@ function dialogueInit() {
     dWrapper.classList.add("flexer");
     overlay.classList.add("none");
     dWrapper.style.backgroundImage = `url("../../media/photos/${phases[STATE.currentPhase].backgroundImage}")`;
-    document.getElementById("startBtn").classList.add("none");
+    // document.getElementById("startBtn").classList.add("none");
     dialogueBox.click();
 }
 
@@ -133,6 +134,10 @@ function itemHandler(itemObj) {
                     itemImg.addEventListener("click", function() {
                         itemViewer(itemImg.src);
                     });
+                } if(index == 0) {
+                    document.getElementById("map").classList.remove("none");
+                    document.querySelector(".mapBtn").classList.remove("transp");
+                    document.querySelector(".mapBtn > img").src = "../../media/illustrations/icons/map.png";
                 }
     
                 itemDiv.appendChild(itemImg);
@@ -180,12 +185,12 @@ function phaseChanger() {
     protecc(3.5);
 
     // Reset the keys
-    if (STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue) {//! && STATE.currentUser.completedGame
+    // if (STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue) {//! && STATE.currentUser.completedGame
 
-        STATE.currentUser.introDialogue = false;
-        STATE.currentUser.completedGame = false;
-        STATE.currentUser.outroDialogue = false;
-    }
+        // STATE.currentUser.introDialogue = false;
+        // STATE.currentUser.completedGame = false;
+        // STATE.currentUser.outroDialogue = false;
+    // }
     let phaseIndex = STATE.currentPhase;
 
     // Empty the dialogue-history
@@ -197,7 +202,7 @@ function phaseChanger() {
     gameHolder.innerHTML = "";
 
     // Patch the user's state with the changed data
-    patchState("currentUser", "storyPhase", phaseIndex + 1);
+    patchState("currentUser", "storyPhase", phaseIndex);
 
     setTimeout(() => {
         activateGeolocation();

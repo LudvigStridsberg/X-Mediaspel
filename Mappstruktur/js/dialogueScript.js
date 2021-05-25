@@ -8,7 +8,7 @@ const indicator = document.getElementById("indicator");
 const hTextfield = document.querySelector(".histTextfield");
 
 // Initialized to -1 since we perform a click when pressing the button, which also raises the number
-let dialogueIndex = 10;
+let dialogueIndex = -1;
 let endgameChoice = "";
 
 dialogueBox.addEventListener("click", e => {
@@ -92,16 +92,16 @@ function changeText(arrayChoice) {
             const inventoryBtn = document.getElementById("inventoryBtn");
             importantBtn(inventoryBtn);
 
-            // Pretty specific case, so it is last
-            if (dialogueObj.sunray == true){
-                const pilen = document.getElementById("pilen");
-                const mapBtn = document.querySelector(".mapBtn");
-                importantBtn(mapBtn);
-                pilen.classList.remove("none");
-            } else if(dialogueObj.sunray == false) {
-                const pilen = document.getElementById("pilen");
-                pilen.classList.add("none");
-            }
+        }
+        // Pretty specific case, so it is last
+        if (dialogueObj.sunray == true){
+            const pilen = document.getElementById("pilen");
+            const mapBtn = document.querySelector(".mapBtn");
+            importantBtn(mapBtn);
+            pilen.classList.remove("none");
+        } else if(dialogueObj.sunray == false) {
+            const pilen = document.getElementById("pilen");
+            pilen.classList.add("none");
         }
     } else {
         // ...otherwise we're out of dialogue, reset the page
@@ -134,7 +134,7 @@ function printText(string, indicatorClass) {
 
         // Set a ID for the timeout, so that we can close it when we are out of letters
         // Each letter-print prepares the next one
-        let id = setTimeout(printNext, 1);
+        let id = setTimeout(printNext, 30);
 
         // If this function call printed the last letter...
         if (lastLetter) {
@@ -155,9 +155,9 @@ function printText(string, indicatorClass) {
     printNext();
 }
 
-document.getElementById("startBtn").addEventListener("click", e=> {
-    dialogueInit();
-});
+// document.getElementById("startBtn").addEventListener("click", e=> {
+//     dialogueInit();
+// });
 
 function dialogueEnder(arrayChoice) {
 
@@ -186,7 +186,10 @@ function dialogueEnder(arrayChoice) {
 
     if (!phases[STATE.currentPhase].game && arrayChoice == "intro") {
         patchState("currentUser", "completedGame", true);
-        dialogueInit();
+        protecc(3.5);
+        setTimeout(() => {
+            dialogueInit();
+        }, 3500);
     } else {
         dWrapper.classList.remove("flexer");
         dWrapper.classList.add("none");
@@ -201,7 +204,7 @@ function dialogueEnder(arrayChoice) {
 
     }
 
-    document.getElementById("startBtn").classList.remove("none");
+    // document.getElementById("startBtn").classList.remove("none");
 
     if (arrayChoice == "outro"){
         phaseChanger();

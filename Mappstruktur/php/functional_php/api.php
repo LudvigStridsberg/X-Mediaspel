@@ -37,8 +37,15 @@
 
             for($i = 0; $i<count($database["users"]); $i++){
                 if($database["users"][$i]["id"] == $userId) {
-                    $database["users"][$i] = $data;
                     $found = true;
+                    
+                    if($data["introDialogue"] == true && $data["outroDialogue"] == true && $data["completedGame"] == true) {
+                        $data["introDialogue"] = false;
+                        $data["outroDialogue"] = false;
+                        $data["completedGame"] = false;
+                        $data["storyPhase"] = $data["storyPhase"] +1;
+                    };
+                    $database["users"][$i] = $data;
                 }
             }
 

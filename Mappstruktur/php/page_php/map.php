@@ -752,7 +752,7 @@
             <circle class="locationPoint teatern none" id="location3" cx="285.18" cy="119.02" r="10.11" />
             <circle class="locationPoint apPojke none" id="location2" cx="255.54" cy="104.59" r="10.11" />
             <circle class="locationPoint inblick none" id="location1" cx="218.3" cy="31.69" r="10.11" />
-            <g id="pilen">
+            <g id="pilen" class="none">
                 <path style="fill:#5FBC7C;" d="M130,154.2c-15,6.1-29.2,2.7-45.2,3.6c-14.4,0.8-31.7-8.3-44.9-3.8c2.2-0.5,3.3-0.8,6.1-1.1
                     c12.2-4.1,26.6,3.4,38.7,5.7c17.2,3.3,22.7,3.1,37.4-7.6C125.3,150.7,126.9,151.8,130,154.2z"/>
                 <path style="fill:#E7C55F;" d="M137.9,160.7c-17.5,2.2-20.1-7.1-36.2-8.4c-6.5-0.5-11.1,3.3-16.7,5.5c-10.2,4-11.7,5.6-22,3.5
