@@ -97,7 +97,7 @@
 #overlayStandby img:nth-child(1) {
     position: absolute;
     width: 70%;
-    top: 20%;
+    top: 17%;
     left: 16%
 }
 #overlayStandby img:nth-child(2) {
@@ -106,6 +106,9 @@
     /* width: 100%; */
     opacity: .4;
     /* filter: saturate(3); */
+}
+#standbyInfo {
+    font-family: var(--elite);
 }
 #overlayHistorik {
     box-sizing: border-box;
