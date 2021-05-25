@@ -3,8 +3,8 @@
 <a class="viewLink logoutBtn" href="../functional_php/admin/logout.php">Avbryt signal</a>
 <div id="mainBtnNav" class="flexer">
 
-    <a class="viewLink iconBtn" href="#map">
-        <img class="icon" src="../../media/illustrations/icons/map.png" alt="Karta">
+    <a class="viewLink iconBtn mapBtn" href="#map">
+        <img class="icon" src="../../media/illustrations/icons/mapQuestion.png" alt="Karta">
     </a>
     <a class="viewLink iconBtn" id="inventoryBtn" href="#inventory">
         <img class="icon" src="../../media/illustrations/icons/bag.png" alt="Samling">

@@ -5,10 +5,10 @@
             "password": "1",
             "id": 0,
             "pronoun": "",
-            "storyPhase": 10,
+            "storyPhase": 0,
             "inventory": {
-                "mapItem": true,
-                "letterItem": true,
+                "mapItem": false,
+                "letterItem": false,
                 "photo": false,
                 "oldLetterItem": false,
                 "gems": [
@@ -20,10 +20,9 @@
                 ]
             },
             "hasPlayed": false,
-            "introDialogue": true,
-            "completedGame": true,
-            "outroDialogue": false,
-            "outroADialogue": true
+            "introDialogue": false,
+            "completedGame": false,
+            "outroDialogue": false
         },
         {
             "username": "Sami",

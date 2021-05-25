@@ -22,7 +22,12 @@ function setState() {
             STATE.dialogue = phases[STATE.currentPhase].dialogue;
             //Fattas lägga in dialogue i STATE, men finns empty string för att kunna köra över
             displayLocations();
-            itemHandler(user.inventory)
+            itemHandler(user.inventory);
+
+            if (STATE.currentPhase > 0) {
+                document.getElementById("map").classList.remove("none");
+                document.querySelector(".mapBtn > img").src = "../../media/illustrations/icons/map.png";
+            }
         });
 }
 
@@ -30,7 +35,6 @@ function setState() {
 // Ska kallas från dialog-funktionen och från varje spel-script
 // Call setState
 function patchState(key1, key2, value) {
-    protecc(3.5);
 
     // Update the local State
     // let {key, value} = patchObj;
@@ -76,7 +80,7 @@ function dialogueInit() {
     dWrapper.classList.add("flexer");
     overlay.classList.add("none");
     dWrapper.style.backgroundImage = `url("../../media/photos/${phases[STATE.currentPhase].backgroundImage}")`;
-    // document.getElementById("startBtn").classList.add("none");
+    document.getElementById("startBtn").classList.add("none");
     dialogueBox.click();
 }
 
@@ -112,41 +116,49 @@ function classChecker(gameType) {
     gameHolder.appendChild(gameScript);
 }
 
-// Ska gömma eller visa olika föremål i spelarens inventory. Bildelementen är
-// alltid där, vi måste byta mellan display: none och display: block/inline/whatever
+// Add or remove items from the player's inventory
 function itemHandler(itemObj) {
     console.log("itemHandler", itemObj);
 
     Object.entries(itemObj).forEach((entry, index) => {
         const [key, value] = entry;
-        if(key !== "gems"){
-            if(value){
-                let itemDiv = document.querySelector(`#itemDiv${index}`);
-    
-                itemDiv.innerHTML = `<img src="../../media/illustrations/items/item${index}.png"></img>`;
-            }else{
-                let itemDiv = document.querySelector(`#itemDiv${index}`);
+        const itemDiv = document.querySelector(`#itemDiv${index}`);
+        const itemImg = document.createElement("img");
+        if (key !== "gems") {
+            itemDiv.innerHTML = "";
+            if (value) {
+                itemImg.src = `../../media/illustrations/items/item${index}.png`;
 
-                itemDiv.innerHTML = "";
+                if (index > 0) {
+                    itemImg.addEventListener("click", function() {
+                        itemViewer(itemImg.src);
+                    });
+                }
+    
+                itemDiv.appendChild(itemImg);
             }
-        }else{            
+        } else {            
             entry[1].forEach(((gem, gemIndex) => {
         
-                if(gem) {
+                if (gem) {
                     let gemDiv = document.querySelector(`#gem${gemIndex}`);
 
                     gemDiv.innerHTML = `<img src="../../media/illustrations/items/sten${gemIndex}.png"></img>`;
-                }else{
+                } else {
                     let gemDiv = document.querySelector(`#gem${gemIndex}`);
                     gemDiv.innerHTML = "";
                 }
             }));
         }
     });
-
-
     //! kolla igenom detta också så allt funkar med phaseChanger
     // patchState("currentUser", "inventory", itemObj);
+}
+
+// Show the item-picture in the big div at the top of the inventory
+function itemViewer(image) {
+    const bigImg = document.querySelector("#invImgSection > img");
+    bigImg.src = image;
 }
 
 function protecc(seconds) {
@@ -164,7 +176,10 @@ function protecc(seconds) {
 }
 
 function phaseChanger() {
-    // 1 Uppdateta phase-nummer via patchState
+    // Activate the loading-screen
+    protecc(3.5);
+
+    // Reset the keys
     if (STATE.currentUser.introDialogue && STATE.currentUser.completedGame && STATE.currentUser.outroDialogue) {//! && STATE.currentUser.completedGame
 
         STATE.currentUser.introDialogue = false;
@@ -181,23 +196,24 @@ function phaseChanger() {
     const gameHolder = document.getElementById("gameHolder");
     gameHolder.innerHTML = "";
 
+    // Patch the user's state with the changed data
     patchState("currentUser", "storyPhase", phaseIndex + 1);
-    // 1.1, kontrollera spel stadierna intro, completedGame och outro
-    // 2 Få koordinaterna från phase-objektet, lägg i state
-    // 3 Uppdatera script-taggar och php-includes
+
     setTimeout(() => {
         activateGeolocation();
     }, 5000);
 }
 
+// Temporarily add the class important to a element
 function importantBtn(theButton) {
-    theButton.classlist.add("important");
+    theButton.classList.add("important");
 
     setTimeout(function () {
-        theButton.classlist.remove("important");
+        theButton.classList.remove("important");
     }, 5000);
 }
 
+// Display the dots on the map
 function displayLocations() {
     let locationArray = document.querySelectorAll(".locationPoint");
     locationArray.forEach(location => {
@@ -259,7 +275,21 @@ document.getElementById("invBackBtn").addEventListener("click", function() {
     toggleDialogue();
 });
 
-function toggleDialogue(){
+function toggleDialogue() {
     const dialogueWindow = document.getElementById("dialogue");
     dialogueWindow.classList.toggle("none");
+}
+
+function resetState() {
+    STATE.currentUser.storyPhase = 0;
+    STATE.currentUser.introDialogue = false;
+    STATE.currentUser.completedGame = false;
+    STATE.currentUser.inventory = {
+        mapItem: false,
+        letterItem: false,
+        photo: false,
+        oldLetterItem: false,
+        gems:[false, false, false, false, false]
+    }
+    patchState("currentUser", "outroDialogue", false);
 }

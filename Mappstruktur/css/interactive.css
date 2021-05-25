@@ -45,6 +45,10 @@
     align-self: end;
 }
 
+#questAnswer button:active {
+    background-color: var(--gray);
+}
+
 #questFeedback {
     color: var(--red);
     background-color: var(--white);

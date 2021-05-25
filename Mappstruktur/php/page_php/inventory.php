@@ -1,9 +1,9 @@
 <a class="viewLink middle backBtn" id="invBackBtn" href="#dialogue">Tillbaka</a>
 <link rel="stylesheet" href="../../css/inventory.css">
 <div id="invWrapper">
-    <!-- <div id="invImgSection">
+    <div id="invImgSection">
         <img src="../../media/illustrations/malmu_icon.png" alt="">
-    </div> -->
+    </div>
     <div id="invSection">
         <a href="#map" id="itemDiv0"></a>
         <div id="itemDiv1"></div>

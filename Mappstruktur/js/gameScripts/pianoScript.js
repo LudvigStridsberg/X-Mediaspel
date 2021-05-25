@@ -12,6 +12,7 @@ const sF = document.getElementById('sF');
 const sG = document.getElementById('sG');
 const sA = document.getElementById('sA');
 
+const feedbackHolder = document.getElementById('feedbackHolder');
 const feedback = document.getElementById('feedback');
 const feedbackText = document.getElementById('feedbackText');
 const again = document.getElementById('again');
@@ -40,10 +41,12 @@ function arrayCheck() {
     let result;
     if (playerArray.length == 7) {
         result = arrayLooper();
+        feedbackHolder.classList.remove("none");
+        feedbackHolder.classList.add("flexer");
+        feedback.classList.remove('none');
         if(result) {
-            feedback.classList.remove('hidden');
-            feedback.classList.add('good', 'visible');
-            feedbackText.innerText = 'Bra jobbat! Prova att gå tilbaka till dialogfönstret.';
+            feedback.classList.add('good', 'flexer');
+            feedbackText.innerText = 'Bra jobbat! Nu kan du gå tilbaka till dialogfönstret.';
             patchState("currentUser", "completedGame", true);
             dialogueInit("outro");
 
@@ -55,8 +58,7 @@ function arrayCheck() {
             let gameBtn = document.getElementById("interactiveBtn");
             gameBtn.classList.remove("important");
         } else {
-            feedback.classList.remove('hidden');
-            feedback.classList.add('bad', 'visible');
+            feedback.classList.add('bad', 'flexer');
             feedbackText.innerText = 'Det lät inte rätt... Prova en gång till.';
         }
     }
@@ -79,8 +81,10 @@ function arrayLooper() {
 }
 
 again.addEventListener('click', e => {
-    feedback.classList.remove('good', 'bad', 'visible');
-    feedback.classList.add('hidden');
+    feedbackHolder.classList.remove("flexer");
+    feedbackHolder.classList.add("none");
+    feedback.classList.remove('good', 'bad', 'flexer');
+    feedback.classList.add('none');
     feedbackText.innerText = '';
     playerArray = [];
 });

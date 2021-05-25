@@ -9,8 +9,9 @@ questTitle.innerText = "\"Berätta för mig vilket djur ssom är längsst ned, t
 
 questSubmit.addEventListener("click", e => {
     let guess = questGuess.value.toLowerCase();
+    questFeedback.classList.remove("none");
 
-    if (guess == "orm") {
+    if (guess == "orm" || guess == "ormen") {
         questFeedback.innerText = "Rätt svar! Gå tillbaka till dialogfönstret";
         patchState("currentUser", "completedGame", true);
 
